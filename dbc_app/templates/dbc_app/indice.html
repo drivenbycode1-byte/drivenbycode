@@ -1,0 +1,17 @@
+
+{% extends 'dbc_app/base.html' %}
+
+{% block content %}
+<p>Proyectos:</p>
+<ul>
+    {% for i in indice %}
+        <li>
+            <a href="{% url 'dbc_app:proyectos' i.id %}">{{ i.text }}.</a>
+        </li>
+    {% empty %}
+        <li>Ningún proyecto ha sido añadido todavía.</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
+

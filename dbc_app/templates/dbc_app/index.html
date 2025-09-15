@@ -1,0 +1,87 @@
+{% extends 'dbc_app/base.html' %}
+
+{% block page_header %}
+    <div class="p-3 mb-4 ">
+        <div class="container-fluid py-4">
+            <h1 class="display-5 oswald-subrayado">¡Hola!</h1>
+
+            <p class="lead oswald">Mi nombre es Diego Silva Baeza y en diciembre del año 2023 sufrí un accidente en moto que me provocó 
+                una lesión medular y me dejó con una paraplejia incompleta a nivel T4.
+    Creé esta página para que sea una ventana en donde puedan asomarse y ver una parte de mi vida, y también para poder
+    aludir a quienes se sientan en lo más profundo. 
+    Publicaré mis proyectos, mis avances con la electroestimulación, mi recorrido por el paraatletismo,
+    mi pasión por la programación, expresaré mis pensamientos en el blog y estaré dando noticias de mi primer libro.<br>
+    <br>¡Que el viaje y el final valgan la pena!
+            </p>
+            
+        </div>
+    </div>
+{% endblock page_header %}
+
+{% block content %}
+<div class="row">
+  <!-- 🧱 Columna principal: 3/4 del ancho -->
+  <div class="col-12 col-md-9">
+    <div class="text-center my-5">
+      <p class="text-start fs-3 oswald">Posts</p>
+
+      <div class="blog-section my-4">
+        {% for entry in blog_entries %}
+          <div class="mb-4 p-3 border rounded bg-white text-start">
+            <small class="text-muted d-block mb-2">
+              Publicado el {{ entry.data_added|date:"d M Y H:i" }}
+            </small>
+            <h4>{{ entry.title }}</h4>
+            <p>{{ entry.text|truncatewords:85 }}...</p>
+
+            <a href="{% url 'dbc_app:proyectos' entry.topic.id %}" class="btn btn-outline-dark btn-sm mt-2">
+              Leer más →
+            </a>
+
+            <span class="badge 
+              {% if entry.topic.id == 1 %}bg-primary
+              {% elif entry.topic.id == 2 %}bg-secondary
+              {% elif entry.topic.id == 3 %}bg-success
+              {% elif entry.topic.id == 4 %}bg-warning
+              {% elif entry.topic.id == 6 %}bg-danger
+              {% else %}bg-secondary{% endif %}
+            ">
+              Categoría: {{ entry.topic.text }}
+            </span>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="text-start mt-3 oswald">
+        <a href="{% url 'dbc_app:todos_los_posts' %}" class="btn btn-dark btn-lg">
+          📚 Ver todos los posteos
+        </a>
+      </div>
+
+      <figcaption class="blockquote-footer">
+        Driven by Code · La forma cambia, el propósito se afina.
+      </figcaption>
+    </div>
+  </div>
+
+  <!-- 🎯 Columna lateral derecha: 1/4 del ancho -->
+  <div class="col-12 col-md-3 mt-4 mt-md-0">
+    <p class="text-muted medium text-center mt-2">Sígueme en el viaje</p>
+
+    <div class="d-flex flex-md-column justify-content-md-start align-items-center gap-3">
+        <a href="https://www.instagram.com/spiritinmotion__/" target="_blank" class="text-decoration-none">
+          <i class="bi bi-instagram bi-instagram fs-3"></i>
+        </a>
+        <a href="https://www.tiktok.com/@diegosilvabaeza" target="_blank" class="text-decoration-none">
+          <i class="bi bi-tiktok fs-3"></i>
+        </a>
+        <a href="https://www.youtube.com/@SpiritInMotion__" target="_blank" class="text-decoration-none">
+          <i class="bi bi-youtube fs-3"></i>
+        </a>
+
+
+      <!-- Podés agregar más íconos aquí -->
+    </div>
+  </div>
+</div>
+{% endblock content %}

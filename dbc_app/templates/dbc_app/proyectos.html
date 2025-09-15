@@ -1,0 +1,76 @@
+
+{% extends 'dbc_app/base.html' %}
+
+{% load static %}
+
+{% block page_header %}
+  <h1>{{ proyectos.text }}</h1>
+
+  {% if proyectos.id == 1 %}
+    <div class="mt-3 text-center">
+      <a href="https://www.instagram.com/spiritinmotion__/" target="_blank" class="btn btn-outline-dark">
+        <i class="bi bi-instagram me-2"></i> ¡Sígue a SpiritInMotion!
+      </a>
+    </div>
+  {% endif %}
+{% endblock page_header %}
+
+
+
+
+{% block content %}
+
+    <ul>
+        {% for d in descripcion %}
+        <div class="mb-4 p-3 border rounded bg-white text-start">
+            {% if proyectos.id != 1 and proyectos.id != 5 %}
+                <small class="text-muted d-block mb-2">
+                    Publicado el {{ d.data_added|date:"d M Y H:i" }}
+                </small>
+                <h4>{{ d.title }}</h4>
+            {% endif %}
+                
+                <p>{{ d.text|linebreaks }}</p>
+            </div>
+        {% empty %}
+        <li>No hay descripción todavía.</li>
+        {% endfor %}
+    </ul>
+
+{% if proyectos.id == 1 %}
+  <div class="mt-4 d-flex flex-column gap-3 align-items-start">
+    
+    <!-- Botón de Instagram -->
+    <a href="https://www.instagram.com/chrissilva._/" target="_blank" class="btn btn-outline-dark">
+      <i class="bi bi-instagram me-2"></i> ¡Conecta con mi hermano en Instagram!
+    </a>
+
+        <!-- Botón de contacto por Gmail -->
+    <a href="mailto:christophersilva.b@gmail.com" class="btn btn-outline-dark">
+      <i class="bi bi-envelope me-2 fs-5"></i> Escríbele a Christopher Silva
+    </a>
+
+  </div>
+{% endif %}
+
+    {% if proyectos.id == 1 %}
+    <div class="mt-5 text-center">
+        <img src="{% static 'img/proyecto1_id1.png' %}" alt="Imagen simbólica del proyecto 1" class="img-fluid rounded shadow">
+        <p class="text-muted mt-3">Este proyecto representa el origen y la esencia de la unión.</p>
+    </div>
+    {% endif %}
+
+    {% if proyectos.id == 5 %}
+    <div class="mt-5 text-center">
+        <img src="{% static 'img/sobre_mi_1.png' %}" alt="Imagen simbólica del proyecto 1" class="img-fluid rounded shadow">
+        <p class="text-muted mt-3"></p>
+    </div>
+    {% endif %}
+    {% if proyectos.id == 5 %}
+    <div class="mt-5 text-center">
+        <img src="{% static 'img/sobre_mi_2.png' %}" alt="Imagen simbólica del proyecto 1" class="img-fluid rounded shadow">
+        <p class="text-muted mt-3"></p>
+    </div>
+    {% endif %}
+
+{% endblock content %}

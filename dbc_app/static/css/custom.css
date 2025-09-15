@@ -1,0 +1,264 @@
+/* === Tipografía global === */
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #212529;
+}
+
+/* === Encabezados === */
+h1, h2, h3 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* === Marca personal === */
+.dbc-logo {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.dbc-gradient {
+  font-weight: bold;
+  font-size: 1.4rem;
+  background: linear-gradient(to right, #007bff, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.dbc-gradient:hover {
+  background: linear-gradient(to right, #6610f2, #007bff);
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* === Botones personalizados === */
+.btn-dbc {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dbc:hover {
+  background-color: #0056b3;
+}
+
+/* === Espaciado y layout === */
+.section {
+  padding: 3rem 0;
+}
+
+.container-wide {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* === Animaciones sutiles === */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dbc-background {
+    background-image: url("/static/img/fondo_v1.jpg"); /* Ajustá la ruta si es distinta */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+}
+
+.hero-section {
+  height: 100vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Color elegante y contrastante */
+.hero-text,
+.hero-subtext {
+  color: #f1eded; /* Azul humo */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6); /* Sombra clara para reforzar contraste */
+}
+
+
+/* Estilo visual */
+.hero-text {
+  padding-top: 20vh;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtext {
+  margin-top: 1rem;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 4px;
+  font-size: 1.4rem;        /* Aumenta el tamaño base */
+  line-height: 1.6;         /* Mejora la lectura */
+  font-weight: 300;         /* Ligero pero definido */
+  letter-spacing: 0.5px;    /* Sutil separación entre letras */
+}
+
+
+body, .dbc-background, .hero-section {
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-divider {
+    border-bottom: 1px solid #ddd; /* Gris claro */
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar-nav .nav-divider:last-child {
+    border-bottom: none; /* No mostrar línea en el último ítem */
+  }
+
+    .navbar-nav {
+    align-items: flex-start;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+}
+
+.oswald {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.oswald-subrayado {
+  font-family: 'Oswald', sans-serif !important;
+  text-decoration: underline !important;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-muted {
+  font-family: 'Merryweather', sans-serif;
+  text-decoration: underline;
+}
+
+.bi-instagram {
+  display: inline-block;
+  font-size: 1.5rem; /* Ajustá según tu diseño */
+  width: 40px;
+  height: 40px;
+  line-height: 40px; /* Centra verticalmente el ícono */
+  text-align: center;
+  background-color: #f09433;
+  background-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.bi-instagram:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(220, 39, 67, 0.4);
+}
+
+.bi-tiktok {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #000;
+  color: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.bi-tiktok:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.bi-youtube {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #FF0000;
+  color: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.bi-youtube:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+.blockquote-footer {
+  margin-top: 1rem;
+  display: block;
+  clear: both;
+  font-size: 0.9rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  .btn-lg {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .blockquote-footer {
+    font-size: 0.85rem;
+    padding: 0 1rem;
+  }
+}
+
+.menu-label {
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1,5rem;
+}

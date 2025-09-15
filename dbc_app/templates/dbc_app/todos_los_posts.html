@@ -1,0 +1,32 @@
+{% extends 'dbc_app/base.html' %}
+
+{% block content %}
+  <div class="container my-5">
+    <h2 class="oswald">Todos los posts</h2>
+
+    {% for entry in todas_las_entradas %}
+      <div class="mb-4 p-3 border rounded bg-white text-start">
+        <small class="text-muted d-block mb-2">
+          Publicado el {{ entry.data_added|date:"d M Y H:i" }}
+        </small>
+        <h4>{{ entry.title }}</h4>
+        <p>{{ entry.text|truncatewords:70 }}...</p>
+
+        <a href="{% url 'dbc_app:proyectos' entry.topic.id %}" class="btn btn-outline-dark btn-sm mt-2">
+          Leer más →
+        </a>
+
+        <span class="badge 
+          {% if entry.topic.id == 1 %}bg-primary
+          {% elif entry.topic.id == 2 %}bg-secondary
+          {% elif entry.topic.id == 3 %}bg-success
+          {% elif entry.topic.id == 4 %}bg-warning
+          {% elif entry.topic.id == 6 %}bg-danger
+          {% else %}bg-info{% endif %}
+        ">
+          Categoría: {{ entry.topic.text }}
+        </span>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
