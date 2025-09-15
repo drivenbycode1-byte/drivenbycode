@@ -144,3 +144,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://drivenbycode.cl',
     'https://www.drivenbycode.cl'  # si usas www también
 ]
+
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
