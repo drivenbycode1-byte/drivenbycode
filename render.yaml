@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: drivenbycode
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn dbc_project.wsgi:application
+    envVars:
+      - fromFile: .env
