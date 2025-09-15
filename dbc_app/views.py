@@ -28,3 +28,9 @@ def todos_los_posts(request):
     todas_las_entradas = Entry.objects.order_by('-data_added')
     context = {'todas_las_entradas': todas_las_entradas}
     return render(request, 'dbc_app/todos_los_posts.html', context)
+
+# En dbc_app/views.py
+from django.http import JsonResponse
+
+def health_check(request):
+    return JsonResponse({'status': 'ok'})
