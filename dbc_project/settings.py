@@ -140,4 +140,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-print("ALLOWED_HOSTS:", ALLOWED_HOSTS)
+CSRF_TRUSTED_ORIGINS = [
+    'https://drivenbycode.cl',
+    'https://www.drivenbycode.cl'  # si usas www también
+]
