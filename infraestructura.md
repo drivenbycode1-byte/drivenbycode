@@ -72,3 +72,14 @@ Este documento describe la arquitectura técnica y simbólica del proyecto *Driv
 ## Notas finales
 
 Este archivo es parte del blindaje narrativo de *Driven By Code*. Cada componente fue elegido no solo por su funcionalidad, sino por su capacidad de representar una etapa del proceso de reconstrucción. Aquí no hay líneas de código sueltas: hay historia, intención y cuidado.
+
+---
+
+## 15 de septiembre de 2025 — Desbloqueo total del entorno productivo
+
+Se resolvió el error 400 en Render al acceder desde https://drivenbycode.cl.  
+Se blindaron los siguientes componentes:
+- ALLOWED_HOSTS con dominio personalizado
+- CSRF_TRUSTED_ORIGINS para tráfico HTTPS
+- Encabezados de proxy confiables (`USE_X_FORWARDED_HOST`, `SECURE_PROXY_SSL_HEADER`)
+Resultado: acceso completo a rutas públicas y privadas desde dominio oficial.
