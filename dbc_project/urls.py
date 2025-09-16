@@ -18,10 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from two_factor.urls import urlpatterns as tf_urls
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('dbc_app.urls'))
+    path('el-perro-verde/', admin.site.urls), # Renombramos el panel
+
+    path('', include(tf_urls)), # Primero las rutas de 2FA
+
+    path('', include('dbc_app.urls')), # Luego las rutas de tu app
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
