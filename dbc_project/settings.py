@@ -150,7 +150,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://drivenbycode.cl',
-    'https://www.drivenbycode.cl'  # si usas www también
+    'https://www.drivenbycode.cl',
 ]
 
 USE_X_FORWARDED_HOST = True
