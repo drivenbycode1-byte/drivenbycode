@@ -22,7 +22,8 @@ from two_factor.urls import urlpatterns as tf_urls
 
 
 urlpatterns = [
-    path('el-perro-verde/', admin.site.urls), # Renombramos el panel
+    path('el-perro-verde/', admin.site.urls), # Blindaje simbólico del panel administrativo
+
 
     path('', include(tf_urls)), # Primero las rutas de 2FA
 
