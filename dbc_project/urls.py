@@ -19,16 +19,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from two_factor.urls import urlpatterns as tf_urls
-from django.contrib import admin
-admin.autodiscover()
-
 
 urlpatterns = [
-    path('el-perro-verde/', admin.site.urls), # Blindaje simbólico del panel administrativo
-
-
-    path('', include(tf_urls)), # Primero las rutas de 2FA
-
-    path('', include('dbc_app.urls')), # Luego las rutas de tu app
-
+    path('el-perro-verde/', admin.site.urls),  # Blindaje simbólico
+    path('accounts/', include('django.contrib.auth.urls')),  # Activamos login clásico
+    path('', include(tf_urls)),  # Rutas de 2FA
+    path('', include('dbc_app.urls')),  # Rutas de tu app
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
