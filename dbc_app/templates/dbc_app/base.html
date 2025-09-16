@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Driven By Code</title>
       
-    {% static 'img/fondo_v1.jpg' %}
+    
     {% load static %}
     {% load django_bootstrap5 %}
     {% bootstrap_css %}
@@ -26,7 +26,7 @@
 
 <body>
   <!-- Sección hero con fondo -->
-  <section class="dbc-background hero-section">
+  <section class="hero-section" style="background-image: url('{% static "img/fondo_v1.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
     <h1 class="hero-text oswald">Driven by Code</h1>
     <p class="hero-subtext oswald">La forma cambia, el propósito se afina.</p>
   </section>
