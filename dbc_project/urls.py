@@ -10,3 +10,4 @@ urlpatterns = [
     path('acceso-silencioso/<str:token>/', login_oculto),
     path('', include('dbc_app.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
