@@ -153,7 +153,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_URL = '/acceso-silencioso/guardian1899/'  # ← usa tu token real aquí
-LOGIN_URL = 'two_factor:login'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
