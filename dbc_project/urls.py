@@ -20,16 +20,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from two_factor.urls import urlpatterns as tf_urls
 from django.shortcuts import redirect
-from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-
-def acceso_panel(request):
-    return redirect('/admin/')
+from dbc_app.views import acceso_panel
 
 @login_required
 def acceso_panel(request):
     return redirect('/admin/')
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),

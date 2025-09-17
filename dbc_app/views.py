@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Topic, Entry
 from django.db.models import Q
-
+from django.shortcuts import redirect
 
 def index(request):
     # Filtrar entradas de los proyectos 1, 2, 3, 4 y 6
@@ -34,3 +34,9 @@ from django.http import JsonResponse
 
 def health_check(request):
     return JsonResponse({'status': 'ok'})
+
+def acceso_panel(request, token):
+    if token == 'tu_token_secreto':
+        return redirect('/admin/')
+    else:
+        return redirect('/')
