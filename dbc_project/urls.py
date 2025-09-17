@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 from two_factor.urls import urlpatterns as tf_urls
 
 urlpatterns = [
-    path('el-perro-verde/', admin.site.urls),  # Panel blindado
-    path('', include(tf_urls)),                # Rutas de 2FA
-    path('', include('dbc_app.urls')),         # Tu app principal
+    path('admin/', admin.site.urls),
+    path('el-perro-verde/', lambda request: redirect('/admin/')),
+    path('', include(tf_urls)),
+    path('', include('dbc_app.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
