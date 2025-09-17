@@ -30,8 +30,8 @@ def todos_los_posts(request):
 def login_oculto(request, token):
     if token == 'guardian1899':
         request.session['ritual_activado'] = True
-        request.session.modified = True  # ← fuerza que Django guarde la sesión
-        return redirect('/perro_verde_sucio/')
+        request.session.modified = True
+        return redirect('/')  # ← redirige al inicio, como debe ser
     return redirect('/')
 
 def acceso_panel(request, token):
