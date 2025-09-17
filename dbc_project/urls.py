@@ -21,9 +21,9 @@ from django.conf.urls.static import static
 from two_factor.urls import urlpatterns as tf_urls
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-from dbc_app.views import acceso_panel
+from dbc_app.views import acceso_panel, login_oculto
 from django.contrib.auth import views as auth_views
-from dbc_app.views import login_oculto
+
 
 
 
