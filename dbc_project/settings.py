@@ -1,8 +1,6 @@
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-import ast
-
 
 
 load_dotenv()
@@ -34,9 +32,9 @@ INSTALLED_APPS = [
 
     # Third Party apps
     'django_bootstrap5',
-    'django_otp',
-    'django_otp.plugins.otp_totp',
-    'two_factor',
+    # 'django_otp',
+    # 'django_otp.plugins.otp_totp',
+    # 'two_factor',
 
    # Default Apps
     'django.contrib.admin',
