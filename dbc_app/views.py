@@ -6,6 +6,9 @@ from django.http import HttpResponse
 import logging
 from .models import IntentoHoneypot
 from .models import UserIP
+from django.utils.timezone import now
+
+
 
 def honeypot(request):
     ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR', 'IP desconocida')
@@ -13,6 +16,9 @@ def honeypot(request):
 
     # Guardar intento en la base de datos
     IntentoHoneypot.objects.create(ip=ip, user_agent=user_agent)
+
+    # Registrar en el log
+    logger.warning(f"[HONEYPOT] Intento desde IP: {ip} | Agente: {user_agent}")
 
     return HttpResponse("<h1>Acceso denegado: esta ruta está protegida</h1>", status=403)
 
@@ -71,26 +77,12 @@ def ver_ip(request):
 
 logger = logging.getLogger(__name__)
 
-def honeypot(request):
-    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR', 'IP desconocida')
-    user_agent = request.META.get('HTTP_USER_AGENT', 'Agente desconocido')
-    logger.warning(f"[HONEYPOT] Intento desde IP: {ip} | Agente: {user_agent}")
-    return HttpResponse("<h1>Acceso denegado: esta ruta está protegida</h1>", status=403)
-
-
-def honeypot(request):
-    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR', 'IP desconocida')
-    user_agent = request.META.get('HTTP_USER_AGENT', 'Agente desconocido')
-
-    # Guardar intento en la base de datos
-    IntentoHoneypot.objects.create(ip=ip, user_agent=user_agent)
-
-    return HttpResponse("<h1>Acceso denegado: esta ruta está protegida</h1>", status=403)
-
-
 def home(request):
     ip = request.META.get('HTTP_X_FORWARDED_FOR', request.META.get('REMOTE_ADDR')).split(',')[0].strip()
     obj, created = UserIP.objects.get_or_create(ip=ip)
     obj.count += 1
+    obj.last_visit = now()
+
+
     obj.save()
     return render(request, 'home.html')

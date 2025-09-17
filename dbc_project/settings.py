@@ -166,10 +166,14 @@ SECURE_HSTS_PRELOAD = True
 INSTALLED_APPS += ['csp']
 MIDDLEWARE += ['csp.middleware.CSPMiddleware']
 
-CSP_DEFAULT_SRC = ("'self'",)
-CSP_STYLE_SRC = ("'self'", 'fonts.googleapis.com')
-CSP_SCRIPT_SRC = ("'self'", 'cdn.jsdelivr.net')
-CSP_FONT_SRC = ("'self'", 'fonts.gstatic.com')
+CONTENT_SECURITY_POLICY = {
+    'directives': {
+        'default-src': ["'self'"],
+        'style-src': ["'self'", "fonts.googleapis.com"],
+        'script-src': ["'self'", "cdn.jsdelivr.net"],
+        'font-src': ["'self'", "fonts.gstatic.com"],
+    }
+}
 
 LOGGING = {
     'version': 1,
