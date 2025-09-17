@@ -9,6 +9,11 @@ class PanelFachadaMiddleware:
         # 1. Permitir acceso al ritual silencioso
         if request.path.startswith('/acceso-silencioso/'):
             return self.get_response(request)
+        
+        if request.path.startswith('/reforzar-ritual/'):
+            return self.get_response(request)
+
+
 
         # 2. Permitir acceso al login, logout y reset
         if request.path.startswith('/perro_verde_sucio/login') or request.path.startswith('/perro_verde_sucio/logout'):
