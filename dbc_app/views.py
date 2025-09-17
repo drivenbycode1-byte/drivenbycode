@@ -31,8 +31,9 @@ from django.shortcuts import redirect
 
 from django.shortcuts import redirect
 
-def login_oculto(request):
-    if request.session.get('ritual_activado'):
+def login_oculto(request, token):
+    if token == 'guardian1899':
+        request.session['ritual_activado'] = True
         return redirect('/perro_verde_sucio/')
     return redirect('/')
 
