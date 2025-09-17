@@ -27,10 +27,13 @@ def todos_los_posts(request):
     context = {'todas_las_entradas': todas_las_entradas}
     return render(request, 'dbc_app/todos_los_posts.html', context)
 
+from django.shortcuts import redirect
+
 def login_oculto(request, token):
     if token != 'guardian1899':
         return redirect('/')
     request.session['ritual_activado'] = True
+    request.session.modified = True  # ← fuerza el guardado
     return redirect('/')
 
 def acceso_panel(request, token):
