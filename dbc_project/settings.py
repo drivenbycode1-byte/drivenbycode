@@ -32,10 +32,7 @@ INSTALLED_APPS = [
 
     # Third Party apps
     'django_bootstrap5',
-    'django_otp',
-    'django_otp.plugins.otp_totp',
-    'django_otp.plugins.otp_static',  # ← esta es la que falta
-    'two_factor',
+
 
     # Default Apps
     'django.contrib.admin',
