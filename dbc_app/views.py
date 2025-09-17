@@ -31,7 +31,7 @@ def login_oculto(request, token):
     if token == 'guardian1899':
         request.session['ritual_activado'] = True
         request.session.modified = True
-        return redirect('/')  # ← redirige al inicio, como debe ser
+        return redirect('/')  # ← redirige al inicio, no al panel
     return redirect('/')
 
 def acceso_panel(request, token):
@@ -39,3 +39,4 @@ def acceso_panel(request, token):
         request.session.modified = True  # ← refuerzo antes de redirigir
         return redirect('/perro_verde_sucio/')
     return HttpResponse("Acceso denegado: ritual no activado", status=403)
+
