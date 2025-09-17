@@ -40,3 +40,8 @@ def acceso_panel(request, token):
         return redirect('/perro_verde_sucio/')
     return HttpResponse("Acceso denegado: ritual no activado", status=403)
 
+def reforzar_ritual_post_login(request):
+    request.session['ritual_activado'] = True
+    request.session.modified = True
+    return redirect('/perro_verde_sucio/')
+

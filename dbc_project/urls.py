@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from dbc_app.views import acceso_panel, login_oculto
+from dbc_app.views import acceso_panel, login_oculto, reforzar_ritual_post_login
 
 
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
     path('el-perro-verde/<str:token>/', acceso_panel),
     path('acceso-silencioso/<str:token>/', login_oculto),
     path('', include('dbc_app.urls')),
+    path('reforzar-ritual/', reforzar_ritual_post_login),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
