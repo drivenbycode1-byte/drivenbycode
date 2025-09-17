@@ -29,12 +29,20 @@ def todos_los_posts(request):
 
 from django.shortcuts import redirect
 
-def login_oculto(request, token):
-    if token != 'guardian1899':
-        return redirect('/')
-    request.session['ritual_activado'] = True
-    request.session.modified = True  # ← fuerza el guardado
-    return redirect('/')
+def login_oculto_panel(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None and request.session.get('ritual_activado'):
+            login(request, user)
+            # Desactivamos el ritual tras el ingreso
+            request.session['ritual_activado'] = False
+            request.session.modified = True
+            return redirect('/perro_verde_sucio/')
+    return render(request, 'dbc_app/login_oculto.html')
+
+
 
 def acceso_panel(request, token):
     if token == 'blindajeTotal1899' and request.session.get('ritual_activado'):

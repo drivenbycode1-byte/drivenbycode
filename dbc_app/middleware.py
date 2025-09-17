@@ -6,17 +6,17 @@ class PanelFachadaMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        # Permitir acceso al login, logout y reset
-        if request.path.startswith('/perro_verde_sucio/login') or request.path.startswith('/perro_verde_sucio/logout'):
+        # Permitir acceso al login
+        if request.path.startswith('/perro_verde_sucio/login'):
             return self.get_response(request)
 
-        # Bloqueo total si no se activó el ritual
+        # Bloqueo si el ritual no está activo
         if request.path.startswith('/perro_verde_sucio/') and not request.session.get('ritual_activado'):
             return HttpResponse("Acceso bloqueado: fachada activa", status=403)
 
-        # Expulsión si el usuario está autenticado sin ritual
+        # Expulsión si el usuario está autenticado pero el ritual ya fue consumido
         if request.path.startswith('/perro_verde_sucio/') and request.user.is_authenticated and not request.session.get('ritual_activado'):
             logout(request)
-            return HttpResponse("Autenticación anulada: el ritual no fue honrado", status=403)
+            return HttpResponse("Autenticación anulada: el ritual ya fue honrado", status=403)
 
         return self.get_response(request)
