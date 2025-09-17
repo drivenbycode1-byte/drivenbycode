@@ -152,3 +152,48 @@ LOGIN_URL = '/acceso-silencioso/guardian1899/'  # ← usa tu token real aquí
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
+
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+SECURE_HSTS_SECONDS = 31536000  # 1 año
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+INSTALLED_APPS += ['csp']
+
+MIDDLEWARE += ['csp.middleware.CSPMiddleware']
+
+CONTENT_SECURITY_POLICY = {
+    'DIRECTIVES': {
+        'default-src': ("'self'",),
+        'font-src': ("'self'", 'fonts.gstatic.com'),
+        'script-src': ("'self'", 'cdn.jsdelivr.net'),
+        'style-src': ("'self'", 'fonts.googleapis.com'),
+    }
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'honeypot_file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': 'honeypot.log',
+        },
+        'console': {
+            'level': 'WARNING',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'honeypot_file'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+    },
+}

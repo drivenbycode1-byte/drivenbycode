@@ -3,6 +3,18 @@ from .models import Topic, Entry
 from django.db.models import Q
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
+import logging
+from .models import IntentoHoneypot
+
+def honeypot(request):
+    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR', 'IP desconocida')
+    user_agent = request.META.get('HTTP_USER_AGENT', 'Agente desconocido')
+
+    # Guardar intento en la base de datos
+    IntentoHoneypot.objects.create(ip=ip, user_agent=user_agent)
+
+    return HttpResponse("<h1>Acceso denegado: esta ruta está protegida</h1>", status=403)
+
 
 def index(request):
     blog_entries = Entry.objects.filter(
@@ -54,3 +66,22 @@ def ver_ip(request):
         IP via HTTP_X_FORWARDED_FOR: {ip_forwarded}<br>
         IP via REMOTE_ADDR: {ip_remote}
     """)
+
+
+logger = logging.getLogger(__name__)
+
+def honeypot(request):
+    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR', 'IP desconocida')
+    user_agent = request.META.get('HTTP_USER_AGENT', 'Agente desconocido')
+    logger.warning(f"[HONEYPOT] Intento desde IP: {ip} | Agente: {user_agent}")
+    return HttpResponse("<h1>Acceso denegado: esta ruta está protegida</h1>", status=403)
+
+
+def honeypot(request):
+    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR', 'IP desconocida')
+    user_agent = request.META.get('HTTP_USER_AGENT', 'Agente desconocido')
+
+    # Guardar intento en la base de datos
+    IntentoHoneypot.objects.create(ip=ip, user_agent=user_agent)
+
+    return HttpResponse("<h1>Acceso denegado: esta ruta está protegida</h1>", status=403)

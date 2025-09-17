@@ -1,4 +1,5 @@
 from django.contrib import admin
+from .models import IntentoHoneypot
 
 # Register your models here.
 
@@ -6,3 +7,8 @@ from .models import Topic, Entry
 
 admin.site.register(Topic)
 admin.site.register(Entry)
+
+@admin.register(IntentoHoneypot)
+class IntentoHoneypotAdmin(admin.ModelAdmin):
+    list_display = ('ip', 'fecha')
+    readonly_fields = ('ip', 'user_agent', 'fecha')

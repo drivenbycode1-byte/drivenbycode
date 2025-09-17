@@ -2,6 +2,7 @@
 from django.urls import path
 from . import views
 
+
 app_name = 'dbc_app'
 urlpatterns = [
     path('ver-ip/', views.ver_ip),

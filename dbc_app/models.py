@@ -24,3 +24,11 @@ class Entry(models.Model):
             return f"{self.text[:50]}..."
         else:
             return self.text
+        
+class IntentoHoneypot(models.Model):
+    ip = models.CharField(max_length=45)
+    user_agent = models.TextField()
+    fecha = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Intento desde {self.ip} el {self.fecha.strftime('%Y-%m-%d %H:%M:%S')}"
