@@ -161,5 +161,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-LOGIN_URL = '/el-perro-verde/login/'
-#LOGIN_REDIRECT_URL = '/el-perro-verde/'
