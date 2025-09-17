@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 
     # Third Party apps
     'django_bootstrap5',
+    
 
 
     # Default Apps
@@ -163,17 +164,12 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 
 INSTALLED_APPS += ['csp']
-
 MIDDLEWARE += ['csp.middleware.CSPMiddleware']
 
-CONTENT_SECURITY_POLICY = {
-    'DIRECTIVES': {
-        'default-src': ("'self'",),
-        'font-src': ("'self'", 'fonts.gstatic.com'),
-        'script-src': ("'self'", 'cdn.jsdelivr.net'),
-        'style-src': ("'self'", 'fonts.googleapis.com'),
-    }
-}
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_STYLE_SRC = ("'self'", 'fonts.googleapis.com')
+CSP_SCRIPT_SRC = ("'self'", 'cdn.jsdelivr.net')
+CSP_FONT_SRC = ("'self'", 'fonts.gstatic.com')
 
 LOGGING = {
     'version': 1,
