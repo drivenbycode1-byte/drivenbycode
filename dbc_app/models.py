@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.timezone import now
+
 
 # Create your models here.
 
@@ -32,3 +34,16 @@ class IntentoHoneypot(models.Model):
 
     def __str__(self):
         return f"Intento desde {self.ip} el {self.fecha.strftime('%Y-%m-%d %H:%M:%S')}"
+    
+class VisitNumber(models.Model):
+    count = models.IntegerField(default=0)
+    last_visit = models.DateTimeField(null=True, blank=True)
+
+
+    
+class UserIP(models.Model):
+    ip = models.CharField(max_length=45)
+    count = models.IntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.ip} → {self.count} visitas"

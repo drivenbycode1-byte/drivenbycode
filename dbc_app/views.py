@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 import logging
 from .models import IntentoHoneypot
+from .models import UserIP
 
 def honeypot(request):
     ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR', 'IP desconocida')
@@ -85,3 +86,11 @@ def honeypot(request):
     IntentoHoneypot.objects.create(ip=ip, user_agent=user_agent)
 
     return HttpResponse("<h1>Acceso denegado: esta ruta está protegida</h1>", status=403)
+
+
+def home(request):
+    ip = request.META.get('HTTP_X_FORWARDED_FOR', request.META.get('REMOTE_ADDR')).split(',')[0].strip()
+    obj, created = UserIP.objects.get_or_create(ip=ip)
+    obj.count += 1
+    obj.save()
+    return render(request, 'home.html')
