@@ -1,19 +1,4 @@
-"""
-URL configuration for dbc_project project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -22,22 +7,12 @@ from two_factor.urls import urlpatterns as tf_urls
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from dbc_app.views import acceso_panel, login_oculto
-from django.contrib.auth import views as auth_views
 
-
-
-
-@login_required
-def acceso_panel(request):
-    return redirect('/admin/')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('el-perro-verde/', acceso_panel),
     path('', include(tf_urls)),
     path('', include('dbc_app.urls')),
-    path('el-perro-verde/<str:token>/', acceso_panel),
     path('acceso-silencioso/<str:token>/', login_oculto),
-    
-    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
