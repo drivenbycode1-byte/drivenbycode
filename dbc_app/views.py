@@ -29,12 +29,18 @@ def todos_los_posts(request):
 
 from django.shortcuts import redirect
 
+from django.shortcuts import redirect
+
 def login_oculto(request, token):
     if token != 'guardian1899':
         return redirect('/')
+    
+    # Activación del ritual
     request.session['ritual_activado'] = True
-    request.session.modified = True  # ← fuerza el guardado
-    return redirect('/')
+    request.session.modified = True
+
+    # Redirección al flujo extendido de autenticación
+    return redirect('two_factor:login')  # ← activa QR y código temporal
 
 def acceso_panel(request, token):
     if token == 'blindajeTotal1899' and request.session.get('ritual_activado'):
