@@ -21,9 +21,14 @@ from django.conf.urls.static import static
 from two_factor.urls import urlpatterns as tf_urls
 from django.shortcuts import redirect
 
+def acceso_panel(request):
+    return redirect('/admin/')
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('el-perro-verde/', lambda request: redirect('/admin/')),
+    path('el-perro-verde/', acceso_panel),
     path('', include(tf_urls)),
     path('', include('dbc_app.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
