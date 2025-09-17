@@ -36,7 +36,7 @@ def acceso_panel(request, token):
 def login_oculto(request, token):
     if token != 'tu_token_de_autenticacion':
         return redirect('/')
-    usuario = authenticate(username='gIORDANOnIETZCHE1899@', password='tu_contraseña_segura')
+    usuario = authenticate(username='gIORDANOnIETZCHE1899@', password='Gior,.-180Niet!')
     if usuario is not None:
         login(request, usuario)
         return redirect('/el-perro-verde/tu_token_secreto')
