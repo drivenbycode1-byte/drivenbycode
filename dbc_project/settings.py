@@ -169,9 +169,12 @@ MIDDLEWARE += ['csp.middleware.CSPMiddleware']
 CONTENT_SECURITY_POLICY = {
     'directives': {
         'default-src': ["'self'"],
-        'style-src': ["'self'", "fonts.googleapis.com"],
+        'style-src': ["'self'", "fonts.googleapis.com", "'unsafe-inline'"],
         'script-src': ["'self'", "cdn.jsdelivr.net"],
         'font-src': ["'self'", "fonts.gstatic.com"],
+        'img-src': ["'self'", "data:", "blob:"],
+        'media-src': ["'self'"],
+        'connect-src': ["'self'"],
     }
 }
 
