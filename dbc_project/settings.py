@@ -164,15 +164,34 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 
 INSTALLED_APPS += ['csp']
-MIDDLEWARE += ['csp.middleware.CSPMiddleware']
+#MIDDLEWARE += ['csp.middleware.CSPMiddleware']
 
 CONTENT_SECURITY_POLICY = {
     'directives': {
         'default-src': ["'self'"],
-        'style-src': ["'self'", "fonts.googleapis.com", "'unsafe-inline'", "cdn.jsdelivr.net"],
-        'script-src': ["'self'", "cdn.jsdelivr.net", "'unsafe-inline'"],
-        'font-src': ["'self'", "fonts.gstatic.com", "cdn.jsdelivr.net", "data:"],
-        'img-src': ["'self'", "data:", "blob:", "cdn.jsdelivr.net"],
+        'style-src': [
+            "'self'",
+            "'unsafe-inline'",
+            "fonts.googleapis.com",
+            "cdn.jsdelivr.net"
+        ],
+        'script-src': [
+            "'self'",
+            "'unsafe-inline'",
+            "cdn.jsdelivr.net"
+        ],
+        'font-src': [
+            "'self'",
+            "fonts.gstatic.com",
+            "cdn.jsdelivr.net",
+            "data:"
+        ],
+        'img-src': [
+            "'self'",
+            "data:",
+            "blob:",
+            "cdn.jsdelivr.net"
+        ],
         'media-src': ["'self'"],
         'connect-src': ["'self'"],
     }
