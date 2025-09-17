@@ -27,15 +27,13 @@ def todos_los_posts(request):
     context = {'todas_las_entradas': todas_las_entradas}
     return render(request, 'dbc_app/todos_los_posts.html', context)
 
-# 🔐 Ritual de preparación: no hace login, solo redirige al inicio
 def login_oculto(request, token):
     if token != 'guardian1899':
         return redirect('/')
-    return redirect('/')  # Acto simbólico, sin autenticación
+    request.session['ritual_activado'] = True
+    return redirect('/')
 
-# 🛡️ Ritual de acceso: redirige al panel oculto para login manual
 def acceso_panel(request, token):
-    if token == 'blindajeTotal1899':
+    if token == 'blindajeTotal1899' and request.session.get('ritual_activado'):
         return redirect('/perro_verde_sucio/')
-    else:
-        return redirect('/')
+    return HttpResponse("Acceso denegado: ritual no activado", status=403)
