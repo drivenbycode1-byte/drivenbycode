@@ -47,3 +47,10 @@ def reforzar_ritual_post_login(request):
     request.session.modified = True
     return redirect('/perro_verde_sucio/')
 
+def ver_ip(request):
+    ip_forwarded = request.META.get('HTTP_X_FORWARDED_FOR', 'No enviado')
+    ip_remote = request.META.get('REMOTE_ADDR', 'No enviado')
+    return HttpResponse(f"""
+        IP via HTTP_X_FORWARDED_FOR: {ip_forwarded}<br>
+        IP via REMOTE_ADDR: {ip_remote}
+    """)

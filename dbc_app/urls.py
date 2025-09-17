@@ -4,6 +4,7 @@ from . import views
 
 app_name = 'dbc_app'
 urlpatterns = [
+    path('ver-ip/', views.ver_ip),
     path('', views.index, name='index'),
     path('indice/', views.indice, name='indice'),
     path('indice/<int:dbc_id>', views.proyectos, name='proyectos'),
