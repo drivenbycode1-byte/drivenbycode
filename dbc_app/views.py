@@ -27,16 +27,13 @@ def todos_los_posts(request):
     context = {'todas_las_entradas': todas_las_entradas}
     return render(request, 'dbc_app/todos_los_posts.html', context)
 
+# 🔐 Ritual de preparación: no hace login, solo redirige al inicio
 def login_oculto(request, token):
     if token != 'guardian1899':
         return redirect('/')
-    usuario = authenticate(username='gIORDANOnIETZCHE1899@', password='Gior,.-180Niet!')
-    if usuario is not None:
-        login(request, usuario)
-        return redirect('/el-perro-verde/blindajeTotal1899')
-    else:
-        return HttpResponse("Acceso denegado", status=403)
+    return redirect('/')  # Acto simbólico, sin autenticación
 
+# 🛡️ Ritual de acceso: redirige al panel oculto para login manual
 def acceso_panel(request, token):
     if token == 'blindajeTotal1899':
         return redirect('/perro_verde_sucio/')
