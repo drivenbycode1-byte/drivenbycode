@@ -22,6 +22,7 @@ from two_factor.urls import urlpatterns as tf_urls
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from dbc_app.views import acceso_panel
+from django.contrib.auth import views as auth_views
 
 @login_required
 def acceso_panel(request):
