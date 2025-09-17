@@ -39,6 +39,6 @@ def login_oculto(request, token):
 
 def acceso_panel(request, token):
     if token == 'blindajeTotal1899':
-        return redirect('/admin/')
+        return redirect('/perro_verde_sucio/')
     else:
         return redirect('/')

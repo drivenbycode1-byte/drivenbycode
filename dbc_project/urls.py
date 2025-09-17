@@ -5,7 +5,8 @@ from django.conf.urls.static import static
 from dbc_app.views import acceso_panel, login_oculto
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+    path('perro_verde_sucio/', admin.site.urls),
     path('el-perro-verde/<str:token>/', acceso_panel),
     path('acceso-silencioso/<str:token>/', login_oculto),
     path('', include('dbc_app.urls')),
