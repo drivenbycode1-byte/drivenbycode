@@ -19,10 +19,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from two_factor.urls import urlpatterns as tf_urls
+from django.contrib.auth.views import LoginView  # o tu propia CustomLoginView
 
 urlpatterns = [
     path('el-perro-verde/', admin.site.urls),  # Panel blindado
-    path('accounts/', include('django.contrib.auth.urls')),  # Login clásico
+    path('el-perro-verde/login/', LoginView.as_view(template_name='registration/login.html'), name='login'),  # Login ritualizado
     path('', include(tf_urls)),  # Rutas de 2FA
     path('', include('dbc_app.urls')),  # Tu app principal
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
