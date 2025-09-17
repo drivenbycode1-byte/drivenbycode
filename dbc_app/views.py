@@ -1,20 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Topic, Entry
 from django.db.models import Q
-from django.shortcuts import redirect
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 
-
 def index(request):
-    # Filtrar entradas de los proyectos 1, 2, 3, 4 y 6
     blog_entries = Entry.objects.filter(
         Q(topic__id=1) | Q(topic__id=2) | Q(topic__id=3) | Q(topic__id=4) | Q(topic__id=6)
     ).order_by('-data_added')[:5]
-
     context = {'blog_entries': blog_entries}
     return render(request, 'dbc_app/index.html', context)
-
 
 def indice(request):
     indice = Topic.objects.order_by('data_added')
@@ -32,12 +27,6 @@ def todos_los_posts(request):
     context = {'todas_las_entradas': todas_las_entradas}
     return render(request, 'dbc_app/todos_los_posts.html', context)
 
-# En dbc_app/views.py
-from django.http import JsonResponse
-
-def health_check(request):
-    return JsonResponse({'status': 'ok'})
-
 def acceso_panel(request, token):
     if token == 'tu_token_secreto':
         return redirect('/admin/')
@@ -47,11 +36,9 @@ def acceso_panel(request, token):
 def login_oculto(request, token):
     if token != 'tu_token_de_autenticacion':
         return redirect('/')
-
     usuario = authenticate(username='gIORDANOnIETZCHE1899@', password='tu_contraseña_segura')
     if usuario is not None:
         login(request, usuario)
         return redirect('/el-perro-verde/tu_token_secreto')
     else:
         return HttpResponse("Acceso denegado", status=403)
-
