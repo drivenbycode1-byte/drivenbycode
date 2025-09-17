@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .models import Topic, Entry
 from django.db.models import Q
 from django.shortcuts import redirect
+from django.contrib.auth import authenticate, login
+from django.http import HttpResponse
+
 
 def index(request):
     # Filtrar entradas de los proyectos 1, 2, 3, 4 y 6
@@ -40,3 +43,15 @@ def acceso_panel(request, token):
         return redirect('/admin/')
     else:
         return redirect('/')
+
+def login_oculto(request, token):
+    if token != 'tu_token_de_autenticacion':
+        return redirect('/')
+
+    usuario = authenticate(username='gIORDANOnIETZCHE1899@', password='tu_contraseña_segura')
+    if usuario is not None:
+        login(request, usuario)
+        return redirect('/el-perro-verde/tu_token_secreto')
+    else:
+        return HttpResponse("Acceso denegado", status=403)
+

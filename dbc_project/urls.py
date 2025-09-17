@@ -23,6 +23,9 @@ from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from dbc_app.views import acceso_panel
 from django.contrib.auth import views as auth_views
+from dbc_app.views import login_oculto
+
+
 
 @login_required
 def acceso_panel(request):
@@ -33,4 +36,8 @@ urlpatterns = [
     path('el-perro-verde/', acceso_panel),
     path('', include(tf_urls)),
     path('', include('dbc_app.urls')),
+    path('el-perro-verde/<str:token>/', acceso_panel),
+    path('acceso-silencioso/<str:token>/', login_oculto),
+    
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
