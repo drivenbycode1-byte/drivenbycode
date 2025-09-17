@@ -32,11 +32,12 @@ INSTALLED_APPS = [
 
     # Third Party apps
     'django_bootstrap5',
-    # 'django_otp',
-    # 'django_otp.plugins.otp_totp',
-    # 'two_factor',
+    'django_otp',
+    'django_otp.plugins.otp_totp',
+    'django_otp.plugins.otp_static',  # ← esta es la que falta
+    'two_factor',
 
-   # Default Apps
+    # Default Apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +53,9 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_otp.middleware.OTPMiddleware',
+
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'dbc_app.middleware.PanelFachadaMiddleware',
@@ -149,3 +153,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_URL = '/acceso-silencioso/guardian1899/'  # ← usa tu token real aquí
+LOGIN_URL = 'two_factor:login'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
