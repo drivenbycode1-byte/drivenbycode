@@ -2,7 +2,9 @@ services:
   - type: web
     name: drivenbycode
     env: python
-    buildCommand: ""
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
     startCommand: gunicorn dbc_project.wsgi:application
     envVars:
       - fromFile: .env
