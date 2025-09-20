@@ -1,0 +1,12 @@
+<h1>Dashboard de visitas</h1>
+
+<p><strong>Total visitas:</strong> {{ total_visits }}</p>
+<p><strong>Últimas 24 horas:</strong> {{ last_24h_visits }}</p>
+<p><strong>Visitantes únicos:</strong> {{ unique_visits }}</p>
+
+<h2>Páginas más visitadas</h2>
+<ul>
+  {% for page in popular_pages %}
+    <li>{{ page.path }} - {{ page.visits }} visitas</li>
+  {% endfor %}
+</ul>
