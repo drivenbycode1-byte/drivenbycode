@@ -107,4 +107,4 @@ def dashboard(request):
         'unique_visits': unique_visits,
         'popular_pages': popular_pages,
     }
-    return render(request, 'dbc_app/dashboard.html', context)
+    return render(request, 'dbc_app/ding_dong_dashboard.html', context)
