@@ -1,4 +1,4 @@
-from .models import Visit
+from dbc_app.models import Visit
 
 class TrackVisitsMiddleware:
     def __init__(self, get_response):
