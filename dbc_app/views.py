@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
-from .models import Topic, Entry
-from django.db.models import Q
+from .models import Topic, Entry, Visit
+from django.db.models import Q, Count
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 import logging
 from .models import IntentoHoneypot
 from .models import UserIP
-from django.utils.timezone import now
+from django.utils.timezone import now, timedelta
 
 
 
@@ -86,3 +86,25 @@ def home(request):
 
     obj.save()
     return render(request, 'home.html')
+
+def dashboard(request):
+    # Total visitas
+    total_visits = Visit.objects.count()
+    
+    # Últimas 24h
+    yesterday = now() - timedelta(days=1)
+    last_24h_visits = Visit.objects.filter(timestamp__gte=yesterday).count()
+    
+    # Visitantes únicos por IP
+    unique_visits = Visit.objects.values('ip').distinct().count()
+    
+    # Páginas más visitadas
+    popular_pages = Visit.objects.values('path').annotate(visits=Count('path')).order_by('-visits')[:10]
+    
+    context = {
+        'total_visits': total_visits,
+        'last_24h_visits': last_24h_visits,
+        'unique_visits': unique_visits,
+        'popular_pages': popular_pages,
+    }
+    return render(request, 'dbc_app/dashboard.html', context)
