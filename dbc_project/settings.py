@@ -55,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'dbc_app.middleware.PanelFachadaMiddleware',  # ← aquí está tu blindaje
+    'dbc_app.middleware.track_visits.TrackVisitsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'dbc_project.urls'
