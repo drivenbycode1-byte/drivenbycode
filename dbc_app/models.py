@@ -40,3 +40,14 @@ class UserIP(models.Model):
 
     def __str__(self):
         return f"{self.count} visitas (última: {self.last_visit.strftime('%Y-%m-%d %H:%M:%S') if self.last_visit else 'sin registro'})"
+
+from django.db import models
+
+class Visit(models.Model):
+    ip = models.GenericIPAddressField()
+    path = models.CharField(max_length=255)
+    user_agent = models.CharField(max_length=255)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.ip} - {self.path} - {self.timestamp}"
