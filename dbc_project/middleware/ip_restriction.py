@@ -1,6 +1,9 @@
 from django.http import HttpResponseForbidden
 
-ALLOWED_IPS = ['181.43.202.246']  # ← Tu IP confiable
+ALLOWED_IPS = [
+    '181.43.202.246' # ← Tu IP confiable PC
+    '152.230.28.68'  # ← Tu IP confiable Laptop
+]  # ← Tu IP confiable PC
 
 PROTECTED_PATHS = [
     '/admin/',
