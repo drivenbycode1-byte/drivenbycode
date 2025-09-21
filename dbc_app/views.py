@@ -148,7 +148,7 @@ def proyectos(request, dbc_id):
     # Caso normal: usar Entry del Topic
     topic = get_object_or_404(Topic, id=dbc_id)
     entries = Entry.objects.filter(topic=topic).order_by('-data_added')
-    return render(request, "dbc_app/proyecto.html", {
+    return render(request, "dbc_app/proyectos.html", {
         "proyectos": topic,
         "descripcion": entries
     })
