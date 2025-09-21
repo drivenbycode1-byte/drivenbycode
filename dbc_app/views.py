@@ -40,7 +40,6 @@ def index(request):
     ).order_by('-data_added')[:5])
 
     # Leer Markdown del contenido
-    CONTENT_DIR = os.path.join(BASE_DIR, 'content')  # Ajusta tu path
     md_posts = []
     if os.path.exists(CONTENT_DIR):
         for filename in sorted(os.listdir(CONTENT_DIR), reverse=True):
