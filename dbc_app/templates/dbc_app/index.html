@@ -1,21 +1,20 @@
 {% extends 'dbc_app/base.html' %}
 
 {% block page_header %}
-    <div class="p-3 mb-4 ">
-        <div class="container-fluid py-4">
-            <h1 class="display-5 oswald-subrayado">¡Hola!</h1>
-
-            <p class="lead oswald">Mi nombre es Diego Silva Baeza y en diciembre del año 2023 sufrí un accidente en moto que me provocó 
-                una lesión medular y me dejó con una paraplejia incompleta a nivel T4.
-    Creé esta página para que sea una ventana en donde puedan asomarse y ver una parte de mi vida, y también para poder
-    aludir a quienes se sientan en lo más profundo. 
-    Publicaré mis proyectos, mis avances con la electroestimulación, mi recorrido por el paraatletismo,
-    mi pasión por la programación, expresaré mis pensamientos en el blog y estaré dando noticias de mi primer libro.<br>
-    <br>¡Que el viaje y el final valgan la pena!
-            </p>
-            
-        </div>
-    </div>
+<div class="p-3 mb-4">
+  <div class="container-fluid py-4">
+    <h1 class="display-5 oswald-subrayado">¡Hola!</h1>
+    <p class="lead oswald">
+      Mi nombre es Diego Silva Baeza y en diciembre del año 2023 sufrí un accidente en moto que me provocó 
+      una lesión medular y me dejó con una paraplejia incompleta a nivel T4.
+      Creé esta página para que sea una ventana en donde puedan asomarse y ver una parte de mi vida, y también para poder
+      aludir a quienes se sientan en lo más profundo. 
+      Publicaré mis proyectos, mis avances con la electroestimulación, mi recorrido por el paraatletismo,
+      mi pasión por la programación, expresaré mis pensamientos en el blog y estaré dando noticias de mi primer libro.<br><br>
+      ¡Que el viaje y el final valgan la pena!
+    </p>
+  </div>
+</div>
 {% endblock page_header %}
 
 {% block content %}
@@ -38,24 +37,21 @@
               <a href="{% url 'dbc_app:proyectos' entry.topic.id %}" class="btn btn-outline-dark btn-sm mt-2">
                 Leer más →
               </a>
+              <span class="badge 
+                {% if entry.topic.id == 1 %}bg-primary
+                {% elif entry.topic.id == 2 %}bg-secondary
+                {% elif entry.topic.id == 3 %}bg-success
+                {% elif entry.topic.id == 4 %}bg-warning
+                {% elif entry.topic.id == 6 %}bg-danger
+                {% else %}bg-secondary{% endif %}
+              mt-2 d-inline-block">
+                Categoría: {{ entry.topic.text }}
+              </span>
             {% else %}
               <a href="/indice/2" class="btn btn-outline-secondary btn-sm mt-2">
                 Leer más →
               </a>
             {% endif %}
-          </div>
-        {% endfor %}
-      </div>
-            <span class="badge 
-              {% if entry.topic.id == 1 %}bg-primary
-              {% elif entry.topic.id == 2 %}bg-secondary
-              {% elif entry.topic.id == 3 %}bg-success
-              {% elif entry.topic.id == 4 %}bg-warning
-              {% elif entry.topic.id == 6 %}bg-danger
-              {% else %}bg-secondary{% endif %}
-            ">
-              Categoría: {{ entry.topic.text }}
-            </span>
           </div>
         {% endfor %}
       </div>
@@ -77,18 +73,15 @@
     <p class="text-muted medium text-center mt-2">Sígueme en el viaje</p>
 
     <div class="d-flex flex-md-column justify-content-md-start align-items-center gap-3">
-        <a href="https://www.instagram.com/spiritinmotion__/" target="_blank" class="text-decoration-none">
-          <i class="bi bi-instagram bi-instagram fs-3"></i>
-        </a>
-        <a href="https://www.tiktok.com/@diegosilvabaeza" target="_blank" class="text-decoration-none">
-          <i class="bi bi-tiktok fs-3"></i>
-        </a>
-        <a href="https://www.youtube.com/@SpiritInMotion__" target="_blank" class="text-decoration-none">
-          <i class="bi bi-youtube fs-3"></i>
-        </a>
-
-
-      <!-- Podés agregar más íconos aquí -->
+      <a href="https://www.instagram.com/spiritinmotion__/" target="_blank" class="text-decoration-none">
+        <i class="bi bi-instagram fs-3"></i>
+      </a>
+      <a href="https://www.tiktok.com/@diegosilvabaeza" target="_blank" class="text-decoration-none">
+        <i class="bi bi-tiktok fs-3"></i>
+      </a>
+      <a href="https://www.youtube.com/@SpiritInMotion__" target="_blank" class="text-decoration-none">
+        <i class="bi bi-youtube fs-3"></i>
+      </a>
     </div>
   </div>
 </div>
