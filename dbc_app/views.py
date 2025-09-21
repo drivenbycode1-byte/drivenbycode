@@ -110,21 +110,21 @@ def dashboard(request):
     }
     return render(request, 'dbc_app/ding_dong_dashboard.html', context)
 
-def proyecto_detail(request, proyecto_id):
-    from .models import Proyecto, Descripcion
+#def proyecto_detail(request, proyecto_id):
+ #   from .models import Proyecto, Descripcion
 
-    proyectos = Proyecto.objects.get(id=proyecto_id)
-    descripcion = Descripcion.objects.filter(proyecto=proyectos)
+  #  proyectos = Proyecto.objects.get(id=proyecto_id)
+   # descripcion = Descripcion.objects.filter(proyecto=proyectos)
 
     # Si es el blog de "Combatir la depresión"
-    if proyecto_id == 2:  # o el id que quieras asignar
-        md_path = os.path.join(os.path.dirname(__file__), 'content', 'combatir_depresion.md')
-        with open(md_path, 'r', encoding='utf-8') as f:
-            md_text = f.read()
-        html_text = markdown2.markdown(md_text)
-        descripcion = [{'title': '', 'text': html_text, 'data_added': ''}]
+#    if proyecto_id == 2:  # o el id que quieras asignar
+ #       md_path = os.path.join(os.path.dirname(__file__), 'content', 'combatir_depresion.md')
+  #      with open(md_path, 'r', encoding='utf-8') as f:
+   #         md_text = f.read()
+    #    html_text = markdown2.markdown(md_text)
+     #   descripcion = [{'title': '', 'text': html_text, 'data_added': ''}]
 
-    return render(request, 'dbc_app/proyecto_detail.html', {
-        'proyectos': proyectos,
-        'descripcion': descripcion
-    })
+   # return render(request, 'dbc_app/proyecto_detail.html', {
+    #    'proyectos': proyectos,
+     #   'descripcion': descripcion
+   # })
