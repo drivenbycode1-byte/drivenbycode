@@ -1,14 +1,16 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Topic, Entry, Visit
 from django.db.models import Q, Count
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 import logging
 from .models import IntentoHoneypot
-from .models import UserIP
+from .models import UserIP, Proyecto
 from django.utils.timezone import now, timedelta
 import os
-import markdown2
+import markdown
+from pathlib import Path
+from datetime import datetime
 
 
 def honeypot(request):
@@ -110,21 +112,43 @@ def dashboard(request):
     }
     return render(request, 'dbc_app/ding_dong_dashboard.html', context)
 
-#def proyecto_detail(request, proyecto_id):
- #   from .models import Proyecto, Descripcion
+# Carpeta donde guardas tus archivos .md
+CONTENT_DIR = os.path.join(os.path.dirname(__file__), "content")
 
-  #  proyectos = Proyecto.objects.get(id=proyecto_id)
-   # descripcion = Descripcion.objects.filter(proyecto=proyectos)
+def proyectos(request, dbc_id):
+    # Caso especial: blog en dbc_id == 3
+    if dbc_id == 3:
+        posts = []
+        if os.path.exists(CONTENT_DIR):
+            for filename in sorted(os.listdir(CONTENT_DIR), reverse=True):
+                if filename.endswith(".md"):
+                    filepath = os.path.join(CONTENT_DIR, filename)
+                    with open(filepath, "r", encoding="utf-8") as f:
+                        text = f.read()
+                    html = markdown.markdown(text, extensions=["extra", "nl2br"])
+                    
+                    # Extraer fecha del nombre del archivo (si lo nombras tipo 2025-09-21-mi-post.md)
+                    try:
+                        date_str = "-".join(filename.split("-")[:3])
+                        date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+                    except:
+                        date_obj = None
 
-    # Si es el blog de "Combatir la depresión"
-#    if proyecto_id == 2:  # o el id que quieras asignar
- #       md_path = os.path.join(os.path.dirname(__file__), 'content', 'combatir_depresion.md')
-  #      with open(md_path, 'r', encoding='utf-8') as f:
-   #         md_text = f.read()
-    #    html_text = markdown2.markdown(md_text)
-     #   descripcion = [{'title': '', 'text': html_text, 'data_added': ''}]
+                    posts.append({
+                        "title": filename.replace(".md",""),
+                        "text": html,
+                        "data_added": date_obj
+                    })
 
-   # return render(request, 'dbc_app/proyecto_detail.html', {
-    #    'proyectos': proyectos,
-     #   'descripcion': descripcion
-   # })
+        return render(request, "dbc_app/proyecto.html", {
+            "proyectos": {"id": 3, "text": "Blog"},
+            "descripcion": posts
+        })
+
+    # Caso normal: usar Entry
+    topic = get_object_or_404(Topic, id=dbc_id)
+    entries = Entry.objects.filter(topic=topic).order_by('-data_added')
+    return render(request, "dbc_app/proyecto.html", {
+        "proyectos": topic,
+        "descripcion": entries
+    })
