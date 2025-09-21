@@ -31,7 +31,7 @@
               Publicado el {{ entry.data_added|date:"d M Y H:i" }}
             </small>
             <h4>{{ entry.title }}</h4>
-            <p>{{ entry.text|truncatewords:85 }}...</p>
+            <p>{{ entry.text|safe }}...</p>
 
             {% if entry.topic %}
               <a href="{% url 'dbc_app:proyectos' entry.topic.id %}" class="btn btn-outline-dark btn-sm mt-2">
