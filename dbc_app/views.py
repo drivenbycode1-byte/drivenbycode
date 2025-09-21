@@ -68,7 +68,14 @@ def index(request):
 
     # Combinar y ordenar por fecha
     all_entries = blog_entries + md_posts
-    all_entries.sort(key=lambda x: getattr(x, 'data_added', x.get('data_added', datetime.min)), reverse=True)
+    
+        def get_date(entry):
+            if isinstance(entry, dict):
+                return entry.get("data_added") or datetime.min
+            else:
+                return getattr(entry, "data_added", datetime.min)
+
+    all_entries.sort(key=get_date, reverse=True)
 
     context = {'blog_entries': all_entries}
     return render(request, 'dbc_app/index.html', context)
