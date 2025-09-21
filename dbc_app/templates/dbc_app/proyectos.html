@@ -15,27 +15,25 @@
   {% endif %}
 {% endblock page_header %}
 
-
-
-
 {% block content %}
 
-    <ul>
-        {% for d in descripcion %}
-        <div class="mb-4 p-3 border rounded bg-white text-start">
-            {% if proyectos.id != 1 and proyectos.id != 5 %}
-                <small class="text-muted d-block mb-2">
-                    Publicado el {{ d.data_added|date:"d M Y H:i" }}
-                </small>
-                <h4>{{ d.title }}</h4>
-            {% endif %}
-                
-                <p>{{ d.text|safe }}</p>
-            </div>
-        {% empty %}
-        <li>No hay descripción todavía.</li>
-        {% endfor %}
-    </ul>
+  <ul>
+      {% for d in descripcion %}
+      <div class="mb-4 p-3 border rounded bg-white text-start">
+          {% if proyectos.id != 1 and proyectos.id != 5 %}
+              <small class="text-muted d-block mb-2">
+                  {% if d.data_added %}
+                      Publicado el {{ d.data_added|date:"d M Y" }}
+                  {% endif %}
+              </small>
+              <h4>{{ d.title }}</h4>
+          {% endif %}
+          <p>{{ d.text|safe }}</p>
+      </div>
+      {% empty %}
+      <li>No hay descripción todavía.</li>
+      {% endfor %}
+  </ul>
 
 {% if proyectos.id == 1 %}
   <div class="mt-4 d-flex flex-column gap-3 align-items-start">
