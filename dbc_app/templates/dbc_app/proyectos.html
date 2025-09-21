@@ -28,12 +28,21 @@
                 </small>
                 <h4>{{ d.title }}</h4>
             {% endif %}
-            {{ d.text|linebreaks|safe }}
+
+            {% if proyectos.id == 3 %}
+                {# Es Markdown, ya es HTML #}
+                {{ d.text|safe }}
+            {% else %}
+                {# Es contenido del panel de Django, convertir saltos de línea #}
+                {{ d.text|linebreaks }}
+            {% endif %}
+
         </div>
     {% empty %}
         <p>No hay descripción todavía.</p>
     {% endfor %}
 </div>
+
 
 {% if proyectos.id == 1 %}
   <div class="mt-4 d-flex flex-column gap-3 align-items-start">
