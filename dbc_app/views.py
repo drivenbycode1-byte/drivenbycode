@@ -30,10 +30,46 @@ def honeypot(request):
 
 
 def index(request):
-    blog_entries = Entry.objects.filter(
-        Q(topic__id=1) | Q(topic__id=2) | Q(topic__id=3) | Q(topic__id=4) | Q(topic__id=6)
-    ).order_by('-data_added')[:5]
-    context = {'blog_entries': blog_entries}
+    from datetime import datetime
+    import os, yaml, markdown
+
+    blog_entries = list(Entry.objects.filter(
+        Q(topic__id__in=[1,2,3,4,6])
+    ).order_by('-data_added')[:5])
+
+    # Leer Markdown del contenido
+    CONTENT_DIR = os.path.join(BASE_DIR, 'content')  # Ajusta tu path
+    md_posts = []
+    if os.path.exists(CONTENT_DIR):
+        for filename in sorted(os.listdir(CONTENT_DIR), reverse=True):
+            if filename.endswith(".md"):
+                filepath = os.path.join(CONTENT_DIR, filename)
+                with open(filepath, "r", encoding="utf-8") as f:
+                    content = f.read()
+                if content.startswith('---'):
+                    _, front_matter, text = content.split('---', 2)
+                    metadata = yaml.safe_load(front_matter)
+                    title = metadata.get("title", filename.replace(".md",""))
+                    date_obj = metadata.get("date")
+                    if date_obj:
+                        date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+                else:
+                    title = filename.replace(".md","")
+                    text = content
+                    date_obj = None
+
+                html = markdown.markdown(text, extensions=["extra", "nl2br"])
+                md_posts.append({
+                    "title": title,
+                    "text": html,
+                    "data_added": date_obj
+                })
+
+    # Combinar y ordenar por fecha
+    all_entries = blog_entries + md_posts
+    all_entries.sort(key=lambda x: getattr(x, 'data_added', x.get('data_added', datetime.min)), reverse=True)
+
+    context = {'blog_entries': all_entries}
     return render(request, 'dbc_app/index.html', context)
 
 def indice(request):
