@@ -56,9 +56,17 @@ def index(request):
                     text = content
                     date_obj = None
 
-                html = markdown.markdown(text, extensions=['extra', 'nl2br'])
-                md_posts.append({'title': title, 'text': html, 'data_added': date_obj})
-
+                # Truncar a 85 palabras antes de convertir a HTML
+                raw_excerpt = ' '.join(text.split()[:85])
+                html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
+    
+                md_posts.append({
+                    'title': title,
+                    'text': html_excerpt,
+                    'data_added': date_obj,
+                    'dbc_id': 2  # si quieres usarlo en el template
+                })
+    
     # Combinar y ordenar por fecha
     all_entries = blog_entries + md_posts
 
