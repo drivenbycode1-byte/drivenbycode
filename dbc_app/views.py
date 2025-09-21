@@ -29,64 +29,54 @@ def honeypot(request):
 
     return HttpResponse("<h1>Acceso denegado: esta ruta está protegida</h1>", status=403)
 
-CONTENT_DIR = os.path.join(os.path.dirname(__file__), "content/indice")  # ajusta ruta si es distinta
+
+CONTENT_DIR = '/path/to/indice/2'  # Ajusta la ruta a tu carpeta de markdown
 
 def index(request):
-    # 1. Traer entries desde la BD
-    blog_entries = list(
-        Entry.objects.filter(
-            Q(topic__id__in=[1, 2, 3, 4, 6])
-        )
-    )
+    # Obtener los entries de la DB
+    blog_entries = list(Entry.objects.filter(Q(topic__id__in=[1,2,3,4,6])))
 
-    # 2. Procesar archivos Markdown
+    # Leer Markdown del contenido
     md_posts = []
     if os.path.exists(CONTENT_DIR):
         for filename in sorted(os.listdir(CONTENT_DIR), reverse=True):
-            if filename.endswith(".md"):
+            if filename.endswith('.md'):
                 filepath = os.path.join(CONTENT_DIR, filename)
-                with open(filepath, "r", encoding="utf-8") as f:
+                with open(filepath, 'r', encoding='utf-8') as f:
                     content = f.read()
-
                 if content.startswith('---'):
                     _, front_matter, text = content.split('---', 2)
                     metadata = yaml.safe_load(front_matter)
-                    title = metadata.get("title", filename.replace(".md", ""))
-                    date_obj = metadata.get("date")
+                    title = metadata.get('title', filename.replace('.md',''))
+                    date_obj = metadata.get('date')
                     if date_obj:
-                        date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+                        date_obj = make_aware(datetime.strptime(str(date_obj), '%Y-%m-%d'))
                 else:
-                    title = filename.replace(".md", "")
+                    title = filename.replace('.md','')
                     text = content
                     date_obj = None
 
-                html = markdown.markdown(text, extensions=["extra", "nl2br"])
-                md_posts.append({
-                    "title": title,
-                    "html_content": html,
-                    "data_added": date_obj
-                })
+                html = markdown.markdown(text, extensions=['extra', 'nl2br'])
+                md_posts.append({'title': title, 'text': html, 'data_added': date_obj})
 
-    # 3. Combinar ambos tipos de contenido
+    # Combinar y ordenar por fecha
     all_entries = blog_entries + md_posts
 
-    # 4. Normalizar fechas para ordenamiento
     def get_date(entry):
         if isinstance(entry, dict):
-            date_obj = entry.get("data_added")
-            if date_obj and date_obj.tzinfo is None:
-                return make_aware(date_obj)
-            return date_obj or datetime.min
+            return entry.get('data_added') or make_aware(datetime.min)
         else:
-            date_obj = getattr(entry, "data_added", None)
-            if date_obj and date_obj.tzinfo is None:
+            date_obj = getattr(entry, 'data_added', None)
+            if date_obj is None:
+                return make_aware(datetime.min)
+            if date_obj.tzinfo is None:
                 return make_aware(date_obj)
-            return date_obj or datetime.min
+            return date_obj
 
     all_entries.sort(key=get_date, reverse=True)
 
-    context = {"blog_entries": all_entries}
-    return render(request, "dbc_app/index.html", context)
+    context = {'blog_entries': all_entries}
+    return render(request, 'dbc_app/index.html', context)
 
 
 def indice(request):
