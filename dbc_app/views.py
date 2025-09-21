@@ -65,6 +65,7 @@ def index(request):
                     'text': html_excerpt,
                     'data_added': date_obj,
                     'dbc_id': 2  # si quieres usarlo en el template
+                    'source': 'markdown'
                 })
     
     # Combinar y ordenar por fecha
