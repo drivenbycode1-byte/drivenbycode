@@ -28,7 +28,7 @@
                 </small>
                 <h4>{{ d.title }}</h4>
             {% endif %}
-            {{ d.text|safe }}
+            {{ d.text|linebreaks|safe }}
         </div>
     {% empty %}
         <p>No hay descripción todavía.</p>
