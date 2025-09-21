@@ -68,17 +68,19 @@ def index(request):
 
     # Combinar y ordenar por fecha
     all_entries = blog_entries + md_posts
-    
-        def get_date(entry):
-            if isinstance(entry, dict):
-                return entry.get("data_added") or datetime.min
-            else:
-                return getattr(entry, "data_added", datetime.min)
+
+    # 👇 Función auxiliar correctamente indentada dentro de index
+    def get_date(entry):
+        if isinstance(entry, dict):
+            return entry.get("data_added") or datetime.min
+        else:
+            return getattr(entry, "data_added", datetime.min)
 
     all_entries.sort(key=get_date, reverse=True)
 
     context = {'blog_entries': all_entries}
     return render(request, 'dbc_app/index.html', context)
+
 
 def indice(request):
     indice = Topic.objects.order_by('data_added')
