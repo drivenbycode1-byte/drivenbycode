@@ -11,6 +11,8 @@ import os
 import markdown
 from pathlib import Path
 from datetime import datetime
+from django.conf import settings
+
 
 
 def honeypot(request):
@@ -37,12 +39,6 @@ def indice(request):
     indice = Topic.objects.order_by('data_added')
     context = {'indice': indice}
     return render(request, 'dbc_app/indice.html', context)
-
-def proyectos(request, dbc_id):
-    proyectos = Topic.objects.get(id=dbc_id)
-    descripcion = proyectos.entry_set.order_by('data_added')
-    context = {'proyectos': proyectos, 'descripcion': descripcion}
-    return render(request, 'dbc_app/proyectos.html', context)
 
 def todos_los_posts(request):
     todas_las_entradas = Entry.objects.order_by('-data_added')
@@ -112,20 +108,29 @@ def dashboard(request):
     }
     return render(request, 'dbc_app/ding_dong_dashboard.html', context)
 
-# Carpeta donde guardas tus archivos .md
-CONTENT_DIR = os.path.join(os.path.dirname(__file__), "content")
+
+CONTENT_DIR = os.path.join(settings.BASE_DIR, "dbc_app", "content")
+
 
 def proyectos(request, dbc_id):
-    # Caso especial: blog en dbc_id == 3
+    """
+    Vista para mostrar un Topic o el blog especial (dbc_id == 3).
+    - Para dbc_id == 3, carga archivos Markdown desde CONTENT_DIR.
+    - Para otros Topics, usa la relación Entry del Topic.
+    """
+    # Caso especial: blog
     if dbc_id == 3:
         posts = []
         if os.path.exists(CONTENT_DIR):
             for filename in sorted(os.listdir(CONTENT_DIR), reverse=True):
                 if filename.endswith(".md"):
                     filepath = os.path.join(CONTENT_DIR, filename)
-                    with open(filepath, "r", encoding="utf-8") as f:
-                        text = f.read()
-                    html = markdown.markdown(text, extensions=["extra", "nl2br"])
+                    try:
+                        with open(filepath, "r", encoding="utf-8") as f:
+                            text = f.read()
+                        html = markdown.markdown(text, extensions=["extra", "nl2br"])
+                    except Exception as e:
+                        html = f"<p>Error al leer el archivo: {e}</p>"
 
                     # Extraer fecha del nombre del archivo (ej: 2025-09-21-mi-post.md)
                     try:
@@ -140,15 +145,17 @@ def proyectos(request, dbc_id):
                         "data_added": date_obj
                     })
 
-        return render(request, "dbc_app/proyecto.html", {
+        context = {
             "proyectos": {"id": 3, "text": "Blog"},
             "descripcion": posts
-        })
+        }
+        return render(request, "dbc_app/proyectos.html", context)
 
     # Caso normal: usar Entry del Topic
     topic = get_object_or_404(Topic, id=dbc_id)
     entries = Entry.objects.filter(topic=topic).order_by('-data_added')
-    return render(request, "dbc_app/proyectos.html", {
+    context = {
         "proyectos": topic,
         "descripcion": entries
-    })
+    }
+    return render(request, "dbc_app/proyectos.html", context)
