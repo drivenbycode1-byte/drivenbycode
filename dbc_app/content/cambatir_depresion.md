@@ -1,5 +1,5 @@
 ---
-title: "Cómo Combatir la Depresión"
+title: "Combatir la Depresión"
 date: "2025-09-21"
 ---
 
