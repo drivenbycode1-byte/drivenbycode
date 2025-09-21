@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 import logging
 from .models import IntentoHoneypot
-from .models import UserIP, Proyecto
+from .models import UserIP
 from django.utils.timezone import now, timedelta
 import os
 import markdown
@@ -126,8 +126,8 @@ def proyectos(request, dbc_id):
                     with open(filepath, "r", encoding="utf-8") as f:
                         text = f.read()
                     html = markdown.markdown(text, extensions=["extra", "nl2br"])
-                    
-                    # Extraer fecha del nombre del archivo (si lo nombras tipo 2025-09-21-mi-post.md)
+
+                    # Extraer fecha del nombre del archivo (ej: 2025-09-21-mi-post.md)
                     try:
                         date_str = "-".join(filename.split("-")[:3])
                         date_obj = datetime.strptime(date_str, "%Y-%m-%d")
@@ -145,7 +145,7 @@ def proyectos(request, dbc_id):
             "descripcion": posts
         })
 
-    # Caso normal: usar Entry
+    # Caso normal: usar Entry del Topic
     topic = get_object_or_404(Topic, id=dbc_id)
     entries = Entry.objects.filter(topic=topic).order_by('-data_added')
     return render(request, "dbc_app/proyecto.html", {
