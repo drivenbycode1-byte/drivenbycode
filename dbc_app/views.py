@@ -6,7 +6,7 @@ from django.http import HttpResponse
 import logging
 from .models import IntentoHoneypot
 from .models import UserIP
-from django.utils.timezone import now, timedelta
+from django.utils.timezone import now, timedelta, make_aware
 import os
 import markdown
 import yaml
@@ -72,9 +72,15 @@ def index(request):
     # 👇 Función auxiliar correctamente indentada dentro de index
     def get_date(entry):
         if isinstance(entry, dict):
-            return entry.get("data_added") or datetime.min
+            date_obj = entry.get("data_added")
+            if date_obj and date_obj.tzinfo is None: # si es naive
+                return make_aware(date_obj)
+            return date_obj or datetime.min
         else:
-            return getattr(entry, "data_added", datetime.min)
+            date_obj = getattr(entry, "data_added", None)
+            if date_obj and date_obj.tzinfo is None:
+                return make_aware(date_obj)
+            return date_obj or datetime.min
 
     all_entries.sort(key=get_date, reverse=True)
 
