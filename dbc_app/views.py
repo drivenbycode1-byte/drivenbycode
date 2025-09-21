@@ -29,6 +29,8 @@ def honeypot(request):
     return HttpResponse("<h1>Acceso denegado: esta ruta está protegida</h1>", status=403)
 
 
+CONTENT_DIR = os.path.join(settings.BASE_DIR, 'content')
+
 def index(request):
     from datetime import datetime
     import os, yaml, markdown
