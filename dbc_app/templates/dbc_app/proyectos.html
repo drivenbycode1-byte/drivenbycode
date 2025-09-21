@@ -30,7 +30,7 @@
                 <h4>{{ d.title }}</h4>
             {% endif %}
                 
-                <p>{{ d.text|linebreaks }}</p>
+                <p>{{ d.text|safe }}</p>
             </div>
         {% empty %}
         <li>No hay descripción todavía.</li>
