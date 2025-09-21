@@ -34,10 +34,18 @@
             <h4>{{ entry.title }}</h4>
             <p>{{ entry.text|truncatewords:85 }}...</p>
 
-            <a href="{% url 'dbc_app:proyectos' entry.topic.id %}" class="btn btn-outline-dark btn-sm mt-2">
-              Leer más →
-            </a>
-
+            {% if entry.topic %}
+              <a href="{% url 'dbc_app:proyectos' entry.topic.id %}" class="btn btn-outline-dark btn-sm mt-2">
+                Leer más →
+              </a>
+            {% else %}
+              <a href="/indice/2" class="btn btn-outline-secondary btn-sm mt-2">
+                Leer más →
+              </a>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
             <span class="badge 
               {% if entry.topic.id == 1 %}bg-primary
               {% elif entry.topic.id == 2 %}bg-secondary
