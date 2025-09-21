@@ -9,6 +9,7 @@ from .models import UserIP
 from django.utils.timezone import now, timedelta
 import os
 import markdown
+import yaml
 from pathlib import Path
 from datetime import datetime
 from django.conf import settings
@@ -115,7 +116,7 @@ CONTENT_DIR = os.path.join(settings.BASE_DIR, "dbc_app", "content")
 def proyectos(request, dbc_id):
     """
     Vista para mostrar un Topic o el blog especial (dbc_id == 3).
-    - Para dbc_id == 3, carga archivos Markdown desde CONTENT_DIR.
+    - Para dbc_id == 3, carga archivos Markdown desde CONTENT_DIR con metadata YAML.
     - Para otros Topics, usa la relación Entry del Topic.
     """
     # Caso especial: blog
@@ -127,20 +128,28 @@ def proyectos(request, dbc_id):
                     filepath = os.path.join(CONTENT_DIR, filename)
                     try:
                         with open(filepath, "r", encoding="utf-8") as f:
-                            text = f.read()
+                            content = f.read()
+                        # Separar metadata YAML si existe
+                        if content.startswith('---'):
+                            _, front_matter, text = content.split('---', 2)
+                            metadata = yaml.safe_load(front_matter)
+                            title = metadata.get("title", filename.replace(".md",""))
+                            date_obj = metadata.get("date")
+                            if date_obj:
+                                date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+                        else:
+                            title = filename.replace(".md","")
+                            text = content
+                            date_obj = None
+
                         html = markdown.markdown(text, extensions=["extra", "nl2br"])
                     except Exception as e:
                         html = f"<p>Error al leer el archivo: {e}</p>"
-
-                    # Extraer fecha del nombre del archivo (ej: 2025-09-21-mi-post.md)
-                    try:
-                        date_str = "-".join(filename.split("-")[:3])
-                        date_obj = datetime.strptime(date_str, "%Y-%m-%d")
-                    except:
+                        title = filename.replace(".md","")
                         date_obj = None
 
                     posts.append({
-                        "title": filename.replace(".md",""),
+                        "title": title,
                         "text": html,
                         "data_added": date_obj
                     })
