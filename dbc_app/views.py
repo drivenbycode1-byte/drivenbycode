@@ -202,7 +202,7 @@ def proyectos(request, dbc_id):
                         text = content
                         date_obj = None
 
-                    html = markdown.markdown(text, extensions=["extra", "nl2br"])
+                    plain_text = text  # sin convertir a HTML
                 except Exception as e:
                     html = f"<p>Error al leer el archivo: {e}</p>"
                     title = file.replace(".md","")
