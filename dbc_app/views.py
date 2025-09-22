@@ -174,7 +174,7 @@ def proyectos(request, dbc_id):
     """
     markdown_map = {
         2: "proximamente.md",
-        3: "combatir_depresion.md"
+        3: "cambatir_depresion.md"
     }
 
     if dbc_id in markdown_map:
