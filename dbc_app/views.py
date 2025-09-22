@@ -168,47 +168,51 @@ CONTENT_DIR = os.path.join(settings.BASE_DIR, "dbc_app", "content")
 def proyectos(request, dbc_id):
     """
     Vista para mostrar un Topic o archivos Markdown especiales.
-    - dbc_id == 3 → blog (Markdown convertido a HTML)
-    - dbc_id == 2 → índice (Markdown como texto plano con saltos de línea)
+    - dbc_id == 2 → proximamente.md
+    - dbc_id == 3 → combatir_depresion.md
     - otros → contenido desde la base de datos
     """
-    if dbc_id in [2, 3]:
+    markdown_map = {
+        2: "proximamente.md",
+        3: "combatir_depresion.md"
+    }
+
+    if dbc_id in markdown_map:
+        filename = markdown_map[dbc_id]
+        filepath = os.path.join(CONTENT_DIR, filename)
         posts = []
-        files = sorted(os.listdir(CONTENT_DIR), reverse=True)
 
-        for file in files:
-            if file.endswith(".md"):
-                filepath = os.path.join(CONTENT_DIR, file)
-                try:
-                    with open(filepath, "r", encoding="utf-8") as f:
-                        content = f.read()
+        if os.path.exists(filepath):
+            try:
+                with open(filepath, "r", encoding="utf-8") as f:
+                    content = f.read()
 
-                    # Separar metadata YAML si existe
-                    if content.startswith('---'):
-                        _, front_matter, text = content.split('---', 2)
-                        metadata = yaml.safe_load(front_matter)
-                        title = metadata.get("title", file.replace(".md", ""))
-                        date_obj = metadata.get("date")
-                        if date_obj:
-                            date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
-                    else:
-                        title = file.replace(".md", "")
-                        text = content
-                        date_obj = None
-
-                    # Convertir a HTML solo si dbc_id == 3
-                    final_text = markdown.markdown(text, extensions=["extra", "nl2br"]) if dbc_id == 3 else text
-
-                except Exception as e:
-                    title = file.replace(".md", "")
-                    final_text = f"Error al leer el archivo: {e}"
+                # Separar metadata YAML si existe
+                if content.startswith('---'):
+                    _, front_matter, text = content.split('---', 2)
+                    metadata = yaml.safe_load(front_matter)
+                    title = metadata.get("title", filename.replace(".md", ""))
+                    date_obj = metadata.get("date")
+                    if date_obj:
+                        date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+                else:
+                    title = filename.replace(".md", "")
+                    text = content
                     date_obj = None
 
-                posts.append({
-                    "title": title,
-                    "text": final_text,
-                    "data_added": date_obj
-                })
+                # Convertir a HTML solo si dbc_id == 3
+                final_text = markdown.markdown(text, extensions=["extra", "nl2br"]) if dbc_id == 3 else text
+
+            except Exception as e:
+                title = filename.replace(".md", "")
+                final_text = f"Error al leer el archivo: {e}"
+                date_obj = None
+
+            posts.append({
+                "title": title,
+                "text": final_text,
+                "data_added": date_obj
+            })
 
         context = {
             "proyectos": {"id": dbc_id, "text": "Blog" if dbc_id == 3 else "Índice"},
