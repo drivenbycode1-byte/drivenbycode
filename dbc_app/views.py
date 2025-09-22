@@ -174,18 +174,14 @@ def proyectos(request, dbc_id):
     """
     # Diccionario que mapea dbc_id a archivo Markdown
     markdown_map = {
-        2: "indice2.md",
+        2: None,
         3: None  # blog lee todos los .md en CONTENT_DIR
     }
 
     # Casos especiales Markdown
-    if dbc_id in markdown_map:
+    if dbc_id in [2, 3]:  # puedes expandir esto si quieres más índices
         posts = []
-        if dbc_id == 3:
-            files = sorted(os.listdir(CONTENT_DIR), reverse=True)
-        else:
-            filename = markdown_map[dbc_id]
-            files = [filename] if filename and os.path.exists(os.path.join(CONTENT_DIR, filename)) else []
+        files = sorted(os.listdir(CONTENT_DIR), reverse=True)
 
         for file in files:
             if file.endswith(".md"):
