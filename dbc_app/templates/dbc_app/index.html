@@ -42,16 +42,29 @@
               <a href="{% url 'dbc_app:proyectos' entry.topic.id %}" class="btn btn-outline-dark btn-sm mt-2">
                 Leer más →
               </a>
-              <span class="badge 
-                {% if entry.topic.id == 1 %}bg-primary
-                {% elif entry.topic.id == 2 %}bg-secondary
-                {% elif entry.topic.id == 3 %}bg-success
-                {% elif entry.topic.id == 4 %}bg-warning
-                {% elif entry.topic.id == 6 %}bg-danger
-                {% else %}bg-secondary{% endif %}
-              mt-2 d-inline-block">
-                Categoría: {{ entry.topic.text }}
-              </span>
+                <span class="badge 
+                  {% if entry.topic %}
+                    {% if entry.topic.id == 1 %}bg-primary
+                    {% elif entry.topic.id == 2 %}bg-secondary
+                    {% elif entry.topic.id == 3 %}bg-success
+                    {% elif entry.topic.id == 4 %}bg-warning
+                    {% elif entry.topic.id == 6 %}bg-danger
+                    {% else %}bg-secondary{% endif %}
+                  {% elif entry.dbc_id %}
+                    {% if entry.dbc_id == 1 %}bg-primary
+                    {% elif entry.dbc_id == 2 %}bg-secondary
+                    {% elif entry.dbc_id == 3 %}bg-success
+                    {% elif entry.dbc_id == 4 %}bg-warning
+                    {% elif entry.dbc_id == 6 %}bg-danger
+                    {% else %}bg-info{% endif %}
+                  {% endif %}
+                mt-2 d-inline-block">
+                  {% if entry.topic %}
+                    Categoría: {{ entry.topic.text }}
+                  {% elif entry.dbc_id %}
+                    Sección especial: índice/{{ entry.dbc_id }}
+                  {% endif %}
+                </span>
             {% else %}
               <a href="{% url 'dbc_app:proyectos' entry.dbc_id %}" class="btn btn-outline-secondary btn-sm mt-2">
                 Leer más →
