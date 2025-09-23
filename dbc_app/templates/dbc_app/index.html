@@ -53,7 +53,7 @@
                 Categoría: {{ entry.topic.text }}
               </span>
             {% else %}
-              <a href="/indice/3" class="btn btn-outline-secondary btn-sm mt-2">
+              <a href="{% url 'dbc_app:proyectos' entry.dbc_id %}" class="btn btn-outline-secondary btn-sm mt-2">
                 Leer más →
               </a>
             {% endif %}
