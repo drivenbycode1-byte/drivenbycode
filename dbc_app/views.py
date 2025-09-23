@@ -59,12 +59,20 @@ def index(request):
                 # Truncar a 85 palabras antes de convertir a HTML
                 raw_excerpt = ' '.join(text.split()[:85])
                 html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
-    
+
+                # Asignar dbc_id según el nombre del archivo
+                if filename == "proximamente.md":
+                    dbc_id = 2
+                elif filename == "cambatir_depresion.md":
+                    dbc_id = 3
+                else:
+                    dbc_id = 0
+                
                 md_posts.append({
                     'title': title,
                     'text': html_excerpt,
                     'data_added': date_obj,
-                    'dbc_id': 2,  # si quieres usarlo en el template
+                    'dbc_id': dbc_id,  # si quieres usarlo en el template
                     'source': 'markdown'
                 })
     
