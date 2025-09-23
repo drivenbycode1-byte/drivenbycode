@@ -211,7 +211,9 @@ def proyectos(request, dbc_id):
             posts.append({
                 "title": title,
                 "text": final_text,
-                "data_added": date_obj
+                "data_added": date_obj,
+                "source": "markdown",
+                "dbc_id": dbc_id
             })
 
         context = {
