@@ -61,7 +61,7 @@ def index(request):
                 html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
 
                 # Asignar dbc_id según el nombre del archivo
-                if filename == "proximamente.md":
+                if filename == "proximamente_1.md":
                     dbc_id = 2
                 elif filename == "cambatir_depresion.md":
                     dbc_id = 3
@@ -176,12 +176,12 @@ CONTENT_DIR = os.path.join(settings.BASE_DIR, "dbc_app", "content")
 def proyectos(request, dbc_id):
     """
     Vista para mostrar un Topic o archivos Markdown especiales.
-    - dbc_id == 2 → proximamente.md
+    - dbc_id == 2 → proximamente_1.md
     - dbc_id == 3 → combatir_depresion.md
     - otros → contenido desde la base de datos
     """
     markdown_map = {
-        2: "proximamente.md",
+        2: "proximamente_1.md",
         3: "cambatir_depresion.md"
     }
 
