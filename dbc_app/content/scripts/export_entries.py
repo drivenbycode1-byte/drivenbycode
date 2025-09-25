@@ -1,6 +1,6 @@
 import os
 from django.core.wsgi import get_wsgi_application
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tu_proyecto.settings")  # reemplaza con tu settings
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dbc_project/settings.py")  # reemplaza con tu settings
 
 application = get_wsgi_application()
 
