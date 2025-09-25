@@ -175,56 +175,56 @@ CONTENT_DIR = os.path.join(settings.BASE_DIR, "dbc_app", "content")
 
 def proyectos(request, dbc_id):
     """
-    Vista para mostrar un Topic o archivos Markdown especiales.
-    - dbc_id == 2 → proximamente_1.md
-    - dbc_id == 3 → combatir_depresion.md
-    - otros → contenido desde la base de datos
+    Vista para mostrar contenido de proyectos.
+    - Si existe una carpeta con archivos Markdown para el dbc_id, los muestra.
+    - Si no, usa contenido desde la base de datos.
     """
-    markdown_map = {
-        2: "proximamente_1.md",
-        3: "cambatir_depresion.md"
-    }
+    folder_path = os.path.join(CONTENT_DIR, f"indice_{dbc_id}")
+    posts = []
 
-    if dbc_id in markdown_map:
-        filename = markdown_map[dbc_id]
-        filepath = os.path.join(CONTENT_DIR, filename)
-        posts = []
+    if os.path.isdir(folder_path):
+        for filename in sorted(os.listdir(folder_path)):
+            if filename.endswith(".md"):
+                filepath = os.path.join(folder_path, filename)
+                try:
+                    with open(filepath, "r", encoding="utf-8") as f:
+                        content = f.read()
 
-        if os.path.exists(filepath):
-            try:
-                with open(filepath, "r", encoding="utf-8") as f:
-                    content = f.read()
+                    # Separar metadata YAML si existe
+                    if content.startswith('---'):
+                        _, front_matter, text = content.split('---', 2)
+                        metadata = yaml.safe_load(front_matter)
+                        title = metadata.get("title", filename.replace(".md", ""))
+                        date_obj = metadata.get("date")
+                        if date_obj:
+                            date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+                    else:
+                        title = filename.replace(".md", "")
+                        text = content
+                        date_obj = None
 
-                # Separar metadata YAML si existe
-                if content.startswith('---'):
-                    _, front_matter, text = content.split('---', 2)
-                    metadata = yaml.safe_load(front_matter)
-                    title = metadata.get("title", filename.replace(".md", ""))
-                    date_obj = metadata.get("date")
-                    tags = metadata.get("tags", [])
-                    if date_obj:
-                        date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
-                else:
-                    title = filename.replace(".md", "")
-                    text = content
-                    date_obj = None
+                    # Convertir Markdown a HTML
+                    final_text = markdown.markdown(text, extensions=["extra", "nl2br"])
 
-                # Convertir a HTML solo si dbc_id == 3
-                final_text = markdown.markdown(text, extensions=["extra", "nl2br"]) if dbc_id == 3 else text
+                    posts.append({
+                        "title": title,
+                        "text": final_text,
+                        "data_added": date_obj,
+                        "source": "markdown",
+                        "dbc_id": dbc_id
+                    })
 
-            except Exception as e:
-                title = filename.replace(".md", "")
-                final_text = f"Error al leer el archivo: {e}"
-                date_obj = None
+                except Exception as e:
+                    posts.append({
+                        "title": filename.replace(".md", ""),
+                        "text": f"Error al leer el archivo: {e}",
+                        "data_added": None,
+                        "source": "markdown",
+                        "dbc_id": dbc_id
+                    })
 
-            posts.append({
-                "title": title,
-                "text": final_text,
-                "data_added": date_obj,
-                "tags": tags,
-                "source": "markdown",
-                "dbc_id": dbc_id
-            })
+        # Ordenar por fecha descendente si existe
+        posts.sort(key=lambda x: x["data_added"] or datetime.min, reverse=True)
 
         context = {
             "proyectos": {"id": dbc_id, "text": "Blog" if dbc_id == 3 else "Índice"},
@@ -232,7 +232,7 @@ def proyectos(request, dbc_id):
         }
         return render(request, "dbc_app/proyectos.html", context)
 
-    # Caso normal: usar Entry del Topic
+    # Si no hay carpeta Markdown, usar modelo
     topic = get_object_or_404(Topic, id=dbc_id)
     entries = Entry.objects.filter(topic=topic).order_by('-data_added')
     context = {
