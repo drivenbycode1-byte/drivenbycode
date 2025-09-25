@@ -27,7 +27,15 @@
                     {% endif %}
                 </small>
                 <h4>{{ d.title }}</h4>
-            {% endif %}
+                      
+                {% if d.tags %}
+                  <div class="mb-2">
+                    {% for tag in d.tags %}
+                      <span class="badge bg-secondary me-1">{{ tag }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              {% endif %}
 
             {% if proyectos.id == 3 %}
                 {# Es Markdown, ya es HTML #}
