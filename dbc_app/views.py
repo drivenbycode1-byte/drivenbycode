@@ -201,6 +201,7 @@ def proyectos(request, dbc_id):
                     metadata = yaml.safe_load(front_matter)
                     title = metadata.get("title", filename.replace(".md", ""))
                     date_obj = metadata.get("date")
+                    tags = metadata.get("tags", [])
                     if date_obj:
                         date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
                 else:
@@ -220,6 +221,7 @@ def proyectos(request, dbc_id):
                 "title": title,
                 "text": final_text,
                 "data_added": date_obj,
+                "tags": tags,
                 "source": "markdown",
                 "dbc_id": dbc_id
             })
