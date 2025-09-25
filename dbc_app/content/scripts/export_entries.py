@@ -1,8 +1,13 @@
+import sys
 import os
 from django.core.wsgi import get_wsgi_application
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dbc_project/settings.py")  # reemplaza con tu settings
 
+# Agrega la ruta raíz del proyecto al PYTHONPATH
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dbc_project.settings")
 application = get_wsgi_application()
+
 
 from dbc_app.models import Entry
 
