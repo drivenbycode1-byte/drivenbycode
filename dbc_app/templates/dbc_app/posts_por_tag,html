@@ -1,0 +1,28 @@
+{% extends 'dbc_app/base.html' %}
+
+{% block page_header %}
+  <h1 class="oswald-subrayado">Posts sobre "{{ tag }}"</h1>
+{% endblock page_header %}
+
+{% block content %}
+  <div class="markdown-body">
+    {% for post in posts %}
+      <div class="mb-4 p-3 border rounded bg-white text-start">
+        <small class="text-muted d-block mb-2">
+          {% if post.data_added %}
+            Publicado el {{ post.data_added|date:"d M Y" }}
+          {% endif %}
+        </small>
+        <h4>{{ post.title }}</h4>
+
+        {% if post.summary %}
+          <p class="text-muted">{{ post.summary }}</p>
+        {% endif %}
+
+        {{ post.text|safe }}
+      </div>
+    {% empty %}
+      <p>No hay posts con el tag "{{ tag }}".</p>
+    {% endfor %}
+  </div>
+{% endblock content %}
