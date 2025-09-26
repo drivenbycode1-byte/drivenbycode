@@ -1,5 +1,5 @@
 ---
-title: "¿Qué es la inclusión?"
+title: "SpiritInMotion"
 date: 2025-09-20
 tags: [inclusión, deporte]
 ---
