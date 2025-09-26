@@ -174,6 +174,16 @@ CONTENT_DIR = os.path.join(settings.BASE_DIR, "dbc_app", "content")
 
 
 def proyectos(request, dbc_id):
+    TITULOS_PERSONALIZADOS = {
+        1: "SpiritInMotion",
+        2: "Antes de Rendirte",
+        3: "Blog",
+        4: "Preguntas y Comunidad",
+        5: "Sobre mí",
+        6: "Proyectos"
+    }
+
+    
     """
     Vista para mostrar contenido de proyectos.
     - Si existe una carpeta con archivos Markdown para el dbc_id, los muestra.
