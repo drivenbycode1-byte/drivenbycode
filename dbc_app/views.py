@@ -106,6 +106,55 @@ def todos_los_posts(request):
     context = {'todas_las_entradas': todas_las_entradas}
     return render(request, 'dbc_app/todos_los_posts.html', context)
 
+def posts_por_tag(request, tag):
+    """
+    Muestra todos los posts (Markdown o Entry) que contienen el tag especificado.
+    """
+    posts = []
+
+    # Buscar en archivos Markdown
+    for folder in os.listdir(CONTENT_DIR):
+        folder_path = os.path.join(CONTENT_DIR, folder)
+        if os.path.isdir(folder_path):
+            for filename in os.listdir(folder_path):
+                if filename.endswith(".md"):
+                    filepath = os.path.join(folder_path, filename)
+                    try:
+                        with open(filepath, "r", encoding="utf-8") as f:
+                            content = f.read()
+
+                        if content.startswith('---'):
+                            _, front_matter, text = content.split('---', 2)
+                            metadata = yaml.safe_load(front_matter)
+                            tags = metadata.get("tags", [])
+                            if tag in tags:
+                                title = metadata.get("title", filename.replace(".md", ""))
+                                date_obj = metadata.get("date")
+                                if date_obj:
+                                    date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+                                final_text = markdown.markdown(text, extensions=["extra", "nl2br"])
+                                posts.append({
+                                    "title": title,
+                                    "text": final_text,
+                                    "data_added": date_obj,
+                                    "tags": tags,
+                                    "summary": metadata.get("summary", ""),
+                                    "source": "markdown"
+                                })
+                    except:
+                        continue
+
+    # Opcional: buscar también en Entry si usas tags ahí
+
+    posts.sort(key=lambda x: x["data_added"] or datetime.min, reverse=True)
+
+    context = {
+        "tag": tag,
+        "posts": posts
+    }
+    return render(request, "dbc_app/posts_por_tag.html", context)
+
+
 def login_oculto(request, token):
     if token == 'guardian1899':
         request.session['ritual_activado'] = True
