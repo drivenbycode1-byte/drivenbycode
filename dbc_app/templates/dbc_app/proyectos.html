@@ -37,13 +37,8 @@
                 {% endif %}
               {% endif %}
 
-            {% if proyectos.id == 3 %}
-                {# Es Markdown, ya es HTML #}
-                {{ d.text|safe }}
-            {% else %}
-                {# Es contenido del panel de Django, convertir saltos de línea #}
-                {{ d.text|linebreaks }}
-            {% endif %}
+              {{ d.text|safe }}
+
 
         </div>
     {% empty %}
