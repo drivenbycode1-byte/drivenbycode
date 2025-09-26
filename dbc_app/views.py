@@ -32,52 +32,90 @@ def honeypot(request):
 
 CONTENT_DIR = '/path/to/indice/2'  # Ajusta la ruta a tu carpeta de markdown
 
+CONTENT_DIR = "content"  # Ajusta si tu ruta es distinta
+
 def index(request):
     # Obtener los entries de la DB
-    blog_entries = list(Entry.objects.filter(Q(topic__id__in=[1,2,3,4,6])))
+    blog_entries = list(Entry.objects.filter(Q(topic__id__in=[1, 2, 3, 4, 6])))
 
     # Leer Markdown del contenido
     md_posts = []
+    tags_disponibles = set()
+
     if os.path.exists(CONTENT_DIR):
-        for filename in sorted(os.listdir(CONTENT_DIR), reverse=True):
-            if filename.endswith('.md'):
-                filepath = os.path.join(CONTENT_DIR, filename)
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                if content.startswith('---'):
-                    _, front_matter, text = content.split('---', 2)
-                    metadata = yaml.safe_load(front_matter)
-                    title = metadata.get('title', filename.replace('.md',''))
-                    date_obj = metadata.get('date')
-                    if date_obj:
-                        date_obj = make_aware(datetime.strptime(str(date_obj), '%Y-%m-%d'))
-                else:
-                    title = filename.replace('.md','')
-                    text = content
-                    date_obj = None
+        for folder in os.listdir(CONTENT_DIR):
+            folder_path = os.path.join(CONTENT_DIR, folder)
+            if os.path.isdir(folder_path):
+                for filename in sorted(os.listdir(folder_path), reverse=True):
+                    if filename.endswith('.md'):
+                        filepath = os.path.join(folder_path, filename)
+                        try:
+                            with open(filepath, 'r', encoding='utf-8') as f:
+                                content = f.read()
 
-                # Truncar a 85 palabras antes de convertir a HTML
-                raw_excerpt = ' '.join(text.split()[:85])
-                html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
+                            if content.startswith('---'):
+                                _, front_matter, text = content.split('---', 2)
+                                metadata = yaml.safe_load(front_matter)
+                                title = metadata.get('title', filename.replace('.md', ''))
+                                date_obj = metadata.get('date')
+                                if date_obj:
+                                    date_obj = make_aware(datetime.strptime(str(date_obj), '%Y-%m-%d'))
+                                tags = metadata.get('tags', [])
+                                summary = metadata.get('summary', '')
+                            else:
+                                title = filename.replace('.md', '')
+                                text = content
+                                date_obj = None
+                                tags = []
+                                summary = ''
 
-                # Asignar dbc_id según el nombre del archivo
-                if filename == "proximamente_1.md":
-                    dbc_id = 2
-                elif filename == "cambatir_depresion.md":
-                    dbc_id = 3
-                else:
-                    dbc_id = 0
-                
-                md_posts.append({
-                    'title': title,
-                    'text': html_excerpt,
-                    'data_added': date_obj,
-                    'dbc_id': dbc_id,  # si quieres usarlo en el template
-                    'source': 'markdown'
-                })
-    
+                            tags_disponibles.update(tags)
+
+                            # Truncar a 85 palabras antes de convertir a HTML
+                            raw_excerpt = ' '.join(text.split()[:85])
+                            html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
+
+                            # Asignar dbc_id según carpeta
+                            try:
+                                dbc_id = int(folder.replace("indice_", ""))
+                            except:
+                                dbc_id = 0
+
+                            md_posts.append({
+                                'title': title,
+                                'text': html_excerpt,
+                                'data_added': date_obj,
+                                'dbc_id': dbc_id,
+                                'source': 'markdown',
+                                'tags': tags,
+                                'summary': summary
+                            })
+
+                        except Exception as e:
+                            continue
+
     # Combinar y ordenar por fecha
     all_entries = blog_entries + md_posts
+
+    def get_date(entry):
+        if isinstance(entry, dict):
+            return entry.get('data_added') or make_aware(datetime.min)
+        else:
+            date_obj = getattr(entry, 'data_added', None)
+            if date_obj is None:
+                return make_aware(datetime.min)
+            if date_obj.tzinfo is None:
+                return make_aware(date_obj)
+            return date_obj
+
+    all_entries.sort(key=get_date, reverse=True)
+
+    context = {
+        'blog_entries': all_entries,
+        'tags_disponibles': sorted(tags_disponibles)
+    }
+    return render(request, 'dbc_app/index.html', context)
+
 
     def get_date(entry):
         if isinstance(entry, dict):
