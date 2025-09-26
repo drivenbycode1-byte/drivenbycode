@@ -12,5 +12,6 @@ urlpatterns = [
     path('indice/<int:dbc_id>', views.proyectos, name='proyectos'),
     path('todos/', views.todos_los_posts, name='todos_los_posts'),
     path('ding_dong_dashboard/', dashboard, name='dashboard'),
+    path('temas/<str:tag>/', views.posts_por_tag, name='posts_por_tag'),
     #path('healthz/', views.health_check),
 ]
