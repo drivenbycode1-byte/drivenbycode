@@ -237,7 +237,7 @@ def proyectos(request, dbc_id):
         posts.sort(key=lambda x: x["data_added"] or datetime.min, reverse=True)
 
         context = {
-            "proyectos": {"id": dbc_id, "text": "Blog" if dbc_id == 3 else "Índice"},
+            "proyectos": {"id": dbc_id, "text": TITULOS_PERSONALIZADOS.get(dbc_id, "Índice")},
             "descripcion": posts
         }
         return render(request, "dbc_app/proyectos.html", context)
