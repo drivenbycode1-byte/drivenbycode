@@ -1,4 +1,4 @@
-{% extends 'dbc_app/base.html' %}
+,m{% extends 'dbc_app/base.html' %}
 
 {% block page_header %}
 <div class="p-3 mb-4">
@@ -108,8 +108,9 @@
   <div class="d-flex flex-wrap justify-content-center gap-2">
     {% for tag in tags_disponibles %}
       <a href="{% url 'dbc_app:posts_por_tag' tag %}" class="btn btn-outline-dark btn-sm">
-        #{{ tag }}
+        {{ tag|capfirst }}
       </a>
+
     {% endfor %}
   </div>
 
