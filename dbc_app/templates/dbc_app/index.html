@@ -1,4 +1,3 @@
-
 {% extends 'dbc_app/base.html' %}
 {% load custom_filters %}
 
@@ -43,5 +42,54 @@
             <span class="badge 
               {% if entry.dbc_id == 1 %}bg-primary
               {% elif entry.dbc_id == 2 %}bg-secondary
-              {%
-{% endblock content %}equest, 'dbc_app/index.html', context)
+              {% elif entry.dbc_id == 3 %}bg-success
+              {% elif entry.dbc_id == 4 %}bg-warning
+              {% elif entry.dbc_id == 6 %}bg-danger
+              {% else %}bg-info{% endif %}
+            mt-2 d-inline-block">
+              {{ titulos_por_id|dict_get:entry.dbc_id }}
+            </span>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="text-start mt-3 oswald">
+        <a href="{% url 'dbc_app:todos_los_posts' %}" class="btn btn-dark btn-lg">
+          📚 Ver todos los posteos
+        </a>
+      </div>
+
+      <figcaption class="blockquote-footer">
+        Driven by Code · La forma cambia, el propósito se afina.
+      </figcaption>
+    </div>
+  </div>
+
+  <!-- 🎯 Columna lateral derecha: 1/4 del ancho -->
+  <div class="col-12 col-md-3 mt-4 mt-md-0">
+    <p class="text-muted medium text-center mt-2">Sígueme en el viaje</p>
+
+    <div class="d-flex flex-column align-items-center gap-3 text-center">
+      <a href="https://www.instagram.com/spiritinmotion__/" target="_blank" class="text-decoration-none">
+        <i class="bi bi-instagram fs-3"></i>
+      </a>
+      <a href="https://www.tiktok.com/@diegosilvabaeza" target="_blank" class="text-decoration-none">
+        <i class="bi bi-tiktok fs-3"></i>
+      </a>
+      <a href="https://www.youtube.com/@SpiritInMotion__" target="_blank" class="text-decoration-none">
+        <i class="bi bi-youtube fs-3"></i>
+      </a>
+    </div>
+    <hr class="my-4">
+
+    <p class="text-muted text-center">Explora por temas</p>
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      {% for tag in tags_disponibles %}
+        <a href="{% url 'dbc_app:posts_por_tag' tag %}" class="btn btn-outline-dark btn-sm">
+          {{ tag|capfirst }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock content %}
