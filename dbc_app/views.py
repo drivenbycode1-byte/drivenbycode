@@ -42,9 +42,6 @@ def index(request):
         6: "Proyectos"
     }
 
-    # Entradas desde la base de datos
-    blog_entries = list(Entry.objects.filter(Q(topic__id__in=[1, 2, 3, 4, 6])))
-
     # Entradas desde Markdown
     md_posts = []
     tags_disponibles = set()
