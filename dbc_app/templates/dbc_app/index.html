@@ -1,4 +1,5 @@
 {% extends 'dbc_app/base.html' %}
+{% load custom_filters %}
 
 {% block page_header %}
 <div class="p-3 mb-4">
@@ -68,7 +69,9 @@
               {% if entry.topic %}
                 Categoría: {{ entry.topic.text }}
               {% elif entry.dbc_id %}
-                Sección especial: índice/{{ entry.dbc_id }}
+                <span class="badge bg-secondary mt-2 d-inline-block">
+                  Sección especial: {{ titulos_por_id|dict_get:entry.dbc_id }}
+                </span>
               {% endif %}
             </span>
           </div>
