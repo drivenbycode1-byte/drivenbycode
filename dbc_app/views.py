@@ -268,12 +268,6 @@ def proyectos(request, dbc_id):
         6: "Proyectos"
     }
 
-    
-    """
-    Vista para mostrar contenido de proyectos.
-    - Si existe una carpeta con archivos Markdown para el dbc_id, los muestra.
-    - Si no, usa contenido desde la base de datos.
-    """
     folder_path = os.path.join(CONTENT_DIR, f"indice_{dbc_id}")
     posts = []
 
@@ -285,7 +279,6 @@ def proyectos(request, dbc_id):
                     with open(filepath, "r", encoding="utf-8") as f:
                         content = f.read()
 
-                    # Separar metadata YAML si existe
                     if content.startswith('---'):
                         _, front_matter, text = content.split('---', 2)
                         metadata = yaml.safe_load(front_matter)
@@ -293,12 +286,13 @@ def proyectos(request, dbc_id):
                         date_obj = metadata.get("date")
                         if date_obj:
                             date_obj = datetime.strptime(str(date_obj), "%Y-%m-%d")
+                        summary = metadata.get("summary", "")
                     else:
                         title = filename.replace(".md", "")
                         text = content
                         date_obj = None
+                        summary = ""
 
-                    # Convertir Markdown a HTML
                     final_text = markdown.markdown(text, extensions=["extra", "nl2br"])
 
                     posts.append({
@@ -306,7 +300,8 @@ def proyectos(request, dbc_id):
                         "text": final_text,
                         "data_added": date_obj,
                         "source": "markdown",
-                        "dbc_id": dbc_id
+                        "dbc_id": dbc_id,
+                        "summary": summary
                     })
 
                 except Exception as e:
@@ -315,23 +310,24 @@ def proyectos(request, dbc_id):
                         "text": f"Error al leer el archivo: {e}",
                         "data_added": None,
                         "source": "markdown",
-                        "dbc_id": dbc_id
+                        "dbc_id": dbc_id,
+                        "summary": ""
                     })
 
-        # Ordenar por fecha descendente si existe
         posts.sort(key=lambda x: x["data_added"] or datetime.min, reverse=True)
 
-        context = {
-            "proyectos": {"id": dbc_id, "text": TITULOS_PERSONALIZADOS.get(dbc_id, "Índice")},
-            "descripcion": posts
-        }
-        return render(request, "dbc_app/proyectos.html", context)
+    else:
+        topic = get_object_or_404(Topic, id=dbc_id)
+        entries = Entry.objects.filter(topic=topic).order_by('-data_added')
+        for entry in entries:
+            posts.append(entry)
 
-    # Si no hay carpeta Markdown, usar modelo
-    topic = get_object_or_404(Topic, id=dbc_id)
-    entries = Entry.objects.filter(topic=topic).order_by('-data_added')
     context = {
-        "proyectos": topic,
-        "descripcion": entries
+        "proyectos": {
+            "id": dbc_id,
+            "text": TITULOS_PERSONALIZADOS.get(dbc_id, "Índice")
+        },
+        "descripcion": posts
     }
+
     return render(request, "dbc_app/proyectos.html", context)
