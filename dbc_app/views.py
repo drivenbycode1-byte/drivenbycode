@@ -14,6 +14,7 @@ import yaml
 from pathlib import Path
 from datetime import datetime
 from django.conf import settings
+from unicodedata import normalize
 
 
 
@@ -136,7 +137,7 @@ def posts_por_tag(request, tag):
     Muestra todos los posts (Markdown o Entry) que contienen el tag especificado.
     """
     posts = []
-
+    tag = normalize("NFKD", tag).encode("ascii", "ignore").decode("utf-8").lower()
     # Buscar en archivos Markdown
     for folder in os.listdir(CONTENT_DIR):
         folder_path = os.path.join(CONTENT_DIR, folder)
@@ -152,7 +153,7 @@ def posts_por_tag(request, tag):
                             _, front_matter, text = content.split('---', 2)
                             metadata = yaml.safe_load(front_matter)
                             tags = metadata.get("tags", [])
-                            if tag in tags:
+                            if tag in [normalize("NFKD", t).encode("ascii", "ignore").decode("utf-8").lower() for t in tags]:
                                 title = metadata.get("title", filename.replace(".md", ""))
                                 date_obj = metadata.get("date")
                                 if date_obj:
