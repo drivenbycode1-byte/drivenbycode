@@ -33,10 +33,19 @@ def honeypot(request):
 CONTENT_DIR = os.path.join(settings.BASE_DIR, "content")
 
 def index(request):
-    # Obtener los entries de la DB
+    TITULOS_POR_ID = {
+        1: "SpiritInMotion",
+        2: "Antes de Rendirte",
+        3: "Blog",
+        4: "Preguntas y Comunidad",
+        5: "Sobre mí",
+        6: "Proyectos"
+    }
+
+    # Entradas desde la base de datos
     blog_entries = list(Entry.objects.filter(Q(topic__id__in=[1, 2, 3, 4, 6])))
 
-    # Leer Markdown del contenido
+    # Entradas desde Markdown
     md_posts = []
     tags_disponibles = set()
 
@@ -69,11 +78,9 @@ def index(request):
 
                             tags_disponibles.update(tags)
 
-                            # Truncar a 85 palabras antes de convertir a HTML
                             raw_excerpt = ' '.join(text.split()[:85])
                             html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
 
-                            # Asignar dbc_id según carpeta
                             try:
                                 dbc_id = int(folder.replace("indice_", ""))
                             except:
@@ -110,25 +117,10 @@ def index(request):
 
     context = {
         'blog_entries': all_entries,
-        'tags_disponibles': sorted(tags_disponibles)
+        'tags_disponibles': sorted(tags_disponibles),
+        'titulos_por_id': TITULOS_POR_ID
     }
-    return render(request, 'dbc_app/index.html', context)
 
-
-    def get_date(entry):
-        if isinstance(entry, dict):
-            return entry.get('data_added') or make_aware(datetime.min)
-        else:
-            date_obj = getattr(entry, 'data_added', None)
-            if date_obj is None:
-                return make_aware(datetime.min)
-            if date_obj.tzinfo is None:
-                return make_aware(date_obj)
-            return date_obj
-
-    all_entries.sort(key=get_date, reverse=True)
-
-    context = {'blog_entries': all_entries}
     return render(request, 'dbc_app/index.html', context)
 
 
