@@ -1,4 +1,4 @@
-,m{% extends 'dbc_app/base.html' %}
+{% extends 'dbc_app/base.html' %}
 
 {% block page_header %}
 <div class="p-3 mb-4">
@@ -17,78 +17,103 @@
 </div>
 {% endblock page_header %}
 
-def index(request):
-    TITULOS_POR_ID = {
-        1: "SpiritInMotion",
-        2: "Antes de Rendirte",
-        3: "Blog",
-        4: "Preguntas y Comunidad",
-        5: "Sobre mí",
-        6: "Proyectos"
-    }
+{% block content %}
+<div class="row">
+  <!-- 🧱 Columna principal: 3/4 del ancho -->
+  <div class="col-12 col-md-9">
+    <div class="text-center my-5">
+      <p class="text-start fs-3 oswald">Posts</p>
 
-    md_posts = []
-    tags_disponibles = set()
+      <div class="blog-section my-4">
+        {% for entry in blog_entries %}
+          <div class="mb-4 p-3 border rounded bg-white text-start">
+            <small class="text-muted d-block mb-2">
+              Publicado el {{ entry.data_added|date:"d M Y H:i" }}
+            </small>
+            <h4>{{ entry.title }}</h4>
 
-    if os.path.exists(CONTENT_DIR):
-        for folder in os.listdir(CONTENT_DIR):
-            folder_path = os.path.join(CONTENT_DIR, folder)
-            if os.path.isdir(folder_path):
-                for filename in sorted(os.listdir(folder_path), reverse=True):
-                    if filename.endswith('.md'):
-                        filepath = os.path.join(folder_path, filename)
-                        try:
-                            with open(filepath, 'r', encoding='utf-8') as f:
-                                content = f.read()
+            {% if entry.source == 'markdown' %}
+              <div>{{ entry.text|safe }}</div>
+            {% else %}
+              <div>{{ entry.text|truncatewords:85|safe }}...</div>
+            {% endif %}
 
-                            if content.startswith('---'):
-                                _, front_matter, text = content.split('---', 2)
-                                metadata = yaml.safe_load(front_matter)
-                                title = metadata.get('title', filename.replace('.md', ''))
-                                date_obj = metadata.get('date')
-                                if date_obj:
-                                    date_obj = make_aware(datetime.strptime(str(date_obj), '%Y-%m-%d'))
-                                tags = metadata.get('tags', [])
-                                summary = metadata.get('summary', '')
-                            else:
-                                title = filename.replace('.md', '')
-                                text = content
-                                date_obj = None
-                                tags = []
-                                summary = ''
+            {% if entry.topic %}
+              <a href="{% url 'dbc_app:proyectos' entry.topic.id %}" class="btn btn-outline-dark btn-sm mt-2">
+                Leer más →
+              </a>
+            {% else %}
+              <a href="{% url 'dbc_app:proyectos' entry.dbc_id %}" class="btn btn-outline-secondary btn-sm mt-2">
+                Leer más →
+              </a>
+            {% endif %}
 
-                            tags_disponibles.update(tags)
+            <span class="badge 
+              {% if entry.topic %}
+                {% if entry.topic.id == 1 %}bg-primary
+                {% elif entry.topic.id == 2 %}bg-secondary
+                {% elif entry.topic.id == 3 %}bg-success
+                {% elif entry.topic.id == 4 %}bg-warning
+                {% elif entry.topic.id == 6 %}bg-danger
+                {% else %}bg-secondary{% endif %}
+              {% elif entry.dbc_id %}
+                {% if entry.dbc_id == 1 %}bg-primary
+                {% elif entry.dbc_id == 2 %}bg-secondary
+                {% elif entry.dbc_id == 3 %}bg-success
+                {% elif entry.dbc_id == 4 %}bg-warning
+                {% elif entry.dbc_id == 6 %}bg-danger
+                {% else %}bg-info{% endif %}
+              {% endif %}
+            mt-2 d-inline-block">
+              {% if entry.topic %}
+                Categoría: {{ entry.topic.text }}
+              {% elif entry.dbc_id %}
+                Sección especial: índice/{{ entry.dbc_id }}
+              {% endif %}
+            </span>
+          </div>
+        {% endfor %}
+      </div>
 
-                            raw_excerpt = ' '.join(text.split()[:85])
-                            html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
+      <div class="text-start mt-3 oswald">
+        <a href="{% url 'dbc_app:todos_los_posts' %}" class="btn btn-dark btn-lg">
+          📚 Ver todos los posteos
+        </a>
+      </div>
 
-                            try:
-                                dbc_id = int(folder.replace("indice_", ""))
-                            except:
-                                dbc_id = 0
+      <figcaption class="blockquote-footer">
+        Driven by Code · La forma cambia, el propósito se afina.
+      </figcaption>
+    </div>
+  </div>
 
-                            md_posts.append({
-                                'title': title,
-                                'text': html_excerpt,
-                                'data_added': date_obj,
-                                'dbc_id': dbc_id,
-                                'source': 'markdown',
-                                'tags': tags,
-                                'summary': summary
-                            })
+  <!-- 🎯 Columna lateral derecha: 1/4 del ancho -->
+  <div class="col-12 col-md-3 mt-4 mt-md-0">
+    <p class="text-muted medium text-center mt-2">Sígueme en el viaje</p>
 
-                        except Exception as e:
-                            continue
+    <div class="d-flex flex-column align-items-center gap-3 text-center">
+      <a href="https://www.instagram.com/spiritinmotion__/" target="_blank" class="text-decoration-none">
+        <i class="bi bi-instagram fs-3"></i>
+      </a>
+      <a href="https://www.tiktok.com/@diegosilvabaeza" target="_blank" class="text-decoration-none">
+        <i class="bi bi-tiktok fs-3"></i>
+      </a>
+      <a href="https://www.youtube.com/@SpiritInMotion__" target="_blank" class="text-decoration-none">
+        <i class="bi bi-youtube fs-3"></i>
+      </a>
+    </div>
+    <hr class="my-4">
 
-    def get_date(entry):
-        return entry.get('data_added') or make_aware(datetime.min)
+  <p class="text-muted text-center">Explora por temas</p>
+  <div class="d-flex flex-wrap justify-content-center gap-2">
+    {% for tag in tags_disponibles %}
+      <a href="{% url 'dbc_app:posts_por_tag' tag %}" class="btn btn-outline-dark btn-sm">
+        {{ tag|capfirst }}
+      </a>
 
-    md_posts.sort(key=get_date, reverse=True)
+    {% endfor %}
+  </div>
 
-    context = {
-        'blog_entries': md_posts,
-        'tags_disponibles': sorted(tags_disponibles),
-        'titulos_por_id': TITULOS_POR_ID
-    }
-
-    return render(request, 'dbc_app/index.html', context)
+  </div>
+</div>
+{% endblock content %}equest, 'dbc_app/index.html', context)
