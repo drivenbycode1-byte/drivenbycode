@@ -97,7 +97,7 @@ def index(request):
                             continue
 
     # Combinar y ordenar por fecha
-    all_entries = blog_entries + md_posts
+    all_entries = md_posts
 
     def get_date(entry):
         if isinstance(entry, dict):
