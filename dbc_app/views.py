@@ -33,12 +33,6 @@ def honeypot(request):
 
 CONTENT_DIR = os.path.join(settings.BASE_DIR, "content")
 
-import os, re, yaml
-from datetime import datetime
-from django.utils.timezone import make_aware
-from django.shortcuts import render
-import markdown
-
 def index(request):
     TITULOS_POR_ID = {
         1: "SpiritInMotion",
