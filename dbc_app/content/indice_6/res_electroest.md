@@ -1,6 +1,7 @@
 ---
 title: Electroestimulación y Paraplejia
 date: 2025-09-25
+tags: [electroestimulación, ciencia, paraplejia]
 ---
 
 Actualmente estoy investigando acerca de la pérdida y/o ganancia de masa muscular con mi propio cuerpo.
