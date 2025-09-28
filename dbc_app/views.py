@@ -8,7 +8,7 @@ from .models import IntentoHoneypot
 from .models import UserIP
 from django.utils.timezone import now, timedelta, make_aware
 from django.utils.dateparse import parse_datetime
-import os
+import os, re
 import markdown
 import yaml
 from pathlib import Path
@@ -33,6 +33,12 @@ def honeypot(request):
 
 CONTENT_DIR = os.path.join(settings.BASE_DIR, "content")
 
+import os, re, yaml
+from datetime import datetime
+from django.utils.timezone import make_aware
+from django.shortcuts import render
+import markdown
+
 def index(request):
     TITULOS_POR_ID = {
         1: "SpiritInMotion",
@@ -43,7 +49,6 @@ def index(request):
         6: "Proyectos"
     }
 
-    # Entradas desde Markdown
     md_posts = []
     tags_disponibles = set()
 
@@ -51,6 +56,10 @@ def index(request):
         for folder in os.listdir(CONTENT_DIR):
             folder_path = os.path.join(CONTENT_DIR, folder)
             if os.path.isdir(folder_path):
+                # Detectar dbc_id desde el nombre de carpeta
+                match = re.search(r'indice[_/]?(\d+)', folder)
+                dbc_id = int(match.group(1)) if match else 0
+
                 for filename in sorted(os.listdir(folder_path), reverse=True):
                     if filename.endswith('.md'):
                         filepath = os.path.join(folder_path, filename)
@@ -58,15 +67,20 @@ def index(request):
                             with open(filepath, 'r', encoding='utf-8') as f:
                                 content = f.read()
 
+                            # Extraer metadatos
                             if content.startswith('---'):
                                 _, front_matter, text = content.split('---', 2)
                                 metadata = yaml.safe_load(front_matter)
                                 title = metadata.get('title', filename.replace('.md', ''))
-                                date_obj = metadata.get('date')
-                                if date_obj:
-                                    date_obj = make_aware(datetime.strptime(str(date_obj), '%Y-%m-%d'))
-                                tags = metadata.get('tags', [])
                                 summary = metadata.get('summary', '')
+                                date_raw = metadata.get('date')
+                                try:
+                                    date_obj = make_aware(datetime.strptime(str(date_raw), '%Y-%m-%d')) if date_raw else None
+                                except:
+                                    date_obj = None
+                                tags = metadata.get('tags')
+                                if not isinstance(tags, list):
+                                    tags = []
                             else:
                                 title = filename.replace('.md', '')
                                 text = content
@@ -76,42 +90,30 @@ def index(request):
 
                             tags_disponibles.update(tags)
 
+                            # Generar excerpt
                             raw_excerpt = ' '.join(text.split()[:85])
                             html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
 
-                            try:
-                                dbc_id = int(folder.replace("indice_", ""))
-                            except:
-                                dbc_id = 0
+                            # Validar entrada útil
+                            if title and html_excerpt:
+                                md_posts.append({
+                                    'title': title,
+                                    'text': html_excerpt,
+                                    'data_added': date_obj,
+                                    'dbc_id': dbc_id,
+                                    'source': 'markdown',
+                                    'tags': tags,
+                                    'summary': summary
+                                })
 
-                            md_posts.append({
-                                'title': title,
-                                'text': html_excerpt,
-                                'data_added': date_obj,
-                                'dbc_id': dbc_id,
-                                'source': 'markdown',
-                                'tags': tags,
-                                'summary': summary
-                            })
-
-                        except Exception as e:
+                        except Exception:
                             continue
 
-    # Combinar y ordenar por fecha
-    all_entries = md_posts
-
+    # Ordenar por fecha
     def get_date(entry):
-        if isinstance(entry, dict):
-            return entry.get('data_added') or make_aware(datetime.min)
-        else:
-            date_obj = getattr(entry, 'data_added', None)
-            if date_obj is None:
-                return make_aware(datetime.min)
-            if date_obj.tzinfo is None:
-                return make_aware(date_obj)
-            return date_obj
+        return entry.get('data_added') or make_aware(datetime.min)
 
-    all_entries.sort(key=get_date, reverse=True)
+    all_entries = sorted(md_posts, key=get_date, reverse=True)
 
     context = {
         'blog_entries': all_entries,
@@ -120,6 +122,7 @@ def index(request):
     }
 
     return render(request, 'dbc_app/index.html', context)
+
 
 
 def indice(request):
