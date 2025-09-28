@@ -31,11 +31,7 @@
             <small class="text-muted d-block mb-2">
               Publicado el {{ entry.data_added|date:"d M Y H:i" }}
             </small>
-            <h4>{{ entry.title }}</h4>
-
-            <small class="text-muted">dbc_id: {{ entry.dbc_id }} | tags: {{ entry.tags }}</small>
-
-            
+            <h4>{{ entry.title }}</h4> 
             <div>{{ entry.text|safe }}</div>
             {% if entry.dbc_id %}
               <a href="{% url 'dbc_app:proyectos' entry.dbc_id %}" class="btn btn-outline-dark btn-sm mt-2">
