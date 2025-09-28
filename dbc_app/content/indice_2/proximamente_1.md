@@ -1,6 +1,7 @@
 ---
 title: "Proximamente"
 date: 2025-09-21
+tags: [resiliencia, libro]
 ---
 
 Advertencia de contenido: Este texto relata acerca de intimidad y trauma físico/emocional
