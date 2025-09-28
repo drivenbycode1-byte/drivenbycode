@@ -88,6 +88,18 @@ def index(request):
                             raw_excerpt = ' '.join(text.split()[:85])
                             html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
 
+                            if title and raw_excerpt.strip():
+                                md_posts.append({
+                                    'title': title,
+                                    'text': html_excerpt,
+                                    'data_added': date_obj,
+                                    'dbc_id': dbc_id,
+                                    'source': 'markdown',
+                                    'tags': tags,
+                                    'summary': summary
+                                })
+                            
+                            
                             # Validar entrada útil
                             if title and html_excerpt:
                                 md_posts.append({
