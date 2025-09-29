@@ -34,9 +34,10 @@
             <h4>{{ entry.title }}</h4> 
             <div>{{ entry.text|safe }}</div>
             {% if entry.dbc_id %}
-              <a href="{% url 'dbc_app:proyectos' entry.dbc_id %}" class="btn btn-outline-dark btn-sm mt-2">
+              <a href="{{ urls_por_id|dict_get:entry.dbc_id }}" class="btn btn-outline-dark btn-sm mt-2">
                 Leer más →
               </a>
+
             {% endif %}
 
             <span class="badge 
