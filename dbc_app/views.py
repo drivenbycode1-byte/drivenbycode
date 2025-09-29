@@ -249,6 +249,70 @@ def posts_por_tag(request, tag):
     }
     return render(request, "dbc_app/posts_por_tag.html", context)
 
+def seccion_por_id(request, seccion_id):
+    from django.utils.timezone import make_aware
+    import os, yaml, markdown
+    from datetime import datetime
+
+    folder_name = f"indice_{seccion_id}"
+    folder_path = os.path.join(CONTENT_DIR, folder_name)
+
+    posts = []
+
+    if os.path.exists(folder_path):
+        for filename in sorted(os.listdir(folder_path), reverse=True):
+            if filename.endswith('.md'):
+                filepath = os.path.join(folder_path, filename)
+                try:
+                    with open(filepath, 'r', encoding='utf-8') as f:
+                        content = f.read()
+
+                    if content.startswith('---'):
+                        _, front_matter, text = content.split('---', 2)
+                        metadata = yaml.safe_load(front_matter)
+                        title = metadata.get('title', filename.replace('.md', ''))
+                        summary = metadata.get('summary', '')
+                        date_raw = metadata.get('date')
+                        try:
+                            date_obj = make_aware(datetime.strptime(str(date_raw), '%Y-%m-%d')) if date_raw else None
+                        except:
+                            date_obj = None
+                    else:
+                        title = filename.replace('.md', '')
+                        summary = ''
+                        date_obj = None
+
+                    posts.append({
+                        'title': title,
+                        'summary': summary,
+                        'filename': filename,
+                        'seccion_id': seccion_id,
+                        'data_added': date_obj
+                    })
+
+                except Exception:
+                    continue
+
+    posts.sort(key=lambda x: x['data_added'] or make_aware(datetime.min), reverse=True)
+
+    TITULOS_POR_ID = {
+        1: "SpiritInMotion",
+        2: "Antes de Rendirte",
+        3: "Blog",
+        4: "Preguntas y Comunidad",
+        5: "Sobre mí",
+        6: "Proyectos"
+    }
+
+    context = {
+        'posts': posts,
+        'seccion_id': seccion_id,
+        'seccion_titulo': TITULOS_POR_ID.get(seccion_id, f"Sección {seccion_id}")
+    }
+
+    return render(request, 'dbc_app/seccion_por_id.html', context)
+
+
 
 def login_oculto(request, token):
     if token == 'guardian1899':
