@@ -342,10 +342,12 @@ def ver_post(request, seccion_id, filename):
 
     html_content = markdown.markdown(text, extensions=['extra', 'nl2br'])
 
-    context = {
-        'title': title,
-        'content': html_content
-    }
+context = {
+    'title': title,
+    'content': html_content,
+    'seccion_id': seccion_id  # ← necesario para el condicional
+}
+
 
     return render(request, 'dbc_app/ver_post.html', context)
 
