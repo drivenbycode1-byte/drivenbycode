@@ -1,4 +1,5 @@
 {% extends 'dbc_app/base.html' %}
+{% load static %}
 
 {% block content %}
   <div class="container my-5">
@@ -7,6 +8,42 @@
     <div class="mt-4">
       {{ content|safe }}
     </div>
+
+    <!-- 🔁 Contenido especial para SpiritInMotion (sección 1) -->
+    {% if seccion_id == 1 %}
+      <div class="mt-4 d-flex flex-column gap-3 align-items-start">
+        <a href="https://www.instagram.com/chrissilva._/" target="_blank" class="btn btn-outline-dark">
+          <i class="bi bi-instagram me-2"></i> ¡Conecta con mi hermano en Instagram!
+        </a>
+        <a href="mailto:christophersilva.b@gmail.com" class="btn btn-outline-dark">
+          <i class="bi bi-envelope me-2 fs-5"></i> Escríbele a Christopher Silva
+        </a>
+      </div>
+
+      <div class="mt-5 text-center">
+        <img src="{% static 'dbc/img/sim.jpg' %}" alt="Imagen simbólica del proyecto SpiritInMotion" class="img-fluid rounded shadow">
+        <p class="text-muted mt-3">Este proyecto representa el origen y la esencia de la unión.</p>
+      </div>
+
+      <div class="mt-4 text-center">
+        <a href="https://www.instagram.com/spiritinmotion__/" target="_blank" class="btn btn-outline-dark">
+          <i class="bi bi-instagram me-2"></i> ¡Sígue a SpiritInMotion!
+        </a>
+      </div>
+    {% endif %}
+
+    <!-- 🔁 Contenido especial para Sobre mí (sección 5) -->
+    {% if seccion_id == 5 %}
+      <div class="mt-5 text-center">
+        <img src="{% static 'dbc/img/sobre_mi_1.jpg' %}" alt="Sobre mí 1" class="img-fluid rounded shadow">
+      </div>
+      <div class="mt-5 text-center">
+        <img src="{% static 'dbc/img/sobre_mi_2.jpg' %}" alt="Sobre mí 2" class="img-fluid rounded shadow">
+      </div>
+      <div class="mt-5 text-center">
+        <img src="{% static 'dbc/img/sobre_mi_3.jpg' %}" alt="Sobre mí 3" class="img-fluid rounded shadow">
+      </div>
+    {% endif %}
 
     <a href="javascript:history.back()" class="btn btn-outline-dark mt-4">← Volver</a>
   </div>
