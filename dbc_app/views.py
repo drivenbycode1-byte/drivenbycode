@@ -250,10 +250,6 @@ def posts_por_tag(request, tag):
     return render(request, "dbc_app/posts_por_tag.html", context)
 
 def seccion_por_id(request, seccion_id):
-    from django.utils.timezone import make_aware
-    import os, yaml, markdown
-    from datetime import datetime
-
     folder_name = f"indice_{seccion_id}"
     folder_path = os.path.join(CONTENT_DIR, folder_name)
 
