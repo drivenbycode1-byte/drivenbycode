@@ -313,7 +313,7 @@ def seccion_por_id(request, seccion_id):
         'seccion_titulo': TITULOS_POR_ID.get(seccion_id, f"Sección {seccion_id}")
     }
 
-    return render(request, 'dbc_app/seccion_por_id.html', 
+    return render(request, 'dbc_app/seccion_por_id.html', context)
 
 def ver_post(request, seccion_id, filename):
     folder_path = os.path.join(CONTENT_DIR, f"indice_{seccion_id}")
