@@ -309,6 +309,34 @@ def seccion_por_id(request, seccion_id):
     return render(request, 'dbc_app/seccion_por_id.html', context)
 
 
+def ver_post(request, seccion_id, filename):
+    folder_path = os.path.join(CONTENT_DIR, f"indice_{seccion_id}")
+    filepath = os.path.join(folder_path, filename)
+
+    if not os.path.exists(filepath):
+        raise Http404("Archivo no encontrado")
+
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    if content.startswith('---'):
+        _, front_matter, text = content.split('---', 2)
+        metadata = yaml.safe_load(front_matter)
+        title = metadata.get('title', filename.replace('.md', ''))
+    else:
+        title = filename.replace('.md', '')
+        text = content
+
+    html_content = markdown.markdown(text, extensions=['extra', 'nl2br'])
+
+    context = {
+        'title': title,
+        'content': html_content
+    }
+
+    return render(request, 'dbc_app/ver_post.html', context)
+
+
 
 def login_oculto(request, token):
     if token == 'guardian1899':
