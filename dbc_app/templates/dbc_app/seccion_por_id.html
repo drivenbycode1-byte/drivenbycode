@@ -4,18 +4,21 @@
   <div class="container my-5">
     <h2 class="oswald">{{ seccion_titulo }}</h2>
 
-    {% for post in posts %}
-      <div class="mb-4 p-3 border rounded bg-white text-start">
-        <h4 class="mb-1">
-          <a href="{% url 'ver_post' post.seccion_id post.filename %}" class="text-decoration-none">
-            {{ post.title|upper }}
-          </a>
-        </h4>
-        {% if post.summary %}
-          <p class="text-muted">{{ post.summary }}</p>
-        {% endif %}
-      </div>
-    {% endfor %}
+    {% if posts %}
+      {% for post in posts %}
+        <div class="mb-4 p-3 border rounded bg-white text-start">
+          <h4 class="mb-1">
+            <a href="{% url 'ver_post' post.seccion_id post.filename %}" class="text-decoration-none">
+              {{ post.title|upper }}
+            </a>
+          </h4>
+          {% if post.summary %}
+            <p class="text-muted">{{ post.summary }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="text-muted">No hay archivos Markdown en esta sección.</p>
+    {% endif %}
   </div>
 {% endblock %}
-
