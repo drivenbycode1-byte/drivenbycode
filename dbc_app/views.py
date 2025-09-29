@@ -33,6 +33,8 @@ def honeypot(request):
 
 CONTENT_DIR = os.path.join(settings.BASE_DIR, "content")
 
+from django.urls import reverse
+
 def index(request):
     TITULOS_POR_ID = {
         1: "SpiritInMotion",
@@ -45,66 +47,70 @@ def index(request):
 
     md_posts = []
     tags_disponibles = set()
+    urls_por_id = {}
 
     if os.path.exists(CONTENT_DIR):
         for folder in os.listdir(CONTENT_DIR):
             folder_path = os.path.join(CONTENT_DIR, folder)
             if os.path.isdir(folder_path):
-                # Detectar dbc_id desde el nombre de carpeta
                 match = re.search(r'indice[_/]?(\d+)', folder)
                 dbc_id = int(match.group(1)) if match else 0
 
-                for filename in sorted(os.listdir(folder_path), reverse=True):
-                    if filename.endswith('.md'):
-                        filepath = os.path.join(folder_path, filename)
-                        try:
-                            with open(filepath, 'r', encoding='utf-8') as f:
-                                content = f.read()
+                archivos_md = [f for f in os.listdir(folder_path) if f.endswith('.md')]
+                archivos_md.sort(reverse=True)
 
-                            # Extraer metadatos
-                            if content.startswith('---'):
-                                _, front_matter, text = content.split('---', 2)
-                                metadata = yaml.safe_load(front_matter)
-                                title = metadata.get('title', filename.replace('.md', ''))
-                                summary = metadata.get('summary', '')
-                                date_raw = metadata.get('date')
-                                try:
-                                    date_obj = make_aware(datetime.strptime(str(date_raw), '%Y-%m-%d')) if date_raw else None
-                                except:
-                                    date_obj = None
-                                tags = metadata.get('tags')
-                                if not isinstance(tags, list):
-                                    tags = []
-                            else:
-                                title = filename.replace('.md', '')
-                                text = content
+                # Construir URL por sección
+                if dbc_id in [1, 5] and archivos_md:
+                    # Redirigir directamente al único archivo
+                    urls_por_id[dbc_id] = reverse('dbc_app:ver_post', args=[dbc_id, archivos_md[0]])
+                else:
+                    urls_por_id[dbc_id] = reverse('dbc_app:seccion_por_id', args=[dbc_id])
+
+                for filename in archivos_md:
+                    filepath = os.path.join(folder_path, filename)
+                    try:
+                        with open(filepath, 'r', encoding='utf-8') as f:
+                            content = f.read()
+
+                        if content.startswith('---'):
+                            _, front_matter, text = content.split('---', 2)
+                            metadata = yaml.safe_load(front_matter)
+                            title = metadata.get('title', filename.replace('.md', ''))
+                            summary = metadata.get('summary', '')
+                            date_raw = metadata.get('date')
+                            try:
+                                date_obj = make_aware(datetime.strptime(str(date_raw), '%Y-%m-%d')) if date_raw else None
+                            except:
                                 date_obj = None
+                            tags = metadata.get('tags')
+                            if not isinstance(tags, list):
                                 tags = []
-                                summary = ''
+                        else:
+                            title = filename.replace('.md', '')
+                            text = content
+                            date_obj = None
+                            tags = []
+                            summary = ''
 
-                            tags_disponibles.update(tags)
+                        tags_disponibles.update(tags)
 
-                            # Generar excerpt
-                            raw_excerpt = ' '.join(text.split()[:85])
-                            html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
+                        raw_excerpt = ' '.join(text.split()[:85])
+                        html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
 
-                            
-                            # Validar entrada útil
-                            if title and html_excerpt:
-                                md_posts.append({
-                                    'title': title,
-                                    'text': html_excerpt,
-                                    'data_added': date_obj,
-                                    'dbc_id': dbc_id,
-                                    'source': 'markdown',
-                                    'tags': tags,
-                                    'summary': summary
-                                })
+                        if title and html_excerpt:
+                            md_posts.append({
+                                'title': title,
+                                'text': html_excerpt,
+                                'data_added': date_obj,
+                                'dbc_id': dbc_id,
+                                'source': 'markdown',
+                                'tags': tags,
+                                'summary': summary
+                            })
 
-                        except Exception:
-                            continue
+                    except Exception:
+                        continue
 
-    # Ordenar por fecha
     def get_date(entry):
         return entry.get('data_added') or make_aware(datetime.min)
 
@@ -113,7 +119,8 @@ def index(request):
     context = {
         'blog_entries': all_entries,
         'tags_disponibles': sorted(tags_disponibles),
-        'titulos_por_id': TITULOS_POR_ID
+        'titulos_por_id': TITULOS_POR_ID,
+        'urls_por_id': urls_por_id
     }
 
     return render(request, 'dbc_app/index.html', context)
