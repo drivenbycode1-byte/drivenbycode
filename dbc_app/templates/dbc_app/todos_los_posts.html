@@ -1,4 +1,5 @@
 {% extends 'dbc_app/base.html' %}
+{% load custom_filters %}
 
 {% block content %}
   <div class="container my-5">
@@ -9,23 +10,35 @@
         <small class="text-muted d-block mb-2">
           Publicado el {{ entry.data_added|date:"d M Y H:i" }}
         </small>
+
         <h4>{{ entry.title }}</h4>
-        <p>{{ entry.text|truncatewords:70 }}...</p>
 
-        <a href="{% url 'dbc_app:proyectos' entry.topic.id %}" class="btn btn-outline-dark btn-sm mt-2">
-          Leer más →
-        </a>
+        {% if entry.summary %}
+          <p class="text-muted">{{ entry.summary }}</p>
+        {% endif %}
 
-        <span class="badge 
-          {% if entry.topic.id == 1 %}bg-primary
-          {% elif entry.topic.id == 2 %}bg-secondary
-          {% elif entry.topic.id == 3 %}bg-success
-          {% elif entry.topic.id == 4 %}bg-warning
-          {% elif entry.topic.id == 6 %}bg-danger
-          {% else %}bg-info{% endif %}
-        ">
-          Categoría: {{ entry.topic.text }}
-        </span>
+        <div>{{ entry.text|safe }}</div>
+
+        {% if entry.dbc_id %}
+          <a href="{% url 'dbc_app:proyectos' entry.dbc_id %}" class="btn btn-outline-dark btn-sm mt-2">
+            Leer más →
+          </a>
+
+          <span class="badge 
+            {% if entry.dbc_id == 1 %}bg-primary
+            {% elif entry.dbc_id == 2 %}bg-secondary
+            {% elif entry.dbc_id == 3 %}bg-success
+            {% elif entry.dbc_id == 4 %}bg-warning
+            {% elif entry.dbc_id == 6 %}bg-danger
+            {% else %}bg-info{% endif %}
+          mt-2 d-inline-block">
+            {{ titulos_por_id|dict_get:entry.dbc_id }}
+          </span>
+        {% elif entry.tags %}
+          <span class="badge bg-info mt-2 d-inline-block">
+            Tema: {{ entry.tags.0|capfirst }}
+          </span>
+        {% endif %}
       </div>
     {% endfor %}
   </div>
