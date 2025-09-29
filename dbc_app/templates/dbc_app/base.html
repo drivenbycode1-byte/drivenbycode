@@ -73,7 +73,7 @@
 
         {% for proyecto in lista_proyectos %}
           <li class="nav-item nav-divider">
-            <a class="nav-link px-3" href="{% url 'seccion_por_id' proyecto.id %}">
+            <a class="nav-link px-3" href="{% url 'dbc_app:seccion_por_id' proyecto.id %}">
               {{ proyecto.text }}
             </a>
           </li>
