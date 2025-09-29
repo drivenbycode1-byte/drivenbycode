@@ -253,6 +253,13 @@ def seccion_por_id(request, seccion_id):
     folder_name = f"indice_{seccion_id}"
     folder_path = os.path.join(CONTENT_DIR, folder_name)
 
+    # Redirección directa para secciones especiales
+    if seccion_id in [1, 5]:
+        if os.path.exists(folder_path):
+            archivos_md = [f for f in os.listdir(folder_path) if f.endswith('.md')]
+            if archivos_md:
+                return redirect('dbc_app:ver_post', seccion_id=seccion_id, filename=archivos_md[0])
+
     posts = []
 
     if os.path.exists(folder_path):
@@ -306,8 +313,7 @@ def seccion_por_id(request, seccion_id):
         'seccion_titulo': TITULOS_POR_ID.get(seccion_id, f"Sección {seccion_id}")
     }
 
-    return render(request, 'dbc_app/seccion_por_id.html', context)
-
+    return render(request, 'dbc_app/seccion_por_id.html', 
 
 def ver_post(request, seccion_id, filename):
     folder_path = os.path.join(CONTENT_DIR, f"indice_{seccion_id}")
