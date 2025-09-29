@@ -125,9 +125,78 @@ def indice(request):
     context = {'indice': indice}
     return render(request, 'dbc_app/indice.html', context)
 
-def todos_los_posts(request):
-    todas_las_entradas = Entry.objects.order_by('-data_added')
-    context = {'todas_las_entradas': todas_las_entradas}
+    TITULOS_POR_ID = {
+        1: "SpiritInMotion",
+        2: "Antes de Rendirte",
+        3: "Blog",
+        4: "Preguntas y Comunidad",
+        5: "Sobre mí",
+        6: "Proyectos"
+    }
+
+    md_posts = []
+
+    if os.path.exists(CONTENT_DIR):
+        for folder in os.listdir(CONTENT_DIR):
+            folder_path = os.path.join(CONTENT_DIR, folder)
+            if os.path.isdir(folder_path):
+                match = re.search(r'indice[_/]?(\d+)', folder)
+                dbc_id = int(match.group(1)) if match else 0
+
+                for filename in sorted(os.listdir(folder_path), reverse=True):
+                    if filename.endswith('.md'):
+                        filepath = os.path.join(folder_path, filename)
+                        try:
+                            with open(filepath, 'r', encoding='utf-8') as f:
+                                content = f.read()
+
+                            if content.startswith('---'):
+                                _, front_matter, text = content.split('---', 2)
+                                metadata = yaml.safe_load(front_matter)
+                                title = metadata.get('title', filename.replace('.md', ''))
+                                summary = metadata.get('summary', '')
+                                date_raw = metadata.get('date')
+                                try:
+                                    date_obj = make_aware(datetime.strptime(str(date_raw), '%Y-%m-%d')) if date_raw else None
+                                except:
+                                    date_obj = None
+                                tags = metadata.get('tags')
+                                if not isinstance(tags, list):
+                                    tags = []
+                            else:
+                                title = filename.replace('.md', '')
+                                text = content
+                                date_obj = None
+                                tags = []
+                                summary = ''
+
+                            raw_excerpt = ' '.join(text.split()[:85])
+                            html_excerpt = markdown.markdown(raw_excerpt, extensions=['extra', 'nl2br'])
+
+                            if title and raw_excerpt.strip():
+                                md_posts.append({
+                                    'title': title,
+                                    'text': html_excerpt,
+                                    'data_added': date_obj,
+                                    'dbc_id': dbc_id,
+                                    'tags': tags,
+                                    'summary': summary
+                                })
+
+                        except Exception:
+                            continue
+
+    # Ordenar por fecha
+    def get_date(entry):
+        return entry.get('data_added') or make_aware(datetime.min)
+
+    todas_las_entradas = sorted(md_posts, key=get_date, reverse=True)
+
+    context = {
+        'todas_las_entradas': todas_las_entradas,
+        'titulos_por_id': TITULOS_POR_ID
+    }
+
     return render(request, 'dbc_app/todos_los_posts.html', context)
 
 def posts_por_tag(request, tag):
