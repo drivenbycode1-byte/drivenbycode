@@ -125,6 +125,7 @@ def indice(request):
     context = {'indice': indice}
     return render(request, 'dbc_app/indice.html', context)
 
+def todos_los_posts(request):
     TITULOS_POR_ID = {
         1: "SpiritInMotion",
         2: "Antes de Rendirte",
@@ -198,6 +199,7 @@ def indice(request):
     }
 
     return render(request, 'dbc_app/todos_los_posts.html', context)
+
 
 def posts_por_tag(request, tag):
     """
