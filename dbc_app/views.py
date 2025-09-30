@@ -188,8 +188,10 @@ def todos_los_posts(request):
                                     'data_added': date_obj,
                                     'dbc_id': dbc_id,
                                     'tags': tags,
-                                    'summary': summary
+                                    'summary': summary,
+                                    'filename': filename  # ← esto es clave para generar el link correcto
                                 })
+
 
                         except Exception:
                             continue
