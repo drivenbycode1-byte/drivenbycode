@@ -275,10 +275,11 @@ body, .dbc-background, .hero-section {
 }
 
 .link-list a {
-  color: #000;
+  color: #000 !important; /* fuerza el color negro */
   text-decoration: underline;
   font-weight: 500;
 }
+
 
 .link-list a:hover {
   color: #555;
