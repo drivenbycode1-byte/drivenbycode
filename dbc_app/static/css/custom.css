@@ -284,3 +284,13 @@ body, .dbc-background, .hero-section {
 .link-list a:hover {
   color: #555;
 }
+
+.link-item,
+.link-item:link,
+.link-item:visited,
+.link-item:hover,
+.link-item:active {
+  color: #000 !important;
+  text-decoration: underline;
+  font-weight: 500;
+}
