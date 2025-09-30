@@ -20,7 +20,7 @@
         <div>{{ entry.text|safe }}</div>
 
         {% if entry.dbc_id %}
-          <a href="{% url 'dbc_app:proyectos' entry.dbc_id %}" class="btn btn-outline-dark btn-sm mt-2">
+          <a href="{% url 'dbc_app:ver_post' entry.dbc_id entry.filename %}" class="btn btn-outline-dark btn-sm mt-2">
             Leer más →
           </a>
 
