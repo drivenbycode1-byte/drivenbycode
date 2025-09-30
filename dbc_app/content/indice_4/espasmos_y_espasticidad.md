@@ -3,8 +3,7 @@ title: De Pau - Entendiendo los espamos y la espasticidad
 date: 2025-09-30
 tags: [ciencia, paraplejia]
 ---
-
-Desde que tengo la lesión medular, he estado investigando acerca de los espasmos y la espasticidad ya que la poco informarción que tenía era lo referente a lo que que me entregaban los fisiatras o la experiencia de las enfermeras y TENS que conviven practimente a diario con personas con lesiones medulares.
+Desde que vivo con la lesión medular, he estado investigando acerca de los espasmos y la espasticidad ya que la poco informarción que tenía era lo referente a lo que que me entregaban los fisiatras o la experiencia de las enfermeras y TENS que conviven practimente a diario con personas con lesiones medulares.
 
 Lo primera diferencia que me deccián los médicos siempre fue que tener espamos es diferente a ser espástico. Pues entonces, entremos de lleno a ese terreno:
 
@@ -37,6 +36,8 @@ El paper destaca que estos espasmos no son simplemente “ruido neurológico”,
 
 Una vez definidos estos temas podemos preguntarnos, ¿Cúales son sus pros y sus contras?
 
+---
+
 Espasmos musculares: Pros y contras
 
 Beneficios (según mi experiencia y estudios):
@@ -60,6 +61,8 @@ Desafíos:
 - Rigidez constante: Puede dificultar el movimiento voluntario, generar dolor crónico y afectar la postura.
 - Reflejos exagerados: Movimientos involuntarios ante estímulos mínimos, que dificultan el control motor.
 - Fatiga muscular: El esfuerzo constante para moverse contra la rigidez puede agotar al cuerpo.
+
+---
 
 Formas y maneras de controlar los espamos y la espasticidaqd según la bibliogrfía y mi experiencia:
 
@@ -89,6 +92,84 @@ El baclofeno actúa como agonista GABA-B, inhibiendo la actividad de las neurona
 ¡Importante!
 En el estudio se habla de los efectos a largo plazo que puede teenr en el hígado, por lo que se recomienda un seguimiento y control si su uso es prolongado.
 
+---
+
+B) Elongación y ejercicios para controlar espasmos musculares
+¿Por qué funcionan?
+Los espasmos musculares en la lesión medular ocurren por activación refleja de la médula espinal, muchas veces sin control consciente. Cuando los músculos están inactivos por mucho tiempo, se vuelven más propensos a espasmos. La elongación y el ejercicio ayudan a:
+- Reducir la excitabilidad de los reflejos espinales.
+- Mejorar la circulación y oxigenación muscular.
+- Preservar la longitud y elasticidad de los músculos.
+- Disminuir la frecuencia e intensidad de los espasmos.
+  
+Recomendaciones prácticas:
+- Elongación pasiva diaria: 20–30 minutos por la mañana y noche, especialmente en piernas y espalda.
+- Ejercicio funcional adaptado: Bicicleta pasiva, natación adaptada, ejercicios de brazos o tronco.
+- Uso de marco de bipedestación: Ayuda a estirar todo el cuerpo y reducir espasticidad.
+- Rutina constante: La clave está en la regularidad, no en la intensidad.
+
+---
+
+C) Estímulos Físicos:
+1. Masajes terapéuticos
+¿Cómo ayudan?
+Los masajes aplicados correctamente pueden:
+- Relajar músculos tensos, reduciendo la excitabilidad de los reflejos espinales.
+- Mejorar la circulación, lo que disminuye la acumulación de metabolitos que pueden desencadenar espasmos.
+- Reducir el dolor muscular, lo que indirectamente disminuye la frecuencia de espasmos.
+
+Respaldo científico:
+- Un estudio en Journal of Physical Therapy Science (2020) mostró que el masaje terapéutico en personas con espasticidad post-ictus redujo significativamente el tono muscular medido por la escala de Ashworth.
+- Otro artículo en Rehabilitation Research and Practice (2018) destaca que el masaje puede ser útil como complemento no farmacológico en el manejo de espasticidad en lesión medular.
+
+---
+
+2. Electroestimulación
+¿Cómo ayuda?
+La estimulación eléctrica funcional (FES) o transcutánea puede:
+- Activar músculos paralizados, reduciendo la atrofia y mejorando el tono.
+- Disminuir la espasticidad, al promover patrones de contracción controlada.
+- Reducir espasmos, al reorganizar la actividad neuromuscular.
+
+Respaldo científico:
+- Un estudio en Frontiers in Neuroscience (2021) demostró que la FES aplicada en personas con lesión medular redujo la espasticidad y mejoró la movilidad funcional.
+- Spinal Cord Series and Cases (2020) reportó que la electroestimulación puede ser útil para modular espasmos en pacientes con paraplejía, especialmente cuando se combina con ejercicios activos.
+
+---
+
+D) Técnicas de relajación y respiración
+¿Por qué funcionan?
+Las técnicas de respiración y relajación actúan sobre el sistema nervioso autónomo, ayudando a reducir la excitabilidad de los reflejos espinales que provocan espasmos y espasticidad. En personas con lesión medular, el cuerpo puede estar en un estado de alerta constante, lo que favorece la aparición de movimientos involuntarios. Respirar profundo, relajar el cuerpo y calmar la mente puede:
+- Disminuir la tensión muscular general.
+- Reducir la frecuencia de espasmos.
+- Mejorar el sueño y el descanso.
+- Disminuir la percepción del dolor.
+
+Respaldo científico
+1. Respiración con exhalación prolongada:
+Según Cleveland Clinic, la respiración profunda con énfasis en la exhalación ayuda a reducir la espasticidad al activar el sistema parasimpático. Se recomienda practicarla en posición cómoda, con inhalaciones suaves por la nariz y exhalaciones lentas por la boca, durante 5–10 minutos.
+
+2. Mindfulness y meditación
+Un estudio en Frontiers in Psychology (2020) mostró que la práctica regular de mindfulness reduce la percepción del dolor y mejora el control muscular en personas con condiciones neurológicas. 🔗 Ver estudio completo
+
+---
+
+Conclusión: 
+Los espasmos y la espasticidad no son simples síntomas de una lesión medular: son expresiones complejas del cuerpo que, si se entienden bien, pueden convertirse en señales, herramientas o incluso aliados. A lo largo de este recorrido, descubrimos que:
+- Los espasmos pueden preservar músculo, mejorar circulación y ser parte de un proceso adaptativo, aunque también pueden interferir con la vida diaria si no se controlan.
+- La espasticidad, aunque incómoda, puede ofrecer soporte funcional y reflejar actividad neurológica útil para la rehabilitación.
+
+No hay una única forma de manejarlos. Desde medicamentos como clonazepam o baclofeno, hasta ejercicios, masajes, respiración profunda y electroestimulación, cada estrategia debe adaptarse al cuerpo, al contexto y a la experiencia personal.
+
+En mi caso, aprendí que registrar lo que me pasa, entenderlo e ir variando y adapatando cada cambio hasta conseguir manejarlo de manera óptima para mi vida. No quiero evitar tener espamos, sobretodo pensando en que mi lesión medular es una lesión alta (T4). Gracias a ello, el tono muscular lograr aportar en la fueraz del control de tronco, disminuir lesiones por presión en la zona de los glúteos al mejorar la circulación y mantener en forma mis piernas.
+
+Este texto es gracias Pau y también para todas las personas que estén buscando guías o experiencias relacionadas en lo que es la lesión medular. Que sepan que no están solas, que hay ciencia, experiencia y esperanza siempre.
+
+
+
+
+
+
 Bibliografía:
 - Time Course of Motor Improvement by Epidural Stimulation After Spinal Cord Injury https://journals.sagepub.com/doi/10.1177/11795735251379220
 - A Case of Hereditary Spastic Paraplegia Type 50 With a Novel AP4M1 Variant - https://onlinelibrary.wiley.com/doi/10.1002/ccr3.70954
@@ -98,9 +179,9 @@ Bibliografía:
 - Baclofeno - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8376011/
 - Diazepam - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7285043/
 - Tizanidina - https://www.ncbi.nlm.nih.gov/books/NBK548048/
-
-
-
-
-
-
+- “Sesiones de rango de movimiento de hasta 30 minutos, dos veces al día, pueden reducir significativamente los espasmos en personas con lesión medular.” - https://www.spinalcord.com/blog/methods-to-stop-muscle-spasms-without-medication
+- “El ejercicio mejora la fuerza, la flexibilidad y la circulación, lo que puede disminuir el dolor y los espasmos musculares.” - https://msktc.org/sci/factsheets/exercise-after-spinal-cord-injury
+- “Aunque incómodos, los espasmos pueden ser una señal de recuperación neurológica. El ejercicio y la elongación ayudan a canalizar esa actividad hacia patrones funcionales.” - https://www.flintrehab.com/muscle-spasms-after-spinal-cord-injury/
+- Masaje - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054807/
+- Respiración controlada - https://health.clevelandclinic.org/best-exercises-to-reduce-spasticity
+- Mindfullness - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7524566/
