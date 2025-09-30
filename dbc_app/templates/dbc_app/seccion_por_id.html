@@ -1,24 +1,26 @@
 {% extends 'dbc_app/base.html' %}
+{% load static %}
 
 {% block content %}
   <div class="container my-5">
     <h2 class="oswald">{{ seccion_titulo }}</h2>
 
     {% if posts %}
-      {% for post in posts %}
-        <div class="mb-4 p-3 border rounded bg-white text-start">
-          <h4 class="mb-1">
-            <a href="{% url 'dbc_app:ver_post' post.seccion_id post.filename %}" class="text-decoration-none">
+      <ul class="link-list mt-4">
+        {% for post in posts %}
+          <li class="mb-3">
+            <a href="{% url 'dbc_app:ver_post' post.seccion_id post.filename %}">
               {{ post.title|upper }}
             </a>
-          </h4>
-          {% if post.summary %}
-            <p class="text-muted">{{ post.summary }}</p>
-          {% endif %}
-        </div>
-      {% endfor %}
+            {% if post.summary %}
+              <p class="text-muted mb-0">{{ post.summary }}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     {% else %}
       <p class="text-muted">No hay archivos Markdown en esta sección.</p>
     {% endif %}
   </div>
 {% endblock %}
+
