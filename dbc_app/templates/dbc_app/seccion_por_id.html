@@ -9,7 +9,7 @@
       <ul class="link-list mt-4">
         {% for post in posts %}
           <li class="mb-3">
-            <a href="{% url 'dbc_app:ver_post' post.seccion_id post.filename %}">
+            <a href="{% url 'dbc_app:ver_post' post.seccion_id post.filename %}" class="link-item">
               {{ post.title|upper }}
             </a>
             {% if post.summary %}
@@ -23,4 +23,3 @@
     {% endif %}
   </div>
 {% endblock %}
-
