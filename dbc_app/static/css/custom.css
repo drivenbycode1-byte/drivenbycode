@@ -262,3 +262,24 @@ body, .dbc-background, .hero-section {
   font-family: 'Oswald', sans-serif;
   font-size: 1,5rem;
 }
+
+.link-list {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+
+.link-list li::before {
+  content: "– "; /* guión largo */
+  color: #333;
+}
+
+.link-list a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.link-list a:hover {
+  color: #555;
+}
