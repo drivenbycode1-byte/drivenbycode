@@ -7,7 +7,7 @@ Hace unos días hablé con Pau quien es lesionada medular y compartimos opinione
 
 ---
 
-Desde que vivo con la lesión medular, he estado investigando acerca de los espasmos y la espasticidad ya que la poca informarción que tenía era referente a lo que que me entregaban los fisiatras o la experiencia de las enfermeras y TENS que conviven practimente a diario con personas lesionadas medulares.
+Desde que vivo con la lesión medular, he estado investigando acerca de los espasmos y la espasticidad ya que la poca informarción que tenía era referente a lo que me entregaban los fisiatras o la experiencia de las enfermeras y TENS que conviven practimente a diario con personas lesionadas medulares.
 
 Lo primera diferencia que me decián los médicos siempre fue que tener espamos es diferente a ser espástico. Bien, entremos entonces de lleno a ese terreno:
 
