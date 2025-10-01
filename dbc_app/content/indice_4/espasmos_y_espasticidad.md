@@ -1,5 +1,5 @@
 ---
-title: De Pau - Entendiendo los espamos y la espasticidad
+title: De Pau - Entendiendo los espasmos y la espasticidad
 date: 2025-09-30
 tags: [ciencia, paraplejia]
 ---
