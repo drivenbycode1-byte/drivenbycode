@@ -118,7 +118,7 @@ Recomendaciones prácticas:
 ---
 
 C) Estímulos Físicos:
-1. Masajes terapéuticos
+1. Masajes terapéuticos:
 ¿Cómo ayudan?
 Los masajes aplicados correctamente pueden:
 - Relajar músculos tensos, reduciendo la excitabilidad de los reflejos espinales.
@@ -131,7 +131,7 @@ Respaldo científico:
 
 ---
 
-2. Electroestimulación
+2. Electroestimulación:
 ¿Cómo ayuda?
 La estimulación eléctrica funcional (FES) o transcutánea puede:
 - Activar músculos paralizados, reduciendo la atrofia y mejorando el tono.
