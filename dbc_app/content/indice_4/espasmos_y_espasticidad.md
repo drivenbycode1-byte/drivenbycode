@@ -72,11 +72,11 @@ Desafíos:
 Formas y maneras de controlar los espamos y la espasticidad según la bibliogrfía y mi experiencia:
 
 A) Medicamentos para espasmos y espasticidad
-1. Clonazepam:
+1- Clonazepam:
 - Lo uso para controlar los espasmos musculares. Efecto: Ayuda a reducir la actividad muscular involuntaria sin afectar demasiado el estado de alerta.
 - Un estudio publicado en Cureus (2022) explica que clonazepam, como benzodiacepina, actúa sobre el sistema GABA, inhibiendo la excitación neuronal que causa espasmos. Es útil en casos donde los espasmos son frecuentes pero no se desea una sedación profunda.
 
-2. Baclofeno:
+2- Baclofeno:
 - Relajante muscular. Lo tomo en dosis muy bajas porque tengo muy poca espasticidad. Efecto: Ayuda a relajar los músculos tensos sin necesitar grandes cantidades.
 - El baclofeno es un relajante muscular que actúa directamente sobre los receptores GABA-B en la médula espinal, reduciendo la espasticidad sin afectar tanto la conciencia. Un artículo en Frontiers in Neurology (2021) señala que es uno de los tratamientos más usados para espasticidad en lesión medular.
 
@@ -87,11 +87,11 @@ El baclofeno actúa como agonista GABA-B, inhibiendo la actividad de las neurona
 - Interferir con estrategias de movilidad que dependen de cierto grado de rigidez.
 - En personas con espasticidad leve o tono muscular bajo, puede provocar efectos paradójicos o compensatorios que se perciben como un aumento de la espasticidad.
 
-3. Diazepam:
+3- Diazepam:
 - Lo probé durante dos meses, pero no redujo los espasmos y me causaba mucho aletargamiento y somnolencia. Efecto: Sedación intensa sin beneficio claro en mi caso.
 - Aunque el diazepam también es una benzodiacepina, su efecto sedante es más fuerte. Un estudio en Journal of Spinal Cord Medicine (2020) indica que puede reducir espasmos, pero en muchos pacientes provoca somnolencia, debilidad y dependencia. No es ideal si se busca funcionalidad durante el día.
 
-4. Tizanidina:
+4- Tizanidina:
 - Lo probé durante 3 meses, tampoco redujo los espasmos musculares. 
 - La tizanidina es un relajante muscular que actúa sobre los receptores alfa-2 en la médula espinal, reduciendo la actividad de las neuronas motoras. Se usa para tratar espasmos musculares y espasticidad leve a moderada (LiverTox – NCBI Bookshelf).
 
@@ -118,7 +118,7 @@ Recomendaciones prácticas:
 ---
 
 C) Estímulos Físicos:
-1. Masajes terapéuticos:
+1- Masajes terapéuticos:
 ¿Cómo ayudan?
 Los masajes aplicados correctamente pueden:
 - Relajar músculos tensos, reduciendo la excitabilidad de los reflejos espinales.
@@ -131,7 +131,7 @@ Respaldo científico:
 
 ---
 
-2. Electroestimulación:
+2- Electroestimulación:
 ¿Cómo ayuda?
 La estimulación eléctrica funcional (FES) o transcutánea puede:
 - Activar músculos paralizados, reduciendo la atrofia y mejorando el tono.
@@ -153,10 +153,10 @@ Las técnicas de respiración y relajación actúan sobre el sistema nervioso au
 - Disminuir la percepción del dolor.
 
 Respaldo científico
-1. Respiración con exhalación prolongada:
+1- Respiración con exhalación prolongada:
 Según Cleveland Clinic, la respiración profunda con énfasis en la exhalación ayuda a reducir la espasticidad al activar el sistema parasimpático. Se recomienda practicarla en posición cómoda, con inhalaciones suaves por la nariz y exhalaciones lentas por la boca, durante 5–10 minutos.
 
-2. Mindfulness y meditación
+2- Mindfulness y meditación
 Un estudio en Frontiers in Psychology (2020) mostró que la práctica regular de mindfulness reduce la percepción del dolor y mejora el control muscular en personas con condiciones neurológicas. 
 
 ---
