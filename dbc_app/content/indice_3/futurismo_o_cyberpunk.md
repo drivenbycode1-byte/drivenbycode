@@ -56,7 +56,9 @@ Incluso la Unión Soviética imaginó futuros comunistas automatizados. Casas in
 Entonces llegaron Blade Runner, Akira y Neuromancer. Nos metieron ese bichito incómodo que te despierta cuando estás a punto de quedarte dormido (te hablo a ti maldito zancudo de verano). El Cyberpunk nos dio la medida exacta del capitalismo desmedido. Se convirtió en una advertencia: Las corporaciones tienen más poder que los gobiernos.
 
 Cine que despierta:
-- "Blade Runner" (1982), de Ridley Scott: “He visto cosas que ustedes no creerían…”
+- "Blade Runner" (1982), de Ridley Scott: "He visto cosas que ustedes no creerían. 
+Ataques de naves en llamas más allá de Orión..." (Y sin embargo, todo eso se perderá... 
+como lágrimas en la lluvia. ¿Qué es más humano que saber que vamos a desaparecer?)
 - "Mr. Robot" (2015), de Sam Esmail: “La sociedad ha sido hackeada. Nos vendieron una versión de la realidad, y la aceptamos sin leer los términos y condiciones.”
 - "Gattaca" (1997), de Andrew Niccol: “No hay gen para el espíritu humano.”
 (La genética puede predecir tu colesterol, pero no tu voluntad de romper el sistema.)
