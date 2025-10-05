@@ -12,19 +12,19 @@ Pero hubo un problema. Nada de eso ocurrió. O peor: la sociedad cuestiona menos
 Literatura como advertencia:
 En la literatura, encontramos obras que anticiparon este giro:
 
-- La rebelión de las masas, de Ortega y Gasset: “El hombre-masa no quiere dar razones ni que se las den. Vive en una perpetua disposición a imponer sus opiniones.”
-- El fin de la historia y el último hombre, de Francis Fukuyama: “La historia ha terminado. Lo que queda es administrar el aburrimiento.” (La utopía liberal como punto muerto.)
-- El choque de civilizaciones, de Samuel Huntington: “La política global del futuro estará dominada por el conflicto entre civilizaciones.” (La cultura como nueva frontera bélica.)
-- Nosotros, de Yevgueni Zamiatin: “La libertad y la criminalidad son inseparables.”
-- El dador, de Lois Lowry: “Cuando la gente tiene libertad para elegir, elige mal.”
-- ¿Sueñan los androides con ovejas eléctricas?, de Philip K. Dick: “La empatía es lo que nos hace humanos.”
-- QualityLand, de Marc-Uwe Kling: “El sistema sabe lo que quieres antes de que lo sepas tú.”
-- La naranja mecánica, de Anthony Burgess: “¿Puede el hombre ser bueno si no puede elegir?”
-- Ensayo sobre la ceguera, de José Saramago: “Dentro de nosotros hay algo que no tiene nombre, y eso es lo que somos.” (La ceguera como metáfora de la indiferencia.)
-- Frankenstein, de Mary Shelley: “¿Quién es el verdadero monstruo?”
-- Carbono alterado, de Richard Morgan: "La muerte ya no es el fin. Solo un cambio de cuerpo." (La inmortalidad como mercancía.)
-- Neuromancer, de William Gibson: “El cielo sobre el puerto tenía el color de una televisión sintonizada en un canal muerto.”
-- Y la triada totalitarista: Un mundo feliz, Fahrenheit 451 y 1984.
+- "La rebelión de las masas", de Ortega y Gasset: “El hombre-masa no quiere dar razones ni que se las den. Vive en una perpetua disposición a imponer sus opiniones.”
+- "El fin de la historia y el último hombre", de Francis Fukuyama: “La historia ha terminado. Lo que queda es administrar el aburrimiento.” (La utopía liberal como punto muerto.)
+- "El choque de civilizaciones", de Samuel Huntington: “La política global del futuro estará dominada por el conflicto entre civilizaciones.” (La cultura como nueva frontera bélica.)
+- "Nosotros", de Yevgueni Zamiatin: “La libertad y la criminalidad son inseparables.”
+- "El dador", de Lois Lowry: “Cuando la gente tiene libertad para elegir, elige mal.”
+- "¿Sueñan los androides con ovejas eléctricas?", de Philip K. Dick: “La empatía es lo que nos hace humanos.”
+- "QualityLand", de Marc-Uwe Kling: “El sistema sabe lo que quieres antes de que lo sepas tú.”
+- "La naranja mecánica", de Anthony Burgess: “¿Puede el hombre ser bueno si no puede elegir?”
+- "Ensayo sobre la ceguera", de José Saramago: “Dentro de nosotros hay algo que no tiene nombre, y eso es lo que somos.” (La ceguera como metáfora de la indiferencia.)
+- "Frankenstein", de Mary Shelley: “¿Quién es el verdadero monstruo?”
+- "Carbono alterado", de Richard Morgan: "La muerte ya no es el fin. Solo un cambio de cuerpo." (La inmortalidad como mercancía.)
+- "Neuromancer", de William Gibson: “El cielo sobre el puerto tenía el color de una televisión sintonizada en un canal muerto.”
+- Y la triada totalitarista: "Un mundo feliz", "Fahrenheit 451" y "1984".
 
 ¿Qué conectan todas estas obras?
 - La ciencia como herramienta de control.
@@ -32,7 +32,7 @@ En la literatura, encontramos obras que anticiparon este giro:
 - La felicidad como ilusión para eliminar la libertad.
 - Conflictos éticos sobre el libre albedrío, la memoria y el deseo.
 
-Futurismo vs. Cyberpunk
+Futurismo vs. Cyberpunk:
 No confundamos “futurismo” con ciencia ficción. El futurismo fue un movimiento artístico que exaltaba el progreso, la máquina y la juventud. Tenía un optimismo desmedido por la tecnología y una estética agresiva, veloz y metálica.
 
 El futuro, en cambio, no es un concepto obvio. Es una construcción cultural, una proyección que creamos con candor (en la mayoría de los casos, al menos eso espero). Los directores comenzaron a retratar ideas que se alejaban del futurismo brillante y se acercaban cada vez más a la distopía Cyberpunk.
@@ -56,46 +56,46 @@ Incluso la Unión Soviética imaginó futuros comunistas automatizados. Casas in
 Entonces llegaron Blade Runner, Akira y Neuromancer. Nos metieron ese bichito incómodo que te despierta cuando estás a punto de quedarte dormido (te hablo a ti maldito zancudo de verano). El Cyberpunk nos dio la medida exacta del capitalismo desmedido. Se convirtió en una advertencia: Las corporaciones tienen más poder que los gobiernos.
 
 Cine que despierta;
-- Blade Runner (1982), de Ridley Scott: “He visto cosas que ustedes no creerían…”
-- Mr. Robot (2015), de Sam Esmail: “La sociedad ha sido hackeada. Nos vendieron una versión de la realidad, y la aceptamos sin leer los términos y condiciones.”
-- Gattaca (1997), de Andrew Niccol: “No hay gen para el espíritu humano.”
+- "Blade Runner" (1982), de Ridley Scott: “He visto cosas que ustedes no creerían…”
+- "Mr. Robot" (2015), de Sam Esmail: “La sociedad ha sido hackeada. Nos vendieron una versión de la realidad, y la aceptamos sin leer los términos y condiciones.”
+- "Gattaca" (1997), de Andrew Niccol: “No hay gen para el espíritu humano.”
 (La genética puede predecir tu colesterol, pero no tu voluntad de romper el sistema.)
-- Her (2013): “La gente siempre dice que no pueden vivir sin alguien... Yo creo que eso es mentira.”
+- "Her" (2013): “La gente siempre dice que no pueden vivir sin alguien... Yo creo que eso es mentira.”
 (¿Amor o dependencia emocional con interfaz de voz?)
-- The Matrix (1999), de las hermanas Wachowski: “La Matrix es un mundo imaginario creado para mantenernos bajo control.”
+- "The Matrix" (1999), de las hermanas Wachowski: “La Matrix es un mundo imaginario creado para mantenernos bajo control.”
 (¡Gracias por elegir su simulación! Actualización disponible: versión 2.0 con más ansiedad.)
-- Ex Machina (2014), de Alex Garland: “¿Cómo se siente ser el único que no está programado?”
+- "Ex Machina" (2014), de Alex Garland: “¿Cómo se siente ser el único que no está programado?”
 (Spoiler: también estás programado. Solo que no te dieron el manual.)
-- Children of Men (2006), de ALfonso Cuarón: “La única cosa que nos queda es seguir adelante. Vivir día a día.”
+- "Children of Men" (2006), de ALfonso Cuarón: “La única cosa que nos queda es seguir adelante. Vivir día a día.”
 (Cuando el futuro se extingue, el presente se convierte en resistencia.)
-- Minority Report (2002), de Seteven Spielberg: “El sistema es perfecto. La única falla... eres tú.”
-- El Quinto Elemento (1997), de Luc Besson: “Todo lo que ustedes crean, destruyen. Todo lo que construyen, lo convierten en caos.”
-- Elysium (2013), de Neil Blomkamp: “Ellos tienen máquinas que curan la muerte. Nosotros tenemos turnos dobles y cáncer sin diagnóstico.”
+- "Minority Report" (2002), de Seteven Spielberg: “El sistema es perfecto. La única falla... eres tú.”
+- "El Quinto Elemento" (1997), de Luc Besson: “Todo lo que ustedes crean, destruyen. Todo lo que construyen, lo convierten en caos.”
+- "Elysium" (2013), de Neil Blomkamp: “Ellos tienen máquinas que curan la muerte. Nosotros tenemos turnos dobles y cáncer sin diagnóstico.”
 
 Pero las óperas espaciales se mantenían activas y nos daban la ilusión de futuros brillantes. Solo pensar en "Volver al Futuro" y tanto optimismo con que mostraba lo que podría llegar. 
 
 Y así llegamos también al Anime como filosofía visual:
-- Ghost in the Shell (1995), de Mamoru Oshii: “¿Qué define a un ser vivo cuando todo lo que lo compone puede ser replicado?”
-- Cowboy Bebop (1998), de Shinichirō Watanabe: “No hay nada que puedas hacer. El pasado no puede ser cambiado.”
-- Akira (1988), de Katsuhiro Otomo: “¿Quién necesita un dios cuando tienes poder absoluto?”
-- Serial Experiments Lain (1998): “La red es el lugar donde todos somos uno... pero también donde todos estamos solos.”
+- "Ghost in the Shell" (1995), de Mamoru Oshii: “¿Qué define a un ser vivo cuando todo lo que lo compone puede ser replicado?”
+- "Cowboy Bebop" (1998), de Shinichirō Watanabe: “No hay nada que puedas hacer. El pasado no puede ser cambiado.”
+- "Akira" (1988), de Katsuhiro Otomo: “¿Quién necesita un dios cuando tienes poder absoluto?”
+- "Serial Experiments Lain" (1998): “La red es el lugar donde todos somos uno... pero también donde todos estamos solos.”
 (¡Bienvenido al hiperespacio emocional! Conexión garantizada, intimidad no incluida.)
-- Ergo Proxy (2006): “La conciencia es solo una ilusión que nos impide aceptar que somos máquinas.”
-- Texhnolyze (2003): “La evolución no siempre significa progreso. A veces es solo una forma más eficiente de extinguirse.”
-- Psycho-Pass (2012): “La justicia no es más que el promedio estadístico de la moralidad.”
+- "Ergo Proxy" (2006): “La conciencia es solo una ilusión que nos impide aceptar que somos máquinas.”
+- "Texhnolyze" (2003): “La evolución no siempre significa progreso. A veces es solo una forma más eficiente de extinguirse.”
+- "Psycho-Pass" (2012): “La justicia no es más que el promedio estadístico de la moralidad.”
 (¡Gracias por confiar en el algoritmo de tu alma!)
 
 Y todo este existencialismo y construcción de la realidad no solo la encontramos en los medios anteriormente mencionados, si no que también en los videojuegos. Una buena historia puede ser contada desde cualquier rincón del mundo:
 
 Videojuegos como tratados filosóficos:
-- NieR: Automata: "Todo lo vivo está diseñado para morir. Estamos atrapados perpetuamente en una espiral infinita de vida y muerte. ¿Será un maldición o alguna clase de castigo? Pienso a menudo en el Dios que nos "bendijo" con este acertijo y me pregunto si tendremos la algún día la ocasión para matarlo".
+- "NieR: Automata", de Yokotaro: "Todo lo vivo está diseñado para morir. Estamos atrapados perpetuamente en una espiral infinita de vida y muerte. ¿Será un maldición o alguna clase de castigo? Pienso a menudo en el Dios que nos "bendijo" con este acertijo y me pregunto si tendremos la algún día la ocasión para matarlo".
 (¡No Nietzsche, cálmate!).
-- Death Stranding: “La gente construye muros para protegerse... pero también para aislarse.”
+- "Death Stranding", de Hideo Kojima: “La gente construye muros para protegerse... pero también para aislarse.”
 (Kierkegaard, aléjate.).
-- SOMA: “Si mis recuerdos fueron copiados, ¿sigo siendo yo?”
-- The Talos Principle: “¿Qué significa ser libre si todas mis decisiones están determinadas por mis algoritmos?”
-- Metal Gear Solid 2: “La censura ya no es necesaria: basta con inundar el sistema con basura.”
-- Cyberpunk 2077: “La libertad es solo una ilusión bien financiada. Te dejan elegir el color de tu jaula, y llaman a eso democracia.”
+- "SOMA", de Frictional Games: “Si mis recuerdos fueron copiados, ¿sigo siendo yo?”
+- "The Talos Principle", de Croteam: “¿Qué significa ser libre si todas mis decisiones están determinadas por mis algoritmos?”
+- "Metal Gear Solid 2", de Hideo Kojima: “La censura ya no es necesaria: basta con inundar el sistema con basura.”
+- Y obvio, de donde nace todo esta narrativa - "Cyberpunk 2077" de Cd Projekt Red: “La libertad es solo una ilusión bien financiada. Te dejan elegir el color de tu jaula, y llaman a eso democracia.”
 (¡Bienvenido al capitalismo emocional!)
 
 Cyberpunk: nuestra próxima realidad;
