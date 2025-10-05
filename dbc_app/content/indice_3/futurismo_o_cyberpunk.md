@@ -90,7 +90,7 @@ Y así llegamos también al Anime como filosofía visual:
 Y todo este existencialismo y construcción de la realidad no solo la encontramos en los medios anteriormente mencionados, si no que también en los videojuegos. Una buena historia puede ser contada desde cualquier rincón del mundo:
 
 Videojuegos como tratados filosóficos:
-- "NieR: Automata", de Yokotaro: "Todo lo vivo está diseñado para morir. Estamos atrapados perpetuamente en una espiral infinita de vida y muerte. ¿Será un maldición o alguna clase de castigo? Pienso a menudo en el Dios que nos "bendijo" con este acertijo y me pregunto si tendremos la algún día la ocasión para matarlo".
+- "NieR: Automata", de Yokotaro: "Todo lo vivo está diseñado para morir. Estamos atrapados perpetuamente en una espiral infinita de vida y muerte. ¿Será un maldición o alguna clase de castigo? Pienso a menudo en el Dios que nos "bendijo" con este acertijo y me pregunto si tendremos algún día la ocasión para matarlo".
 (¡No Nietzsche, cálmate!).
 - "Death Stranding", de Hideo Kojima: “La gente construye muros para protegerse... pero también para aislarse.”
 (Kierkegaard, aléjate.).
