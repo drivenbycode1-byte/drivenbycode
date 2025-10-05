@@ -100,10 +100,10 @@ Videojuegos como tratados filosóficos:
 - Y obvio, de donde nace toda esta narrativa - "Cyberpunk 2077" de Cd Projekt Red: “La libertad es solo una ilusión bien financiada. Te dejan elegir el color de tu jaula, y llaman a eso democracia.”
 (¡Bienvenido al capitalismo emocional!)
 
-Cyberpunk: nuestra próxima realidad:
+Cyberpunk, nuestra próxima realidad:
 Consciencias cansadas. Desgastadas. Abrumadas. Un refrito del pasado disfrazado de innovación. La imaginación utópica fue lentamente extirpada, reemplazada por la distopía funcional. El mito del futuro está arraigado al capitalismo moderno: crecimiento desmedido como placebo, fe ciega en la ideología del progreso.
 
-Estamos en 2024… y ese futuro no llegó. El futuro se volvió una amenaza. La imaginación colectiva es incapaz de encontrar alternativas. El aburrimiento y las enfermedades mentales —ansiedad, estrés, insomnio— son parte del algoritmo que nosotros mismos alimentamos en las redes.
+Estamos en 2025… y ese futuro no llegó. El futuro se volvió una amenaza. La imaginación colectiva es incapaz de encontrar alternativas. El aburrimiento y las enfermedades mentales —ansiedad, estrés, insomnio— son parte del algoritmo que nosotros mismos alimentamos en las redes.
 
 La globalización se expande, pero también lo hacen la inseguridad laboral y el miedo a las calles. La mentalidad del “emprendedor” se vende como libertad, pero crece de la mano con el pánico al fracaso. Ya nadie —o casi nadie— se imagina una vida en la naturaleza sin cargar las cadenas que ellos mismos crearon.
 
