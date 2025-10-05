@@ -97,10 +97,10 @@ Videojuegos como tratados filosóficos:
 - "SOMA", de Frictional Games: “Si mis recuerdos fueron copiados, ¿sigo siendo yo?”
 - "The Talos Principle", de Croteam: “¿Qué significa ser libre si todas mis decisiones están determinadas por mis algoritmos?”
 - "Metal Gear Solid 2", de Hideo Kojima: “La censura ya no es necesaria: basta con inundar el sistema con basura.”
-- Y obvio, de donde nace todo esta narrativa - "Cyberpunk 2077" de Cd Projekt Red: “La libertad es solo una ilusión bien financiada. Te dejan elegir el color de tu jaula, y llaman a eso democracia.”
+- Y obvio, de donde nace toda esta narrativa - "Cyberpunk 2077" de Cd Projekt Red: “La libertad es solo una ilusión bien financiada. Te dejan elegir el color de tu jaula, y llaman a eso democracia.”
 (¡Bienvenido al capitalismo emocional!)
 
-Cyberpunk: nuestra próxima realidad;
+Cyberpunk: nuestra próxima realidad:
 Consciencias cansadas. Desgastadas. Abrumadas. Un refrito del pasado disfrazado de innovación. La imaginación utópica fue lentamente extirpada, reemplazada por la distopía funcional. El mito del futuro está arraigado al capitalismo moderno: crecimiento desmedido como placebo, fe ciega en la ideología del progreso.
 
 Estamos en 2024… y ese futuro no llegó. El futuro se volvió una amenaza. La imaginación colectiva es incapaz de encontrar alternativas. El aburrimiento y las enfermedades mentales —ansiedad, estrés, insomnio— son parte del algoritmo que nosotros mismos alimentamos en las redes.
@@ -117,7 +117,7 @@ Nuestros padres y abuelos nos prometieron que estudiar una carrera era el camino
 
 Nos contratan como paquetes por tiempos determinados. Poco a poco nos convertimos en apps. Usan nuestros datos para alimentar esas mismas apps y consumir nuestro tiempo.
 
-Posmodernismo, ansiedad y algoritmos
+Posmodernismo, ansiedad y algoritmos:
 Todo esto también forma parte de la inquietud del pensamiento posmoderno. No como estética de la nueva era, sino como ciencia social y cultural. El miedo a no poder separar a los seres humanos de las máquinas se convierte en la única salida dentro de la economía de consumo del nuevo orden capitalista.
 
 Y eso, a su vez, se vuelve absurdo: el individuo solo vive en el presente. El futuro y el pasado ya no tienen importancia. Se pierde la fe en la razón y en la ciencia. Cada vez hay más asincronía con el tiempo: “¡Qué rápido pasó el día!” o “¡Este año pasó volando!”
@@ -148,12 +148,12 @@ Nuestra red social intenta ser algo reservado. Netflix no nos hace felices. Ambo
 Metrópolis verticales y sueños horizontales:
 Las metrópolis siguen creciendo verticalmente, atrayendo hacia la luz todas las polillas que se queman a fin de mes al gastar su dinero. Mientras tanto, los cazadores de polillas usan sus redes para atrapar sus alas… y su dinero.
 
-La diferencia de clases se acerca. Ya no habrá quien pueda convertir sus sueños en sustancia real. Solo quedarán en sueños. La definición más simple de clase media. Y esta se extinguirá, quedando solo en sueños.
+La diferencia de clases se acerca. Ya no habrá quien pueda convertir sus sueños en sustancia real. Solo quedarán en sueños. La definición más simple de clase media. Y esta se extinguirá, quedando solo en sueños, ricos y pobres.
 
 Homo-Technologicus:
 Mientras otros sueños se vuelven realidad —como el transhumanismo y los chips integrados— evolucionamos y “mejoramos” como especie. Tal como lo acuñó Julian Huxley (sí, hermano de Aldous Huxley). Pero la integración tiene un precio. Y ese precio será la pérdida de la humanidad.
 
-Cada vez más conectados. Cada vez menos conectados. Dejando atrás temas éticos y morales: menos dolor, más tiempo de vida, menos enfermedades.
+Cada vez más conectados. Cada vez menos conectados. Dejando atrás temas éticos y morales y comezando la ultra era de la estética: menos dolor, más tiempo de vida, menos enfermedades.
 
 Esta será la última etapa de la especie humana: el Homo-Technologicus.
 
