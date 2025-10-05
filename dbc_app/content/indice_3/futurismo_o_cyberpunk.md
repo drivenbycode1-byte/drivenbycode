@@ -48,14 +48,14 @@ El término fue acuñado por Bruce Bethke en 1983, pero se consolidó con Neurom
 - Pérdida de identidad
 - El punk como actitud: rebelión, marginalidad, estilo callejero
 
-El séptimo arte y el giro distópico
+El séptimo arte y el giro distópico:
 Tras la Segunda Guerra Mundial, el capitalismo y el comunismo triunfaron sobre el fascismo, dando paso a la Guerra Fría. En los 80s, nacen películas, cómics, animes y libros de ciencia ficción centrados en óperas espaciales: Star Trek, Star Wars, Los Supersónicos. Futuros brillantes donde todo era posible.
 
 Incluso la Unión Soviética imaginó futuros comunistas automatizados. Casas inteligentes, autos voladores, exploración espacial. Nadie nos detendría… o eso creíamos.
 
 Entonces llegaron Blade Runner, Akira y Neuromancer. Nos metieron ese bichito incómodo que te despierta cuando estás a punto de quedarte dormido (te hablo a ti maldito zancudo de verano). El Cyberpunk nos dio la medida exacta del capitalismo desmedido. Se convirtió en una advertencia: Las corporaciones tienen más poder que los gobiernos.
 
-Cine que despierta;
+Cine que despierta:
 - "Blade Runner" (1982), de Ridley Scott: “He visto cosas que ustedes no creerían…”
 - "Mr. Robot" (2015), de Sam Esmail: “La sociedad ha sido hackeada. Nos vendieron una versión de la realidad, y la aceptamos sin leer los términos y condiciones.”
 - "Gattaca" (1997), de Andrew Niccol: “No hay gen para el espíritu humano.”
