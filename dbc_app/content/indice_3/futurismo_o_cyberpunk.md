@@ -9,7 +9,7 @@ Autores de distintas disciplinas convergieron en una idea común: la llegada del
 
 Pero hubo un problema. Nada de eso ocurrió. O peor: la sociedad cuestiona menos, se deja llevar por algoritmos cíclicos, y la tecnología resolutiva está cada vez más del lado de quienes pueden pagarla. ¿Y el resto? Que siga consumiendo. No se darán cuenta hasta que... No, no nos daremos cuenta.
 
-Literatura como advertencia
+Literatura como advertencia:
 En la literatura, encontramos obras que anticiparon este giro:
 
 - La rebelión de las masas, de Ortega y Gasset: “El hombre-masa no quiere dar razones ni que se las den. Vive en una perpetua disposición a imponer sus opiniones.”
