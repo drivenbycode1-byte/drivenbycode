@@ -1,7 +1,7 @@
 ---
 title: "Combatir la Depresión"
 date: "2025-09-21"
-tags: [depresión, herramientas de autoayuda, resiliencia]
+tags: [salud mental, herramientas de autoayuda, resiliencia]
 ---
 
 Previo a mi accidente, nunca me detuve a entender mis emociones ni a darles tiempo; mucho menos me di el espacio para conocer por qué sentía lo que sentía. Me dedicaba a llevar mi cuerpo al límite, siempre compitiendo conmigo mismo, hasta donde podía llegar, y a entender el mundo exterior: mochileaba, viajaba en moto, subía al primer cerro que encontraba —El Cerro La Ballena era mi predilección—, y buscaba respuestas en todos los libros que podía devorar. Creía que la filosofía nietzscheana o sartreana tenían las respuestas del existencialismo, del porqué estamos aquí, del porqué nacimos. Entrenaba y trotaba a diario porque, según yo, eso me conectaba con mis pensamientos. Probablemente me concentraba más y dejaba que mis ideas revoloteasen por donde quisieran en los recovecos de la mente, siempre estando solo. Amo mi solitud. Pero todo eso era la "Gran Fachada" que viví durante 34 años.
