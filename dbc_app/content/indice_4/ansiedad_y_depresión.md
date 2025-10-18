@@ -1,7 +1,7 @@
 ---
 title: De Yessenia - Qué entendemos por ansiedad y depresión
 date: 2025-10-18
-tags: [salud menta, ciencia]
+tags: [salud mental, ciencia]
 ---
 Entendiendo lo invisible
 Hay dolores que, por la evolución, por la costumbre o por la necesidad aprendieron a no gritar. Se les enseñó a no sangrar. A que si no se ven en radiografías ni se explican con facilidad, no existen. A que si sale de la norma social, estas no tiene presencia, pero están ahí. En ese cuerpo desgastado que no quiere levantarse, en el pensamiento que corre sin parar, en la mente que se pregunta si todo esto tiene sentido.
