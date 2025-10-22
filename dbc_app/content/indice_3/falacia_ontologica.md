@@ -6,7 +6,7 @@ tags: [filosofía, pensamiento]
 Infiltrado en la visión existencial de Rust Cohle, explorando la ilusión moderna de la esperanza y cómo el acto de esperar puede convertirse en una trampa ontológica: un autoengaño que nos aleja de la acción, del presente y de la autenticidad del ser.
 
 Pues la esperanza se convierte en la forma refinada de huir.
-Una huida disfrazada de fe, de optimismo, un aplazamiento constante de la vida bajo la promesa ilusoria de un mañana que nunca llega. El humano que espera no vive por que se acostunbró a la postergación de sus actos.
+Una huida disfrazada de fe, de optimismo, un aplazamiento constante de la vida bajo la promesa ilusoria de un mañana que nunca llega. El humano que espera no vive por que se acostumbró a la postergación de sus actos.
 
 Y en esa postergación, sacrifica el único territorio que realmente le pertenece —el presente— en nombre de una posibilidad abstracta que no tiene dueño.
 
