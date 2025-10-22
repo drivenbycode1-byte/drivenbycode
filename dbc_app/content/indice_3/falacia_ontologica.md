@@ -1,5 +1,5 @@
 ---
-title: "La Falacia Ontológica de la Espera"
+title: "La Falacia Ontológica de la Esperanza"
 date: "2025-10-22"
 tags: [filosofía, pensamiento]
 ---
