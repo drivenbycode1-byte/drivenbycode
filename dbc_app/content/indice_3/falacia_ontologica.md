@@ -1,9 +1,9 @@
 ---
 title: "La Falacia Ontológica de la Espera"
-date: "2025-09-21"
-tags: [filosofia, pensamiento]
+date: "2025-10-22"
+tags: [filosofía, pensamiento]
 ---
-Inspirado en la visión existencial de Rust Cohle, explorando la ilusión moderna de la esperanza y cómo el acto de esperar puede convertirse en una trampa ontológica: un autoengaño que nos aleja de la acción, del presente y de la autenticidad del ser.
+Infiltrado en la visión existencial de Rust Cohle, explorando la ilusión moderna de la esperanza y cómo el acto de esperar puede convertirse en una trampa ontológica: un autoengaño que nos aleja de la acción, del presente y de la autenticidad del ser.
 
 Pues la esperanza la forma refinada de huir.
 Una huida disfrazada de fe, de optimismo, un aplazamiento constante de la vida bajo la promesa ilusoria de un mañana que nunca llega.
