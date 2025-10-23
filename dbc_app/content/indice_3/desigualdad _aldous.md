@@ -10,7 +10,7 @@ tags: [pensamiento, política]
 Y así empezamos: en una sociedad que está en una cuerda floja entre temerle a la desigualdad o adorarla pero dejando de lado el pensamiento individual que, obviamente, se ve como un error del sistema.
 Huxley lo anticipó: cuando se busca la estabilidad por encima de la verdad, se sacrifica al individuo en el altar de la uniformidad. Y es justo ahí donde quiero entrar: cómo la desigualdad, en ambos extremos, se ha convertido en una enfermedad política que ha olvidado su fundamento humano.
 
-1. La ilusión de igualar desde arriba
+1- La ilusión de igualar desde arriba
 
 En el mundo de Huxley, todos nacen predestinados a su lugar social, felices en su rango, dóciles en su propósito. Y eso, paradójicamente, se parece mucho a lo que ocurre cuando la igualdad se impone desde arriba: lo que menos se hace es liberar al individuo, se lo encasilla en una trampa de la que jamás sabrá que está y de la que jamás saldrá si no es por la fuerza o rebeldía.
 
@@ -25,7 +25,7 @@ Lo mismo ocurrió en la Unión Soviética: la búsqueda de igualdad absoluta se 
 
 En otras palabras, el igualitarismo extremo termina creando una nueva élite: la de los que administran y reparten la igualdad. Una especie de aristocracia de los planificadores de carcasas humanas, los que deciden cuánta felicidad te corresponde.
 
-2. La ilusión contraria: liberar hasta desbordar
+2- La ilusión contraria: liberar hasta desbordar
 
 Si el exceso de igualdad mata la libertad, el exceso de libertad mata el sentido.
 La otra cara del problema viene de la derecha económica extrema, que al grito de “libertad individual” ha escondido los hilos para permitir la construcción de imperios corporativos más poderosos que los mismos Estados.
@@ -42,7 +42,7 @@ Y hoy, bajo el hipercorporativismo, el sistema ha logrado algo aún más elegant
 
 La derecha creó su propia versión del soma: el consumo, la deuda, la promesa del éxito personal. Todos felices, pero dormidos.
 
-3. Los modelos intermedios y el espejismo del equilibrio
+3- Los modelos intermedios y el espejismo del equilibrio
 
 “Bueno —dirás—, entonces el camino está en el medio.” En el igualitarismo moderno.
 Sí, en teoría. Pero incluso los países más “equilibrados” han visto cómo la desigualdad se cuela disfrazada de meritocracia.
@@ -54,7 +54,7 @@ Por lo mismo HUxley decía: “La libertad no puede ser otorgada, debe ser conqu
 
 Y conquistarla implica pensar. Cuestionar. Dudar. Algo que el mundo feliz, de izquierda o de derecha, detesta.
 
-4. La desigualdad como síntoma, no como enemigo
+4- La desigualdad como síntoma, no como enemigo
 
 La desigualdad no debe ser vista ni cuestionada como una cifra del Banco Estado por que es un reflejo humano o, mejor dicho, un espejo social.
 Y es curioso que además, en la era de las redes sociales, donde todos pueden opinar, mostrar, comparar, la desigualdad ha dejado de ser económica para volverse emocional, incluso sentimental. 
@@ -66,7 +66,7 @@ En esto radica la tragedia: nos hemos vuelto expertos en hablar de justicia soci
 
 “El precio de la uniformidad es la pérdida de la humanidad.” – Huxley
 
-5. El antídoto: fortalecer al individuo
+5- El antídoto: fortalecer al individuo
 
 Huxley no fue solo un pesimista, fue un realista lúcido. En sus ensayos advertía que el verdadero peligro no era el control, sino la renuncia voluntaria a pensar.
 Y eso es lo que seguimos haciendo cuando reducimos la desigualdad a un debate político en vez de un desafío moral y educativo.
