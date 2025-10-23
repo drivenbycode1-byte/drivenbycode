@@ -7,7 +7,7 @@ tags: [pensamiento, política]
 
 “La felicidad universal mantiene las ruedas girando; la verdad y la belleza no pueden hacerlo.” – Huxley.
 
-Y así empezamos: en una sociedad que está en una cuerda floja entre temerle a la desigualdad o adorarla pero dejando de lado el pensamiento individual que, obviamentes, se ve como un error del sistema.
+Y así empezamos: en una sociedad que está en una cuerda floja entre temerle a la desigualdad o adorarla pero dejando de lado el pensamiento individual que, obviamente, se ve como un error del sistema.
 Huxley lo anticipó: cuando se busca la estabilidad por encima de la verdad, se sacrifica al individuo en el altar de la uniformidad. Y es justo ahí donde quiero entrar: cómo la desigualdad, en ambos extremos, se ha convertido en una enfermedad política que ha olvidado su fundamento humano.
 
 1. La ilusión de igualar desde arriba
