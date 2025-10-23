@@ -50,7 +50,7 @@ Suecia, Islandia, Noruega, países modelo que hoy viajan hacia  desigualdades cr
 
 El problema, de nuevo, no está en la estructura sino en el individuo. Si no fortaleces la mente crítica, si no formas ciudadanos conscientes, el sistema (sea cual sea), terminará devorando a su propia gente.
 
-Por lo mismo HUxley decía: “La libertad no puede ser otorgada, debe ser conquistada.”
+Por lo mismo Huxley decía: “La libertad no puede ser otorgada, debe ser conquistada.”
 
 Y conquistarla implica pensar. Cuestionar. Dudar. Algo que el mundo feliz, de izquierda o de derecha, detesta.
 
@@ -62,7 +62,7 @@ Ya no nos duele que alguien gane más, sino que tenga más visibilidad, más ate
 
 El intento de eliminar la desigualdad social sin atender la desigualdad del sujeto (la del pensamiento, la autoestima, la conciencia), solo produce una masa de individuos dóciles que piden que alguien piense por ellos, ¿Quién se lee 204 páginas de un republicano o 54 páginas de una comunista que no logra defender sus ideas en un debate? Solo fanáticos o eruditos del tema. Sí, usen a mi amigo ChatGPT para que resuma todo, ¿Cómo? ¿Es tu amigo también?
 
-En esto radica la tragedia: nos hemos vuelto expertos en hablar de justicia social, pero analfabetos en justicia personal y expertos en redes. Al final, solo somos como moscas, tocamos la superficie de la mierda mientras nos frostamos las patas tras haber encontrado la verdad.
+En esto radica la tragedia: nos hemos vuelto expertos en hablar de justicia social, pero analfabetos en justicia personal y expertos en redes. Al final, solo somos como moscas, tocamos la superficie de la mierda mientras nos frotamos las patas tras haber encontrado la verdad.
 
 “El precio de la uniformidad es la pérdida de la humanidad.” – Huxley
 
@@ -85,5 +85,5 @@ Y mientras el individuo siga débil, la desigualdad, tire donde tire, seguirá s
 
 “Quizás la civilización no sea más que un intento de hacer soportable lo insoportable.” – Huxley
 
-Quizas el verdadero problema no sea la desigualdad ni la igualdad, sino que dejamos de pensar por nosotros mismos.
+Quizás el verdadero problema no sea la desigualdad ni la igualdad, sino que dejamos de pensar por nosotros mismos.
 En un mundo donde todos opinan, ¿quién se atreve a tener una idea propia sin esperar aprobación digital? 
