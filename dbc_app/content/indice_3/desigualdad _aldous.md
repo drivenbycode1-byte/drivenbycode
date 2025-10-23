@@ -3,7 +3,7 @@ title: "Un Mundo Feliz y la Desigualdad"
 date: "2025-10-23"
 tags: [pensamiento, política]
 ---
-Cuando pequeño me detestaba la lectura. Odiaba perder el tiempo en responder unas cuantas preguntas enumeradas y, todo lo que podría haber sido un experiencia, se volvía en un prejuicioso aburrimiento. Hasta que salí del cole y me tropecé literalmente con "Un Mundo Feliz" de Aldous Huxley el cual terminó siendo uno de esos libros que me revolvió la cabeza y que hoy es mi libro de batalla, el que siempre recomiendo. La sensación de aprensión, de escalofrío interno al pensar que tal vez no estamos tan lejos de ese mundo perfectamente diseñado para que nadie piense demasiado me hizo odiar los años que perdí al no prestarle atención a ningún libro en mis años de adolescente. 
+"Un Mundo Feliz" de Aldous Huxley terminó siendo uno de esos libros que me revolvió la cabeza y que hoy es mi libro de batalla, el que siempre recomiendo. La sensación de aprensión, de recelo interno al sentir que tal vez no estamos tan lejos de ese mundo perfectamente diseñado para que nadie piense demasiado me provoca escalofríos y un poco de temor cada vez que vuelvo a él.
 
 “La felicidad universal mantiene las ruedas girando; la verdad y la belleza no pueden hacerlo.” – Huxley.
 
