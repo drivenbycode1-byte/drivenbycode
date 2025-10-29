@@ -1,6 +1,6 @@
 ---
 title: "Donde habita la mente"
-date: "2025-10-229"
+date: "2025-10-29"
 tags: [pensamiento, filosofía]
 ---
 Mucho tiempo fui parte de los idealistas que romantizan el escape, probablemente haya sido la mayor parte de mi vida. “Vete al sur”, “desconéctate”, “búscate en la naturaleza”. Como si la libertad estuviera en el bosque, y la paz en el playa. Como si el problema fuera el lugar, y no la forma en que habitamos el mundo.
