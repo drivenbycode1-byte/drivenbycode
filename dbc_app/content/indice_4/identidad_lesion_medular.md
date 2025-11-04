@@ -3,32 +3,30 @@ title: De Cristian - Identidad después de una lesión medular
 date: 2025-11-04
 tags: [ciencia, paraplejia]
 ---
-La identidad después del quiebre
-¿Quién soy cuando ya no soy quien era?
+La identidad después de una lesión medular
 
-Esta pregunta me la hizo Cristian, un seguidor que no buscaba respuestas fáciles, sino una conversación honesta. Y me tocó. Porque desde mi lesión medular, esa pregunta dejó de ser teórica. Se volvió cotidiana. Urgente. Íntima.
+- ¿Quién soy cuando ya no soy quien era? 
+Una pregunta de gran importancia que surgió en una conversación con Cristian, un conocido con lesión medular a nivel T8, casado y padre de una hija y un hijo, posterior al accidente. Él es una persona que lleva más de 20 años desde aquel evento, atravesando miles de vaivenes en el proceso. Me comentó algo muy particular sobre la forma en que decidió enfrentar todo: para él, el cuerpo no cambió, lo que cambió fue el mundo, la forma de habitarlo y quienes lo habitan. Y, desde ahí, nos fuimos a la pregunta: ¿quién soy ahora? ¿Puedo ser quien era?
 
-Durante mucho tiempo, fui muchas cosas: administrador de un restaurante, pareja, padre, deportista, caminante. Y de pronto, todo eso se quebró. No por elección. No por evolución. Por accidente.
+- El yo como construcción y no como esencia
+Si ojeamos la filosofía existencialista —la que me ha acompañado antes y después de este proceso—, esta no cree en un “yo” fijo, eterno o predeterminado. Sartre decía que “la existencia precede a la esencia”. No hay un propósito natural o innato; no somos objetos con una función y diseño ya dados. Somos seres libres y responsables de construir nuestro propio significado.
 
-Y ahí empezó el verdadero dilema: ¿quién soy ahora?
+Entonces, cuando el cuerpo cambia, cuando el entorno se derrumba, cuando los vínculos se van o se rompen… ¿qué queda?
 
-🧠 El yo como construcción, no como esencia
-La filosofía existencialista —que me ha acompañado en este proceso— no cree en un “yo” fijo, eterno, predeterminado. Sartre decía que “la existencia precede a la esencia”. Es decir: no nacemos con un propósito. Lo construimos. Lo elegimos. Lo inventamos.
+Queda la posibilidad de reconstruirse. No como quien vuelve a ser lo que era, sino como quien se atreve a ser algo nuevo: una nueva esencia.
 
-Entonces, cuando el cuerpo cambia, cuando el entorno se derrumba, cuando los vínculos se rompen… ¿qué queda?
+- El quiebre como inicio
+La lesión medular es un quiebre total de toda la percepción que se tenía de la vida. Pero también, cuando lo miras fijamente, se convierte en reflejo. Algo que me dijo Cristian —y que comparto totalmente— fue:
 
-Queda la posibilidad de reconstruirse. No como quien vuelve a ser lo que era, sino como quien se atreve a ser algo nuevo.
+"El accidente me obligó a mirar lo que había detrás de los roles que ejercía, las rutinas y las máscaras de toda la gente a mi alrededor. Me obligó a preguntarme qué parte de mí era realmente mía, cuánta parte de mí la entregaba a otros y qué parte de mí era prestada por el sistema y por la costumbre, por el deber de tener que hacer tal o cual cosa."
 
-🧱 El quiebre como inicio
-La lesión fue un quiebre. Pero también fue un espejo. Me obligó a mirar lo que había detrás de los roles, las rutinas, las máscaras. Me obligó a preguntarme qué parte de mí era realmente mía, y qué parte era prestada por el sistema, por la costumbre, por el deber.
+Y en ese vacío —doloroso, sí, pero fértil— fue donde yo también empecé a construir y aprender.
 
-Y en ese vacío —doloroso, sí, pero fértil— empecé a construir. Aprendí programación. Me volví para atleta. Empecé a escribir. A hablar de inclusión. A crear desde la herida, no desde la negación.
+- La identidad como obstinación
+Albert Camus no ofrecía consuelo fácil. Él hablaba del absurdo como esa tensión inevitable entre el deseo humano de sentido y un universo indiferente. No hay respuestas definitivas ni garantías. Pero hay una posibilidad de reconstrucción que debe ir de la mano con la persistencia. Es la decisión de seguir viviendo, incluso cuando no hay promesa de recompensa.
 
-No fue fácil. No es fácil. Pero es real.
+Camus no pedía que encontráramos sentido. Pedía que lo construyéramos. Que, como el mítico Sísifo, empujáramos la piedra cada día, sabiendo que volverá a caer, pero eligiendo hacerlo despiertos.
 
-🔥 La identidad como acto de rebeldía
-Camus hablaba del absurdo: ese choque entre el deseo humano de sentido y un mundo que no lo ofrece. ¿La respuesta? Rebelarse. No huir. No rendirse. Crear sentido donde no lo hay.
+La identidad no es una etiqueta que se imprime en documentos ni un rol que se repite en conversaciones. Para mí, se ha convertido en una práctica y una decisión que define la forma de estar en el mundo, incluso cuando el mundo ya no es el mismo. Incluso cuando el dolor aparece sin aviso diariamente.
 
-Y eso es lo que intento hacer cada día. No volver a ser quien era. Sino ser quien elijo ser ahora. Con mis límites. Con mis nuevas capacidades. Con mi historia.
-
-Porque la identidad no es una etiqueta. Es una práctica. Es una decisión. Es una forma de estar en el mundo, incluso cuando el mundo ya no es el mismo.
+La identidad no espera ni pide permiso. Grita “Aquí estoy”, tan fuerte como quien se reconoce por primera vez. Como quien se reconstruye sin pedir disculpas.
