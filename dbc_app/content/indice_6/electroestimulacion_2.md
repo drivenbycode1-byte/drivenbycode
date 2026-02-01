@@ -56,9 +56,9 @@ Actualmente, el único parámetro modificado ha sido la intensidad, ajustándola
 - Lumbares: 60 mA
 - Abdominales y oblicuos: 60 mA
 
-3. Medición antropométrica adaptada
+3. Medición antropométrica adaptada para lesión medular
 
-La precisión de la medición muscular ha mejorado considerablemente gracias a la colaboración de la kinesióloga Macarena Vargas, actual coordinadora de salud de La Serena. El proceso pasó de ser una medición muscular referencial, basada en conocimientos anatómicos generales, a una medición antropométrica con puntos específicos y reproducibles.
+La precisión de la medición muscular ha mejorado considerablemente gracias a la colaboración de la kinesióloga Macarena Vargas. El proceso pasó de ser una medición muscular referencial, basada en conocimientos anatómicos generales, a una medición antropométrica con puntos específicos y reproducibles.
 
   a. Muslo
 Actualmente se realizan tres mediciones circunferenciales:
