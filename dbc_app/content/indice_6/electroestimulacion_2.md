@@ -1,5 +1,5 @@
 ---
-title: Electroestimulación y método de medición
+title: Electroestimulación y medición atropométrica adaptada
 date: 2026-02-01
 tags: [electroestimulación, ciencia, paraplejia, kinesiología]
 ---
