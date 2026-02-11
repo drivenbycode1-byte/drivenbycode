@@ -16,7 +16,7 @@ Las cookies son presentadas así "una herramienta técnica inofensiva". Pero en 
 ¿Por qué son problemáticas?
 Porque permiten que empresas que nunca visitaste (redes publicitarias, brokers de datos, plataformas de análisis) sigan tu actividad en miles de sitios web.
 
-El consentimiento forzado
+El consentimiento forzado:
 Cuando aparece el típico banner de “Aceptar cookies”, la mayoría de los usuarios:
 • 	no lee nada.
 • 	no entiende qué implica.
@@ -42,23 +42,23 @@ Si las cookies rastrean lo que haces, los asistentes inteligentes pueden captar 
 Y aquí es donde las controversias se vuelven globales.
 La intervención humana en la revisión de audios, algo que las empresas no comunicaron claramente, ha generado investigaciones en múltiples países.
 
-Bélgica
+Bélgica:
 • 	Filtración de más de 1.000 audios de Google Assistant.
 • 	Contratistas podían identificar direcciones y conversaciones privadas.
 
-Estados Unidos
+Estados Unidos:
 • 	Google ha aceptado pagar 68 millones de dólares para resolver una importante demanda colectiva que alega que su Asistente activado por voz grabó ilegalmente conversaciones privadas en dispositivos con Android.
 • 	La FTC (Comisión General de Comercio) investigó a Amazon por retener grabaciones de menores.
 
-Alemania
+Alemania:
 • 	Investigaciones por intervención humana en Amazon y Google.
 • 	Aplicación estricta del RGPD (Reglamento General de Protección de Datos).
 
-India
+India:
 • 	Google admitió que empleados escuchaban fragmentos de conversaciones.
 • 	Regulación débil.
 
-Luxemburgo
+Luxemburgo:
 • 	Amazon recibió una multa récord de 746 millones de euros por infracciones al RGPD.
 
 3- Apple y Google: acuerdos millonarios que dicen más de lo que parece
@@ -73,29 +73,29 @@ Google también prefirió pagar antes que enfrentar un juicio público.
 
 4- Chile: un país expuesto en la economía de la vigilancia
 Chile no ha tenido escándalos mediáticos de asistentes de voz, pero sí casos relevantes de uso indebido de datos.
-Problemas estructurales
+Problemas estructurales:
 • 	La Ley 19.628 es de 1999, anterior a la era de los smartphones.
 • 	No existe una autoridad autónoma de protección de datos.
 • 	La fiscalización es mínima.
 • 	Las empresas pueden recopilar datos con mucha más libertad que en Europa.
 
-Casos relevantes en Chile
+Casos relevantes en Chile:
 Aunque no hay filtraciones masivas de asistentes de voz, sí existen antecedentes importantes:
 Caso Farmacias Ahumada (FASA) – 2012
 - La empresa vendió datos de clientes a laboratorios.
 - Fue sancionada por el SERNAC.
 - Demostró que la venta de datos personales sí ocurre en Chile.
 
-Caso retail y scoring financiero
+Caso retail y scoring financiero:
 - Empresas de retail y financieras han sido cuestionadas por compartir datos de comportamiento de compra y deuda.
 - Aunque no siempre se considera “venta”, sí existe intercambio comercial de perfiles.
 
-Uso de datos biométricos
+Uso de datos biométricos:
 - Varias empresas han implementado reconocimiento facial sin claridad sobre almacenamiento y tratamiento.
 - La falta de regulación deja a los usuarios en desprotección.
 
-Asistentes de voz en Chile
-No hay casos judiciales, pero:
+Asistentes de voz en Chile:
+No hay casos judiciales, pero...
 - Google, Apple y Amazon operan en Chile.
 - Sus políticas de privacidad son globales.
 - Si en Bélgica, Alemania o EE. UU. se descubrió intervención humana, es razonable asumir que los mismos sistemas funcionan igual en Chile, solo que sin fiscalización local
