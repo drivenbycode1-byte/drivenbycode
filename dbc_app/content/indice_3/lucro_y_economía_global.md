@@ -63,7 +63,7 @@ Luxemburgo
 
 3- Apple y Google: acuerdos millonarios que dicen más de lo que parece
 
-Apple: pag;o 95 millones por el caso Siri
+Apple: pagó 95 millones por el caso Siri
 Siri grababa conversaciones privadas incluso sin activación con contratistas que escuchaban audios con contenido íntimo, médico y personal.
 Apple negó responsabilidad, pero pagó 95 millones de dólares para cerrar el caso.
 
