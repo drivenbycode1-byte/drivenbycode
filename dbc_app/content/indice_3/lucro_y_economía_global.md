@@ -107,7 +107,7 @@ El modelo económico digital depende de que aceptemos condiciones que no entende
 Un clic en un banner de cookies, un comando de voz, una búsqueda, una compra, ¡Y pum! Todo se convierte en un dato... y cada dato se convierte en dinero.
 Las empresas no lucran “a pesar de nosotros”, luucran gracias a nosotros, con nuestro consentimiento formal pero no informado.
 
-6. Chile en la economía de la vigilancia
+6- Chile en la economía de la vigilancia
 Mientras Europa impone multas millonarias y Estados Unidos enfrenta demandas colectivas, Chile sigue operando con una ley de 1999 que no contempla:
 - cookies,
 - asistentes de voz,
