@@ -61,7 +61,7 @@ India:
 Luxemburgo:
 • 	Amazon recibió una multa récord de 746 millones de euros por infracciones al RGPD.
 
-3- Apple y Google: acuerdos millonarios que dicen más de lo que parece
+3- Apple, Google y Amazon: acuerdos millonarios que dicen más de lo que parece
 
 Apple: pagó 95 millones por el caso Siri
 Siri grababa conversaciones privadas incluso sin activación con contratistas que escuchaban audios con contenido íntimo, médico y personal.
@@ -70,6 +70,10 @@ Apple negó responsabilidad, pero pagó 95 millones de dólares para cerrar el c
 Google: pagó 68 millones por grabaciones no autorizadas
 El asistente grababa conversaciones sin consentimiento explícito.
 Google también prefirió pagar antes que enfrentar un juicio público.
+
+Amazon: pagó una multa de 25 millones dólares
+Esto por a la presunta vulneración de la privacidad infantil mediante Alexa. 
+Las autoridades dijeron que la compañía habría almacenado ilegalmente transcripciones de voz de sus usuarios menores de edad.
 
 4- Chile: un país expuesto en la economía de la vigilancia
 Chile no ha tenido escándalos mediáticos de asistentes de voz, pero sí casos relevantes de uso indebido de datos.
