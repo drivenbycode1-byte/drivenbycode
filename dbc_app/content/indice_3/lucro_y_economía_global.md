@@ -10,7 +10,7 @@ Este artículo conecta tres dimensiones de un mismo fenómeno:
 • 	los asistentes de voz que capturan lo que decimos,
 • 	y un modelo económico global que convierte nuestra vida cotidiana en un activo comercial.
 
-1. Cookies: el consentimiento como letra chica
+1- Cookies: el consentimiento como letra chica
 Las cookies son presentadas así "una herramienta técnica inofensiva". Pero en la práctica, especialmente las cookies de terceros, son la columna vertebral de la industria del rastreo digital.
 
 ¿Por qué son problemáticas?
@@ -37,7 +37,7 @@ No venden “tu nombre”, pero sí venden “tu comportamiento”, que es inclu
 En otras palabras:
 La economía global no funciona sin tus datos, y tú mismo autorizas su extracción cada vez que presionas “Aceptar”.
 
-2. Asistentes de voz: cuando escucharte se automatiza
+2- Asistentes de voz: cuando escucharte se automatiza
 Si las cookies rastrean lo que haces, los asistentes inteligentes pueden captar lo que dices.
 Y aquí es donde las controversias se vuelven globales.
 La intervención humana en la revisión de audios, algo que las empresas no comunicaron claramente, ha generado investigaciones en múltiples países.
@@ -61,7 +61,7 @@ India
 Luxemburgo
 • 	Amazon recibió una multa récord de 746 millones de euros por infracciones al RGPD.
 
-3. Apple y Google: acuerdos millonarios que dicen más de lo que parece
+3- Apple y Google: acuerdos millonarios que dicen más de lo que parece
 
 Apple: pag;o 95 millones por el caso Siri
 Siri grababa conversaciones privadas incluso sin activación con contratistas que escuchaban audios con contenido íntimo, médico y personal.
@@ -71,7 +71,7 @@ Google: pagó 68 millones por grabaciones no autorizadas
 El asistente grababa conversaciones sin consentimiento explícito.
 Google también prefirió pagar antes que enfrentar un juicio público.
 
-4. Chile: un país expuesto en la economía de la vigilancia
+4- Chile: un país expuesto en la economía de la vigilancia
 Chile no ha tenido escándalos mediáticos de asistentes de voz, pero sí casos relevantes de uso indebido de datos.
 Problemas estructurales
 • 	La Ley 19.628 es de 1999, anterior a la era de los smartphones.
@@ -101,7 +101,7 @@ No hay casos judiciales, pero:
 - Si en Bélgica, Alemania o EE. UU. se descubrió intervención humana, es razonable asumir que los mismos sistemas funcionan igual en Chile, solo que sin fiscalización local
 
 
-5. La economía global lucra con nosotros… con nuestro propio consentimiento
+5- La economía global lucra con nosotros… con nuestro propio consentimiento
 El modelo económico digital depende de que aceptemos condiciones que no entendemos y las empresas (estatales y privadas), riéndose en nuestras caras, no necesitan ocultar nada: basta con que presiones “Aceptar”.
 
 Un clic en un banner de cookies, un comando de voz, una búsqueda, una compra, ¡Y pum! Todo se convierte en un dato... y cada dato se convierte en dinero.
