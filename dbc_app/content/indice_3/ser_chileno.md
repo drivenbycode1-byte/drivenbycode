@@ -3,6 +3,19 @@ title: "¿Qué cresta es ser chileno?"
 date: "2026-03-23"
 tags: [pensamiento, crítica]
 ---
+Con tantos cambios políticos, culturales y sociales, hay algo que se empezó a hacer cada vez más evidente, aunque no siempre lo queramos reconocer.
+
+Chile ya no se siente igual.
+
+No solo por lo que pasa afuera —en las noticias, en la política, en la calle—, sino por algo más profundo, más difícil de explicar. Como si lo que entendíamos por “ser chileno” ya no fuera tan claro como antes.
+
+Entre discusiones, crisis, nuevas realidades y una mezcla cultural que no deja de crecer, empecé a darme cuenta de algo incómodo: nunca he tenido del todo claro qué significa realmente ser chileno.
+
+Y mientras más lo pienso, más difusa se vuelve la respuesta.
+
+Entonces la pregunta aparece sola, casi inevitable:
+
+¿Qué cresta es ser chileno?
 ¿Qué cresta es ser chileno?
 
 No es una pregunta simple. Y no lo es porque, a diferencia de otras identidades nacionales más consolidadas, la chilena no se presenta como algo evidente, sino como algo en permanente construcción.
