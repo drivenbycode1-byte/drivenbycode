@@ -16,7 +16,6 @@ Y mientras más lo pienso, más difusa se vuelve la respuesta.
 Entonces la pregunta aparece sola, casi inevitable:
 
 ¿Qué cresta es ser chileno?
-¿Qué cresta es ser chileno?
 
 No es una pregunta simple. Y no lo es porque, a diferencia de otras identidades nacionales más consolidadas, la chilena no se presenta como algo evidente, sino como algo en permanente construcción.
 
