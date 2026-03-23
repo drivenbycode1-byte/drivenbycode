@@ -99,7 +99,7 @@ Quizás parte de esta confusión no es solo la falta de claridad obvia con todos
 
 Y tal vez ahí está lo más honesto de todo esto:
 
-Que ser chileno es tener claro qué es ser chileno.
+Que ser chileno es igual a no tener claro qué es ser chileno.
 
 Es estar, constantemente, tratando de entenderlo y rechazarlo… incluso cuando eso que intentas entender ya está cambiando.
 
