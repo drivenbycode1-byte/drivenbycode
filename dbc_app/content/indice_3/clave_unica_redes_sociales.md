@@ -19,7 +19,7 @@ Es decir: el ciberacoso es un comodín narrativo y no la razón técnica del pro
 
 La razón técnica es una sola: controlar quién entra a las plataformas y, en un futuro, saber qué hacen aquellos que entrar en esas plataformas, para finalmente darle la espacio a la... ¡bienvenida al algoritmo! Con todo lo anterior, ya tienen todas las piezas del rompecabezas en la mesa para desbloquear la nueva supervigilancia del Estado que Ray Bradbury adelantó en 1953. "Hay que tener dos dedos de frente Diego" decía mi padre, mientras yo pensaba que nadie se daba cuenta que llegaba arriba de la pelota, tal cual lo hacía Ronaldo Nazario, a tomar once con 20 añitos. Biometría facial, recopilación de datos, Big Data, geolocalización, el Starter Pack de toda nueva industria.
 
-Y eso, inevitablemente, significa identificar a todos y cada uno de las chilenas y chilenos. Ni se te ocurra hacer un perfil de tu perrita o a tu gatito. No, no, no. No es por que el Estado los vaya a vigilarlos, es solo por que a nadie le interesa tu mascota.
+Y eso, inevitablemente, significa identificar a todos y cada uno de las chilenas y chilenos. Ni se te ocurra hacer un perfil de tu perrita o a tu gatito. No, no, no. No es por que el Estado los vaya a vigilar, es solo por que a nadie le interesa tu mascota.
 
 Mientras tanto, el Registro Civil avanza feliz con identificación por iris, rostro, huella y lo que venga.
 Y tú, entregando tu cara y tus ojos como si fueran stickers. La Biomettría ya está vendida.
@@ -50,7 +50,7 @@ no existe forma segura, privada y universal de verificar edad sin comprometer id
 
 Pero Chile quiere intentarlo igual. Chile, querido copihue que deslumbra en el abandono. Si algo caracteriza a nuestro país, es su amor por copiar modelos extranjeros, especialmente los que no funcionan.
 
-¡Oh! Y se me olvidaba, Nuestro querido presidente Kasta tuvo una reunión con Peter Thiel, cofundador de Palantir, conocido mundialmente por proveer tecnología de análisis de datos, inteligencia y vigilancia masiva a agencias gubernamentales y militares. 
+¡Oh! Y se me olvidaba, Nuestro querido presidente Kast tuvo una reunión con Peter Thiel, cofundador de Palantir, conocido mundialmente por proveer tecnología de análisis de datos, inteligencia y vigilancia masiva a agencias gubernamentales y militares. 
 
 
 
