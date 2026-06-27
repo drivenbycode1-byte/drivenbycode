@@ -1,5 +1,5 @@
 ---
-title: "ClaveÚnica + redes sociales: la nueva hherramiento de control del Estado hacia nosotros"
+title: "ClaveÚnica + redes sociales: la nueva herramienta de control del Estado sobre nosotros"
 date: "2026-06-27"
 tags: [tecnología, pensamiento, filosofía]
 ---
