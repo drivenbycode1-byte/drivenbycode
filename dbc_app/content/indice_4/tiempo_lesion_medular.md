@@ -3,9 +3,9 @@ title: Reflexiones - La lesión medular y la pérdida
 date: 2026-08-19
 tags: [salud mental, filosofía, pensamiento]
 ---
-¿Vale la pena intentar obviar lo que prácticamente hace que te sientas parte de algo? o, más bien ¿Se puede prescindir (o “aceptar”, como dirían los neo-gurús del estoicismo) de las sensaciones que te hacen sentir vivo? Quiero poner el siguiente ejemplo: la arena. Durante toda mi vida apreciaba y en ocasiones hasta me extasiaba caminar por la playa. Sacarme las zapatillas, sentir el cosquilleo de la arena, ver cómo se metía entre los dedos de los pies. Era sentir el paisaje y, abusando de la retórica, me atrevería a decir que me llegaba a concebir parte del paisaje. Esa enajenación merecía un segundo de atención. 
+¿Vale la pena intentar obviar lo que prácticamente hace que te sientas parte de algo? más bien ¿Se puede prescindir (o “aceptar”, como dirían los neo-gurús del estoicismo) de las sensaciones que te hacen sentir vivo? Quiero poner el siguiente ejemplo: la arena. Durante toda mi vida apreciaba y en ocasiones hasta me extasiaba caminar por la playa. Sacarme las zapatillas, sentir el cosquilleo de la arena, ver cómo se metía entre los dedos de mis pies. Era sentir el paisaje y, abusando de la retórica, me llegaba a concebir parte del paisaje. Esa enajenación merecía un segundo de atención. 
 
-¡Y pam! Un choque y dejé de sentir la arena en mi pies de un momento a otro.
+¡Y pam! Un choque y dejé de sentir la arena en mis pies de un momento a otro.
 
 No, hoy no quiero caer en la típica cuestión de que “la lesión medular me hizo más fuerte”. Después de un accidente de esa magnitud uno empieza a descubrir que la palabra “normal” es bastante extraña. Lo que antes era automático ahora simplemente dejó de serlo. Hay cosas que antes hacía sin siquiera pensar y que ahora tengo que aprender de otra manera. Si tengo que hacer algo de una forma distinta, lo hago distinto. Si tengo que improvisar, improviso. Si tengo que orinar escondido detrás de un arbusto... bueno, tampoco es que vaya a escribir una tragedia griega al respecto. Se busca una solución, se resuelve y se avanza nuevamente.
 
